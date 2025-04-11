@@ -103,7 +103,10 @@ class PlayerLogs(Endpoint):
 
             # Calculate Season from Date column instead of using `curr_year` because playoff
             # game logs shows for all years
-            data_pd["SEASON"] = curr_year
+            if self.season_type == SeasonType.regular_season:
+                data_pd["SEASON"] = curr_year
+            else:
+                data_pd["SEASON"] = data_pd["DATE"].str[0:4].astype(int)
             data_pd["MIN"] = data_pd["MIN"].str.extract(r'([1-9]*[0-9]):').astype("int32") + \
                             data_pd["MIN"].str.extract(r':([0-5][0-9])').astype("int32") / 60
 
