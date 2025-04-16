@@ -58,15 +58,18 @@ class Request:
         response = self.get_wrapper().text.replace("<!--","").replace("-->","")
         soup = BeautifulSoup(response, features="lxml")
         table = soup.find("table", attrs=self.attr_id)
-        header = []
-        rows = []
-        for i, row in enumerate(table.find_all('tr')):
-            if i == 0:
-                header = [el.text.strip() for el in row.find_all('th')]
-            else:
-                rows.append([el.text.strip() for el in row.find_all('td')])
+        
+        headers = []
+        table_header = table.find('thead')
+        for header in table_header.find_all('tr'):
+            headers = [el.text.strip() for el in header.find_all('th')]
 
-        return pd.DataFrame(rows, columns=header[1:])
+        rows = []
+        table_body = table.find('tbody')
+        for row in table_body.find_all('tr'):
+            rows.append([el.text.strip() for el in row.find_all('td')])
+
+        return pd.DataFrame(rows, columns=headers[1:])
 
     def _nba_stats_response(self):
         response = self.get_wrapper()
