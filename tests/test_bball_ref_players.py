@@ -1,4 +1,4 @@
-'''Testing player methods.'''
+'''Testing player methods (BBall-Ref only).'''
 import unittest
 
 from dans.endpoints.playerstats import PlayerStats
@@ -6,7 +6,7 @@ from dans.endpoints.playerlogs import PlayerLogs
 from dans.library.arguments import DataFormat, SeasonType
 
 class TestPlayerStats(unittest.TestCase):
-    '''Tests for each method in opponent_adjusted_nba_scraper.bball_ref.players'''
+    '''Tests for each dans player endpoint: BBall-Ref only'''
     def test_player_game_logs(self):
 
         logs = PlayerLogs(
