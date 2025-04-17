@@ -311,20 +311,27 @@ class PlayerStats(Endpoint):
     ):
 
         total_poss = 0
-        teams_list = [(year, opp_team) for year in team_dict for opp_team in team_dict[year]]
-        iterator = tqdm(teams_list, desc="Loading player possessions...", ncols=75)
+        iterator = tqdm([self.year_range[0], self.year_range[1] + 1],
+                        desc="Loading player possessions...", ncols=75)
 
-        for year, opp_team in iterator:
-            opp_id = 1610612700 + int(constants.teams()[opp_team])
-            url = 'https://stats.nba.com/stats/leaguedashplayerstats'
-            per_poss_df = Request(url, opp_id=opp_id, year=self._format_year(year), \
-                                  season_type=season_type).get_response()
-            if per_poss_df.empty:
+        for year in iterator:
+            url = 'https://stats.nba.com/stats/playergamelogs'
+            adv_log_pd = Request(
+                url=url,
+                year=self._format_year(year),
+                season_type=season_type,
+                measure_type="Advanced"
+            ).get_response()
+
+            if adv_log_pd.empty:
                 break
-            per_poss_df = per_poss_df.query('PLAYER_NAME == @_name')
-            min_per_poss = per_poss_df.iloc[0]['MIN']
-            filtered_logs = logs_df.query('SEASON == @year').query('MATCHUP == @opp_team')
-            min_played = filtered_logs['MIN'].sum()
-            poss = min_played / min_per_poss
-            total_poss += round(poss)
+
+            adv_log_pd = adv_log_pd.query('PLAYER_NAME == @_name')\
+                .iloc[:, [i for i in range(len(adv_log_pd.columns)) if i != 11]]\
+                .rename(columns={"GAME_DATE": "DATE"})
+
+            adv_log_pd["DATE"] = adv_log_pd["DATE"].str[:10]
+            poss_df = pd.merge(logs_df, adv_log_pd, on=["DATE"], how="inner")
+            total_poss += poss_df["POSS"].sum()
+
         return total_poss
