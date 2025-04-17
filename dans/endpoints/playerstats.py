@@ -60,7 +60,8 @@ class PlayerStats(Endpoint):
     ):
 
         if len(logs_df) == 0 or len(teams_df) == 0:
-            sys.exit("No logs found.")
+            print("No logs found.")
+            sys.exit(1)
 
         teams_df = self._filter_teams_through_logs(logs_df, teams_df)
         teams_dict = self._teams_df_to_dict(teams_df)
@@ -83,7 +84,8 @@ class PlayerStats(Endpoint):
             points, rebounds, assists = self._opp_pace_adj_stats(
                 logs_df, teams_dict, add_possessions, opp_drtg)
         else:
-            sys.exit(f"Not a valid data format: {self.data_format}")
+            print(f"Not a valid data format: {self.data_format}")
+            sys.exit(1)
 
         return pd.DataFrame(columns=self.expected_columns, data=[[
             points,
@@ -236,8 +238,9 @@ class PlayerStats(Endpoint):
     ):
         total_poss = 0
         pace_list = pd.DataFrame(logs_df.groupby(['SEASON', 'TEAM']).size().reset_index())
-        for i in tqdm(range(len(pace_list)), desc='Loading player possessions...', ncols=75):
-
+        iterator = tqdm(range(len(pace_list)), desc='Loading player possessions...', ncols=75)
+        
+        for i in iterator:
             year = pace_list.loc[i]["SEASON"]
             team = pace_list.loc[i]["TEAM"]
             url = f'https://www.basketball-reference.com/teams/{team}/{year}/gamelog-advanced/'
@@ -248,9 +251,14 @@ class PlayerStats(Endpoint):
                 attr_id = "team_game_log_adv_post"
 
             adv_log_pd = Request(url=url, attr_id={"id": attr_id}).get_response()
-            if (adv_log_pd["Pace"] == "").any():
-                sys.exit('Failed to estimate player possessions because at least one of the ' + \
-                         'games does not track pace.')
+            if 'Pace' not in adv_log_pd.columns:
+
+                for _ in iterator:
+                    pass
+
+                print("Failed to estimate player possessions. Pace was not tracked " + \
+                         f"during the {year} {self.season_type}")
+                sys.exit(1)
 
             adv_log_pd = adv_log_pd\
                 .iloc[:, [i for i in range(len(adv_log_pd.columns)) if i != 6]]\
@@ -258,7 +266,18 @@ class PlayerStats(Endpoint):
                     "Date": "DATE",
                     "Opp": "MATCHUP"
                 })
+            
             poss_df = pd.merge(logs_df, adv_log_pd, on=["DATE", "MATCHUP"], how="inner")
+
+            if (poss_df["Pace"] == "").any():
+
+                for _ in iterator:
+                    pass
+
+                print('Failed to estimate player possessions. At least one of the ' + \
+                         'games does not track pace.')
+                sys.exit(1)
+                
             poss_df["POSS"] = ( poss_df["MIN"].astype(float) / 48 ) * \
                 poss_df["Pace"].astype(float)
             total_poss += poss_df["POSS"].sum()
@@ -293,7 +312,9 @@ class PlayerStats(Endpoint):
 
         total_poss = 0
         teams_list = [(year, opp_team) for year in team_dict for opp_team in team_dict[year]]
-        for year, opp_team in tqdm(teams_list, desc="Loading player possessions...", ncols=75):
+        iterator = tqdm(teams_list, desc="Loading player possessions...", ncols=75)
+
+        for year, opp_team in iterator:
             opp_id = 1610612700 + int(constants.teams()[opp_team])
             url = 'https://stats.nba.com/stats/leaguedashplayerstats'
             per_poss_df = Request(url, opp_id=opp_id, year=self._format_year(year), \

@@ -92,5 +92,6 @@ class Request:
         response = \
             self.function(url=self.url, headers=self.headers, params=self.params, timeout=10)
         if response.status_code != 200:
-            sys.exit(f"{response.status_code} Error")
+            print(f"{response.status_code} Error")
+            sys.exit(1)
         return response
