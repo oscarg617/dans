@@ -18,8 +18,7 @@ class Request:
         year=None,
         season_type=None,
         measure_type=None,
-        per_mode=None,
-        opp_id=None
+        per_mode=None
     ):
         self.function = function
         self.url = url
@@ -32,17 +31,13 @@ class Request:
         if "stats.nba.com" in self.url:
             self.headers = parameters._standard_header()
 
-        if measure_type and per_mode and year and season_type:
+        if "team" in self.url:
             self.params = parameters\
                 ._team_advanced_params(measure_type, per_mode, year, season_type)
-        elif opp_id and year and season_type:
-            self.params = parameters\
-                ._player_per_poss_param(opp_id, year, season_type)
-        elif year and season_type:
-            self.params = parameters\
-                ._player_logs_params(year, season_type)
         else:
-            self.params = ()
+            self.params = parameters\
+                ._player_logs_params(measure_type, per_mode, year, season_type)
+        
 
     def get_response(self):
         '''Send request based on url'''
