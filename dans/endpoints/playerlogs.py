@@ -62,14 +62,16 @@ class PlayerLogs(Endpoint):
         names_df = pd.read_csv(path)
         player = names_df[names_df["NAME"] == name]["SUFFIX"]
         if len(player) == 0:
-            sys.exit(f"Player not found: `{name}`")
+            print(f"Player not found: `{name}`")
+            sys.exit(1)
         return player.iloc[0]
 
     def bball_ref(self):
         '''Uses bball-ref to find player game logs.'''
 
         if self.year_range[0] < 1971:
-            sys.exit("This API does not have support for bball-ref before 1970-71.")
+            print("This API does not have support for bball-ref before 1970-71.")
+            sys.exit(1)
 
         format_suffix = 'players/' + self.suffix[0] + '/' + self.suffix
         iterator = tqdm(range(self.year_range[0], self.year_range[1] + 1),
@@ -85,7 +87,7 @@ class PlayerLogs(Endpoint):
                 attr_id = "player_game_log_reg"
 
             data_pd = Request(url=url, attr_id={"id": attr_id}).get_response()\
-                .drop(columns=["Gtm", "GS", "Result", "GmSc"], axis=1)\
+                .drop(columns=["Gtm", "GS", "Result"], axis=1)\
                 .replace("", np.nan)
 
             data_pd = data_pd[~(
@@ -142,7 +144,8 @@ class PlayerLogs(Endpoint):
         '''Uses nba-stats to find player game logs'''
 
         if self.year_range[0] < 1997:
-            sys.exit("This API does not have support for nba-stats before 1996-97.")
+            print("This API does not have support for nba-stats before 1996-97.")
+            sys.exit(1)
 
         iterator = tqdm(range(self.year_range[0], self.year_range[1] + 1),
                         desc="Loading player game logs...", ncols=75)
