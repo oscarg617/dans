@@ -10,8 +10,8 @@ from dans.endpoints.playerstats import PlayerStats
 
 Parameters:
   - `name` - Player full name (e.g. `'Giannis Antetokounmpo'`)
-  - `year_range (type: inclusive list)` - Range of years to search for logs (e.g. `[2019, 2021]`)
-  - `drtg_range (type: exclusive list)` - Range of defensive strength in terms of Defensive Rating (e.g. `[107.5, 110]`)
+  - `year_range (type: inclusive-inclusive list)` - Range of years to search for logs (e.g. `[2019, 2021]`)
+  - `drtg_range (type: inclusive-exclusive list)` - Range of defensive strength in terms of Defensive Rating (e.g. `[107.5, 110]`)
   - `data_format` - One of `DataFormat.per_game` | `DataFormat.per_100_poss` | `DataFormat.opp_adj` | `DataFormat.pace_adj` | `DataFormat.opp_pace_adj` Default value is `DataFormat.per_game`
   - `season_type (type: SeasonType)` - One of `SeasonType.regular_season | SeasonType.playoffs`. Default value is `SeasonType.regular_season`
 
@@ -35,7 +35,7 @@ from dans.endpoints.playerlogs import PlayerLogs
 
 Parameters:
   - `name (type: string)` - Player full name (e.g. `'Anthony Edwards'`)
-  - `year_range (type: inclusive list)` - Range of years to search for logs (e.g. `[2020, 2024]`)
+  - `year_range (type: inclusive-inclusive list)` - Range of years to search for logs (e.g. `[2020, 2024]`)
   - `season_type (type: SeasonType)` - One of `SeasonType.regular_season | SeasonType.playoffs`. Default value is `SeasonType.regular_season`
 
 Returns:
@@ -59,8 +59,8 @@ from dans.endpoints.teams import Teams
 ### `Teams(year_range, drtg_range)`
 
 Parameters:
-  - `year_range (type: inclusive list)` Range of years to search for teams (e.g. `[1995, 2007]`)
-  - `drtg_range (type: exclusive list)` - Range of defensive strength in terms of Defensive Rating (e.g. `[105, 110]`)
+  - `year_range (type: inclusive-inclusive list)` Range of years to search for teams (e.g. `[1995, 2007]`)
+  - `drtg_range (type: inclusive-exclusive list)` - Range of defensive strength in terms of Defensive Rating (e.g. `[105, 110]`)
 
 Returns:
 
