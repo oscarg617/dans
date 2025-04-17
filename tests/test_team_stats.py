@@ -1,8 +1,7 @@
 '''Testing team methods.'''
 import unittest
 
-from opponent_adjusted_nba_scraper.endpoints.teams import Teams
-from opponent_adjusted_nba_scraper.library.arguments import SeasonType
+from dans.endpoints.teams import Teams
 
 class TestTeamStats(unittest.TestCase):
     '''Tests for each method in opponent_adjusted_nba_scraper.bball_ref.players'''
