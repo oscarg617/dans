@@ -154,7 +154,12 @@ class PlayerLogs(Endpoint):
         for curr_year in iterator:
             curr_year = self._format_year(curr_year)
             url = 'https://stats.nba.com/stats/playergamelogs'
-            year_df = Request(url=url, year=curr_year, season_type=self.season_type).get_response()
+            year_df = Request(
+                url=url,
+                year=curr_year,
+                season_type=self.season_type,
+                per_mode="PerGame"
+            ).get_response()
             year_df = year_df.query('PLAYER_NAME == @self.name')\
                 [['SEASON_YEAR', 'GAME_DATE', 'PLAYER_NAME', 'TEAM_ABBREVIATION', 'MATCHUP', 'MIN',
                 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT','FTM', 'FTA', 'FT_PCT', 'OREB',
