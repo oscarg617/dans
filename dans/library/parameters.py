@@ -6,11 +6,11 @@ def _standard_header() -> dict:
     "sec-fetch-site": "same-site","user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) " +
     "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"}
 
-def _player_logs_params(season_year, season_type):
+def _player_logs_params(measure_type, per_mode, season_year, season_type):
 
     return (("DateFrom", ""), ("DateTo", ""), ("GameSegment", ""), ("LastNGames", ""),
-            ("LeagueID", ""), ("Location", ""), ("MeasureType", None), ("Month", ""),
-            ("OpponentTeamID", None), ("Outcome", ""), ("PORound", ""), ("PerMode", ""),
+            ("LeagueID", ""), ("Location", ""), ("MeasureType", measure_type), ("Month", ""),
+            ("OpponentTeamID", None), ("Outcome", ""), ("PORound", ""), ("PerMode", per_mode),
             ("Period", ""), ("PlayerID", ""), ("Season", season_year), ("SeasonSegment", ""),
             ("SeasonType", season_type), ("ShotClockRange", ""), ("TeamID", ""),
             ("VsConference", ""), ("VsDivision", ""))
@@ -25,16 +25,3 @@ def _team_advanced_params(measure_type, per_mode, season_year, season_type):
             ("SeasonSegment", ""), ("SeasonType", season_type), ("ShotClockRange", ""),
             ("StarterBench", ""), ("TeamID", "0"), ("TwoWay", "0"), ("VsConference", ""),
             ("VsDivision", "" ))
-
-def _player_per_poss_param(opp_id, season_year, season_type):
-
-    return (('LastNGames', '0'), ('MeasureType', 'Base'), ('Month', '0'),
-            ('OpponentTeamID', int(opp_id)), ('PaceAdjust', 'N'), ('PerMode', 'PerPossession'),
-            ('Period', '0'), ('PlusMinus', 'N'), ('Rank', 'N'), ('Season', season_year),
-            ('SeasonType', season_type), ('College', ''), ('Conference', ''), ('Country', ''),
-            ('DateFrom', ''), ('DateTo', ''), ('Division', ''), ('DraftPick', ''),
-            ('DraftYear', ''), ('GameScope', ''), ('GameSegment', ''), ('Height', ''),
-            ('LeagueID', ''), ('Location', ''), ('Outcome', ''), ('PORound', ''),
-            ('PlayerExperience', ''), ('PlayerPosition', ''), ('SeasonSegment', ''),
-            ('ShotClockRange', ''), ('StarterBench', ''), ('TeamID', ''), ('TwoWay', ''),
-            ('VsConference', ''), ('VsDivision', ''), ('Weight', ''))
