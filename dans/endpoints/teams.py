@@ -41,6 +41,6 @@ class Teams(Endpoint):
             (teams_df["SEASON"] >= self.year_range[0]) &
             (teams_df["SEASON"] <= self.year_range[1]) &
             (teams_df["DRTG"] >= self.drtg_range[0]) &
-            (teams_df["DRTG"] <= self.drtg_range[1])]
+            (teams_df["DRTG"] < self.drtg_range[1])]
 
         return teams_df
