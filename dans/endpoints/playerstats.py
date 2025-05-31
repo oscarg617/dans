@@ -34,31 +34,35 @@ class PlayerStats(Endpoint):
 
     def __init__(
         self,
-        _name,
-        year_range: list,
+        player_logs: pd.DataFrame,
         drtg_range: list,
         data_format=DataFormat.default,
         season_type=SeasonType.default
     ):
-        self.name = _name
-        self.year_range = year_range
+        self.player_logs = player_logs
         self.drtg_range = drtg_range
         self.data_format = data_format
         self.season_type = season_type
+        self.year_range = [player_logs["SEASON"].min(), player_logs["SEASON"].max()]
+        
+        names = player_logs["NAME"].unique()
+        if len(names) > 1:
+            print(f"There are {len(names)} players included in the logs. This will lead to " + 
+                  "unexpected behavior.")
+            
+        self.name = names[0] if len(names) == 1 else None
 
     def bball_ref(self):
         '''Uses bball-ref to calculate player logs and team defensive metrics.'''
-        logs_df = PlayerLogs(self.name, self.year_range, self.season_type).bball_ref()
         teams_df = Teams(self.year_range, self.drtg_range).bball_ref()
         add_possessions = self._bball_ref_add_possessions
-        return self._calculate_stats(logs_df, teams_df, add_possessions)
+        return self._calculate_stats(self.player_logs, teams_df, add_possessions)
 
     def nba_stats(self):
         '''Uses nba-stats to calculate player logs and team defensive metrics.'''
-        logs_df = PlayerLogs(self.name, self.year_range, self.season_type).nba_stats()
         teams_df = Teams(self.year_range, self.drtg_range).nba_stats()
         add_possessions = self._nba_stats_add_possessions
-        return self._calculate_stats(logs_df, teams_df, add_possessions)
+        return self._calculate_stats(self.player_logs, teams_df, add_possessions)
 
     def _calculate_stats(
             self,
