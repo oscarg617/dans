@@ -45,12 +45,16 @@ class Request:
             return self._bball_ref_response()
         if "stats.nba.com" in self.url:
             return self._nba_stats_response()
-        return None
+        return pd.DataFrame()
 
     def _bball_ref_response(self):
         self.headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
         "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"}
-        response = self.get_wrapper().text.replace("<!--","").replace("-->","")
+        response = self.get_wrapper()
+        if not response:
+            return pd.DataFrame()
+        
+        response = response.text.replace("<!--","").replace("-->","")
         soup = BeautifulSoup(response, features="lxml")
         table = soup.find("table", attrs=self.attr_id)
         
@@ -68,6 +72,9 @@ class Request:
 
     def _nba_stats_response(self):
         response = self.get_wrapper()
+        if not response:
+            return pd.DataFrame()
+
         response_json = response.json()
         data_frame = pd.DataFrame(response_json['resultSets'][0]['rowSet'])
 
@@ -88,5 +95,5 @@ class Request:
             self.function(url=self.url, headers=self.headers, params=self.params, timeout=10)
         if response.status_code != 200:
             print(f"{response.status_code} Error")
-            sys.exit(1)
+            return
         return response
