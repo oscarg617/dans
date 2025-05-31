@@ -43,6 +43,7 @@ class PlayerLogs(Endpoint):
         '+/-'
     ]
 
+    error = None
     data = None
     data_frame = None
 
@@ -60,22 +61,26 @@ class PlayerLogs(Endpoint):
     def _lookup(self, name):
         path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'data\\player_names.csv')
         names_df = pd.read_csv(path)
+        
         player = names_df[names_df["NAME"] == name]["SUFFIX"]
         if len(player) == 0:
-            print(f"Player not found: `{name}`")
-            sys.exit(1)
+            self.error = f"Player not found: `{name}`"
+            return
         return player.iloc[0]
 
     def bball_ref(self):
         '''Uses bball-ref to find player game logs.'''
 
         if self.year_range[0] < 1971:
-            print("This API does not have support for bball-ref before 1970-71.")
-            sys.exit(1)
+            self.error = "This API does not have support for bball-ref before 1970-71."
+            return pd.DataFrame()
+    
+        if not self.suffix:
+            return pd.DataFrame()
 
         format_suffix = 'players/' + self.suffix[0] + '/' + self.suffix
         iterator = tqdm(range(self.year_range[0], self.year_range[1] + 1),
-                        desc="Loading player game logs...", ncols=75)
+                        desc="Loading player game logs...", ncols=75, leave=False)
 
         dfs = []
         for curr_year in iterator:
@@ -86,8 +91,14 @@ class PlayerLogs(Endpoint):
                 url = f'https://www.basketball-reference.com/{format_suffix}/gamelog/{curr_year}'
                 attr_id = "player_game_log_reg"
 
-            data_pd = Request(url=url, attr_id={"id": attr_id}).get_response()\
-                .drop(columns=["Gtm", "GS", "Result"], axis=1)\
+            data_pd = Request(url=url, attr_id={"id": attr_id}).get_response()
+            if data_pd.empty:
+                return pd.DataFrame()
+            
+            if len(data_pd.columns) < 10:
+                continue
+            
+            data_pd = data_pd.drop(columns=["Gtm", "GS", "Result"], axis=1)\
                 .replace("", np.nan)
 
             data_pd = data_pd[~(
@@ -138,17 +149,23 @@ class PlayerLogs(Endpoint):
         result["HOME"] = result['HOME'].replace(np.nan, "")
         # Some stats were not tracked in the 1970s, so we add those columns with value np.nan
         result.loc[:, list(set(self.expected_columns) - set(result.columns.values))] = np.nan
+
+        if self.error:
+            print(self.error)
         return result[self.expected_columns].reset_index(drop=True)
 
     def nba_stats(self):
         '''Uses nba-stats to find player game logs'''
 
         if self.year_range[0] < 1997:
-            print("This API does not have support for nba-stats before 1996-97.")
-            sys.exit(1)
+            self.error = "This API does not have support for nba-stats before 1996-97."
+            return pd.DataFrame()
+        
+        if not self.suffix:
+            return pd.DataFrame()
 
         iterator = tqdm(range(self.year_range[0], self.year_range[1] + 1),
-                        desc="Loading player game logs...", ncols=75)
+                        desc="Loading player game logs...", ncols=75, leave=False)
 
         dfs = []
         for curr_year in iterator:
@@ -160,6 +177,9 @@ class PlayerLogs(Endpoint):
                 season_type=self.season_type,
                 per_mode="PerGame"
             ).get_response()
+            if year_df.empty:
+                return pd.DataFrame()
+
             year_df = year_df.query('PLAYER_NAME == @self.name')\
                 [['SEASON_YEAR', 'GAME_DATE', 'PLAYER_NAME', 'TEAM_ABBREVIATION', 'MATCHUP', 'MIN',
                 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT','FTM', 'FTA', 'FT_PCT', 'OREB',
@@ -177,7 +197,6 @@ class PlayerLogs(Endpoint):
 
             dfs.append(year_df)
 
-
         if len(dfs) == 0:
             return pd.DataFrame()
 
@@ -188,4 +207,6 @@ class PlayerLogs(Endpoint):
                 'TOV': 'int32', 'STL': 'int32', 'BLK': 'int32', 'PF': 'int32', 'PTS': 'int32',
                 '+/-': 'float32', 'SEASON': 'object'})
 
+        if self.error:
+            print(self.error)
         return result[self.expected_columns].reset_index(drop=True)

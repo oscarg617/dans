@@ -1,8 +1,10 @@
 '''Player Stats Endpoint.'''
+import os
 import sys
 import requests
 import pandas as pd
 from tqdm import tqdm
+from typing import Optional
 from bs4 import BeautifulSoup
 
 from dans.library.arguments import SeasonType, DataFormat
@@ -21,8 +23,14 @@ class PlayerStats(Endpoint):
         "AST",
         "TS%",
         "rTS%",
-        "DRTG"
+        "DRTG",
+        "rDRTG",
+        "Opp TS%",
+        "rOpp TS%",
+        "Games"
     ]
+
+    error = None
 
     def __init__(
         self,
@@ -58,16 +66,16 @@ class PlayerStats(Endpoint):
             teams_df: pd.DataFrame,
             add_possessions
     ):
-
+        
         if len(logs_df) == 0 or len(teams_df) == 0:
-            print("No logs found.")
-            sys.exit(1)
+            self.error = "No logs found."
+            return pd.DataFrame()
 
         teams_df = self._filter_teams_through_logs(logs_df, teams_df)
         teams_dict = self._teams_df_to_dict(teams_df)
         logs_df = self._filter_logs_through_teams(logs_df, teams_dict)
 
-        opp_drtg, player_true_shooting, relative_true_shooting = \
+        opp_drtg, rel_drtg, opp_ts, rel_opp_ts, player_true_shooting, relative_true_shooting = \
             self._calculate_efficiency_stats(logs_df, teams_df, teams_dict)
 
         if self.data_format == DataFormat.per_game:
@@ -84,8 +92,13 @@ class PlayerStats(Endpoint):
             points, rebounds, assists = self._opp_pace_adj_stats(
                 logs_df, teams_dict, add_possessions, opp_drtg)
         else:
-            print(f"Not a valid data format: {self.data_format}")
-            sys.exit(1)
+            self.error = f"Not a valid data format: {self.data_format}"
+
+        if self.error or not points:
+            print(self.error)
+            return pd.DataFrame()
+
+        games = len(logs_df)
 
         return pd.DataFrame(columns=self.expected_columns, data=[[
             points,
@@ -93,7 +106,11 @@ class PlayerStats(Endpoint):
             assists,
             player_true_shooting,
             relative_true_shooting,
-            opp_drtg
+            opp_drtg,
+            rel_drtg,
+            opp_ts,
+            rel_opp_ts,
+            games
         ]])
 
     def _per_game_stats(
@@ -112,6 +129,10 @@ class PlayerStats(Endpoint):
             add_possessions
     ):
         possessions = add_possessions(self.name, logs_df, teams_dict, self.season_type)
+
+        if not possessions:
+            return (None, None, None)
+
         points = round((logs_df['PTS'].sum() / possessions) * 100, 1)
         rebounds = round((logs_df['TRB'].sum() / possessions) * 100, 1)
         assists = round((logs_df['AST'].sum() / possessions) * 100, 1)
@@ -125,6 +146,10 @@ class PlayerStats(Endpoint):
     ):
         possessions = add_possessions(self.name, logs_df, \
                                             teams_dict, self.season_type)
+        
+        if not possessions:
+            return (None, None, None)
+
         min_ratio = logs_df['MIN'].mean() / 48
         points = round((min_ratio * (logs_df['PTS'].sum() / possessions) * 100), 1)
         rebounds = round((min_ratio * (logs_df['TRB'].sum() / possessions) * 100), 1)
@@ -150,10 +175,15 @@ class PlayerStats(Endpoint):
     ):
         possessions = add_possessions(self.name, logs_df, \
                                             teams_dict, self.season_type)
+        
+        if not possessions:
+            return (None, None, None)
+
         points_per_100 = (logs_df['PTS'].sum() / possessions) * 100
-        points = round(((logs_df['MIN'].mean() / 48) * points_per_100 * (110 / opp_drtg)), 1)
-        rebounds = round(logs_df['TRB'].mean(), 1)
-        assists = round(logs_df['AST'].mean(), 1)
+        min_ratio = logs_df['MIN'].mean() / 48
+        points = round((min_ratio * points_per_100 * (110 / opp_drtg)), 1)
+        rebounds = round(min_ratio * (logs_df['TRB'].sum() / possessions) * 100, 1)
+        assists = round(min_ratio * (logs_df['AST'].sum() / possessions) * 100, 1)
         return points, rebounds, assists
 
     def _filter_teams_through_logs(
@@ -211,23 +241,43 @@ class PlayerStats(Endpoint):
         teams_df: pd.DataFrame,
         teams_dict: dict
     ):
+        
+        path = os.path.join(os.path.dirname(os.path.dirname(__file__)),
+                                     'data\\bball-ref-teams.csv')
+        
         opp_drtg_sum = 0
-        opp_true_shooting_sum = 0
+        r_drtg_sum = 0
+        opp_ts_sum = 0
+        r_ts_sum = 0
         for year in teams_dict:
+            
+            teams = pd.read_csv(path).drop(columns="Unnamed: 0")
+            teams = teams[teams["SEASON"] == year]
+            
+            la_drtg = teams["DRTG"].mean()
+            la_ts = teams["OPP_TS"].mean()
+            
             for opp_team in teams_dict[year]:
                 logs_in_year = logs_df[logs_df['SEASON'] == year]
                 logs_vs_team = logs_in_year[logs_in_year['MATCHUP'] == opp_team]
-                opp_drtg_sum += (float(teams_df[teams_df['TEAM'] == opp_team].DRTG.values[0]) *
-                                logs_vs_team.shape[0])
-                teams_in_year = teams_df[teams_df['SEASON'] == year]
-                opp_true_shooting_sum += (float(teams_in_year[teams_in_year['TEAM'] == opp_team]
-                                                .OPP_TS.values[0]) * logs_vs_team.shape[0])
-        opp_drtg = round((opp_drtg_sum / logs_df.shape[0]), 1)
-        opp_true_shooting = (opp_true_shooting_sum / logs_df.shape[0]) * 100
+                opp = teams_df[(teams_df['TEAM'] == opp_team) & (teams_df['SEASON'] == year)]
+                opp_drtg_sum += (float(opp.DRTG.values[0]) * logs_vs_team.shape[0])
+                r_drtg_sum += ((float(opp.DRTG.values[0]) - la_drtg) * logs_vs_team.shape[0])
+                opp_ts_sum += (float(opp.OPP_TS.values[0]) * logs_vs_team.shape[0])
+                r_ts_sum += ((float(opp.OPP_TS.values[0] - la_ts) * logs_vs_team.shape[0]))
+
+        
+        
+        opp_drtg = round((opp_drtg_sum / logs_df.shape[0]), 2)
+        r_opp_drtg = round((r_drtg_sum / logs_df.shape[0]), 2)
+        opp_ts = (opp_ts_sum / logs_df.shape[0]) * 100
+        r_opp_ts = (r_ts_sum / logs_df.shape[0]) * 100
+        
         player_true_shooting = self._true_shooting_percentage(
             logs_df.PTS.sum(), logs_df.FGA.sum(), logs_df.FTA.sum()) * 100
-        relative_true_shooting = round(player_true_shooting - opp_true_shooting, 1)
-        return (opp_drtg, player_true_shooting, relative_true_shooting)
+        relative_true_shooting = round(player_true_shooting - opp_ts, 2)
+        return (opp_drtg, r_opp_drtg, round(opp_ts, 2), round(r_opp_ts, 2), 
+                round(player_true_shooting, 2), relative_true_shooting)
 
     def _bball_ref_add_possessions(
         self,
@@ -238,7 +288,8 @@ class PlayerStats(Endpoint):
     ):
         total_poss = 0
         pace_list = pd.DataFrame(logs_df.groupby(['SEASON', 'TEAM']).size().reset_index())
-        iterator = tqdm(range(len(pace_list)), desc='Loading player possessions...', ncols=75)
+        iterator = tqdm(range(len(pace_list)),
+                        desc='Loading player possessions...', ncols=75, leave=False)
         
         for i in iterator:
             year = pace_list.loc[i]["SEASON"]
@@ -251,14 +302,16 @@ class PlayerStats(Endpoint):
                 attr_id = "team_game_log_adv_post"
 
             adv_log_pd = Request(url=url, attr_id={"id": attr_id}).get_response()
+            if adv_log_pd.empty:
+                return
+            
             if 'Pace' not in adv_log_pd.columns:
-
                 for _ in iterator:
                     pass
 
-                print("Failed to estimate player possessions. Pace was not tracked " + \
-                         f"during the {year} {self.season_type}")
-                sys.exit(1)
+                self.error = "Failed to estimate player possessions. Pace was not tracked " + \
+                         f"during the {year} {self.season_type}"
+                return
 
             adv_log_pd = adv_log_pd\
                 .iloc[:, [i for i in range(len(adv_log_pd.columns)) if i != 6]]\
@@ -274,9 +327,9 @@ class PlayerStats(Endpoint):
                 for _ in iterator:
                     pass
 
-                print('Failed to estimate player possessions. At least one of the ' + \
-                         'games does not track pace.')
-                sys.exit(1)
+                self.error = 'Failed to estimate player possessions. At least one of the ' + \
+                         'games does not track pace.'
+                return
                 
             poss_df["POSS"] = ( poss_df["MIN"].astype(float) / 48 ) * \
                 poss_df["Pace"].astype(float)
@@ -290,8 +343,8 @@ class PlayerStats(Endpoint):
         url = "https://www.basketball-reference.com/boxscores/index.fcgi?year=" + \
                 f"{date.year}&month={date.month}&day={date.day}"
         response = Request(function=requests.get, url=url).get_wrapper()
-        if response.status_code != 200:
-            return None
+        if not response or response.status_code != 200:
+            return
 
         suffix = None
         soup = BeautifulSoup(response.content, 'html.parser')
@@ -312,7 +365,7 @@ class PlayerStats(Endpoint):
 
         total_poss = 0
         iterator = tqdm([self.year_range[0], self.year_range[1] + 1],
-                        desc="Loading player possessions...", ncols=75)
+                        desc="Loading player possessions...", ncols=75, leave=False)
 
         for year in iterator:
             url = 'https://stats.nba.com/stats/playergamelogs'
@@ -322,9 +375,8 @@ class PlayerStats(Endpoint):
                 season_type=season_type,
                 measure_type="Advanced"
             ).get_response()
-
             if adv_log_pd.empty:
-                break
+                return
 
             adv_log_pd = adv_log_pd.query('PLAYER_NAME == @_name')\
                 .iloc[:, [i for i in range(len(adv_log_pd.columns)) if i != 11]]\
