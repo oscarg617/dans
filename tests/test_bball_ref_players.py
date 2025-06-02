@@ -1,5 +1,6 @@
 '''Testing player methods (BBall-Ref only).'''
 import unittest
+import pandas as pd
 
 from dans.endpoints.playerstats import PlayerStats
 from dans.endpoints.playerlogs import PlayerLogs
@@ -15,68 +16,79 @@ class TestPlayerStats(unittest.TestCase):
             season_type=SeasonType.playoffs
         ).bball_ref()
 
-        expected_columns = ['SEASON', 'DATE', 'NAME', 'TEAM', 'HOME', 'MATCHUP', 'MIN', 'FG',
-                            'FGA', 'FG%', '3P', '3PA', '3P%', 'FT', 'FTA', 'FT%', 'ORB', 'DRB',
-                            'TRB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', '+/-']
+        expected_columns = ['SEASON', 'SEASON_TYPE', 'DATE', 'NAME', 'TEAM', 'HOME', 'MATCHUP',
+                            'MIN', 'FG', 'FGA', 'FG%', '3P', '3PA', '3P%', 'FT', 'FTA', 'FT%',
+                            'ORB', 'DRB', 'TRB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', '+/-']
 
         self.assertEqual(logs['PTS'].sum(), 1523)
         self.assertListEqual(list(logs.columns), expected_columns)
 
     def test_player_stats(self):
 
-        per_game_stats = PlayerStats(
+        logs = PlayerLogs(
             "Kobe Bryant",
             year_range=[2003, 2003],
-            drtg_range=[90, 100],
-            data_format=DataFormat.default,
             season_type=SeasonType.playoffs
+        ).bball_ref()
+
+        per_game_stats = PlayerStats(
+            logs,
+            drtg_range=[90, 100],
+            data_format=DataFormat.default
         ).bball_ref()
 
         per_poss_stats = PlayerStats(
-            "Kobe Bryant",
-            year_range=[2001, 2003],
+            logs,
             drtg_range=[90, 100],
-            data_format=DataFormat.per_100_poss,
-            season_type=SeasonType.playoffs
+            data_format=DataFormat.per_100_poss
         ).bball_ref()
 
         self.assertEqual(per_game_stats["PTS"].loc[0], 32.3)
-        self.assertEqual(per_poss_stats["PTS"].loc[0], 35.7)
+        self.assertEqual(per_poss_stats["PTS"].loc[0], 39.4)
 
     def test_no_pace_columns_fail(self):
+            
+        logs = PlayerLogs(
+            "Kareem Abdul-Jabbar",
+            year_range=[1972, 1972],
+            season_type=SeasonType.playoffs
+        ).bball_ref()
+        
+        per_game_stats = PlayerStats(
+            logs,
+            drtg_range=[90, 100],
+            data_format=DataFormat.pace_adj
+        ).bball_ref()
 
-        with self.assertRaises(SystemExit) as cm:
-            per_game_stats = PlayerStats(
-                "Kareem Abdul-Jabbar",
-                year_range=[1972, 1972],
-                drtg_range=[90, 100],
-                data_format=DataFormat.pace_adj,
-                season_type=SeasonType.playoffs
-            ).bball_ref()
-
-        self.assertEqual(cm.exception.code, 1)
+        self.assertEqual(len(per_game_stats), 0)
 
     def test_missing_pace_values_fail(self):
-
-        with self.assertRaises(SystemExit) as cm:
-            per_game_stats = PlayerStats(
-                "Kareem Abdul-Jabbar",
-                year_range=[1974, 1974],
-                drtg_range=[95.1, 95.2],
-                data_format=DataFormat.pace_adj,
-                season_type=SeasonType.regular_season
-            ).bball_ref()
-
-        self.assertEqual(cm.exception.code, 1)
+            
+        logs = PlayerLogs(
+            "Kareem Abdul-Jabbar",
+            year_range=[1974, 1974],
+            season_type=SeasonType.regular_season
+        ).bball_ref()
+        
+        per_game_stats = PlayerStats(
+            logs,
+            drtg_range=[95.1, 95.2],
+            data_format=DataFormat.pace_adj
+        ).bball_ref()
+        
+        self.assertEqual(len(per_game_stats), 0)
 
     def test_missing_pace_values_pass(self):
 
-        per_game_stats = PlayerStats(
+        logs = PlayerLogs(
             "Kareem Abdul-Jabbar",
-            year_range=[1974, 1974],
+            year_range=[1974, 1974]
+        ).bball_ref()
+
+        per_game_stats = PlayerStats(
+            logs,
             drtg_range=[93.6, 93.7],
-            data_format=DataFormat.pace_adj,
-            season_type=SeasonType.regular_season
+            data_format=DataFormat.pace_adj
         ).bball_ref()
 
         self.assertEqual(per_game_stats["PTS"].loc[0], 26.6)
