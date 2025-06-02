@@ -16,6 +16,7 @@ class PlayerLogs(Endpoint):
 
     expected_columns = [
         'SEASON',
+        'SEASON_TYPE',
         'DATE',
         'NAME',
         'TEAM',
@@ -147,6 +148,7 @@ class PlayerLogs(Endpoint):
             .query("SEASON >= @self.year_range[0] and SEASON <= @self.year_range[1]")
         result["NAME"] = self.name
         result["HOME"] = result['HOME'].replace(np.nan, "")
+        result["SEASON_TYPE"] = self.season_type
         # Some stats were not tracked in the 1970s, so we add those columns with value np.nan
         result.loc[:, list(set(self.expected_columns) - set(result.columns.values))] = np.nan
 
@@ -207,6 +209,7 @@ class PlayerLogs(Endpoint):
                 'TOV': 'int32', 'STL': 'int32', 'BLK': 'int32', 'PF': 'int32', 'PTS': 'int32',
                 '+/-': 'float32', 'SEASON': 'object'})
 
+        result["SEASON_TYPE"] = self.season_type
         if self.error:
             print(self.error)
         return result[self.expected_columns].reset_index(drop=True)
