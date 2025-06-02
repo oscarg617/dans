@@ -36,20 +36,24 @@ class PlayerStats(Endpoint):
         self,
         player_logs: pd.DataFrame,
         drtg_range: list,
-        data_format=DataFormat.default,
-        season_type=SeasonType.default
+        data_format=DataFormat.default
     ):
         self.player_logs = player_logs
         self.drtg_range = drtg_range
         self.data_format = data_format
-        self.season_type = season_type
         self.year_range = [player_logs["SEASON"].min(), player_logs["SEASON"].max()]
         
-        names = player_logs["NAME"].unique()
+        season_types = player_logs["SEASON_TYPE"].unique().tolist()
+        if len(season_types) > 1:
+            self.season_type = "BOTH"
+        else:
+            self.season_type = season_types[0] if len(season_types) == 1 else None
+        
+        names = player_logs["NAME"].unique().tolist()
         if len(names) > 1:
             print(f"There are {len(names)} players included in the logs. This will lead to " + 
                   "unexpected behavior.")
-            
+
         self.name = names[0] if len(names) == 1 else None
 
     def bball_ref(self):
@@ -132,7 +136,7 @@ class PlayerStats(Endpoint):
             teams_dict: dict,
             add_possessions
     ):
-        possessions = add_possessions(self.name, logs_df, teams_dict, self.season_type)
+        possessions = add_possessions(logs_df)
 
         if not possessions:
             return (None, None, None)
@@ -148,8 +152,7 @@ class PlayerStats(Endpoint):
             teams_dict: dict,
             add_possessions
     ):
-        possessions = add_possessions(self.name, logs_df, \
-                                            teams_dict, self.season_type)
+        possessions = add_possessions(logs_df)
         
         if not possessions:
             return (None, None, None)
@@ -178,7 +181,7 @@ class PlayerStats(Endpoint):
             opp_drtg: int
     ):
         possessions = add_possessions(self.name, logs_df, \
-                                            teams_dict, self.season_type)
+                                            teams_dict)
         
         if not possessions:
             return (None, None, None)
@@ -285,22 +288,22 @@ class PlayerStats(Endpoint):
 
     def _bball_ref_add_possessions(
         self,
-        _name,
-        logs_df: pd.DataFrame,
-        _team_dict: dict,
-        _season_type
+        logs_df: pd.DataFrame
     ):
         total_poss = 0
-        pace_list = pd.DataFrame(logs_df.groupby(['SEASON', 'TEAM']).size().reset_index())
+        pace_list = pd.DataFrame(logs_df.groupby(['SEASON', 'SEASON_TYPE', 'TEAM'])
+                                 .size().reset_index())
+        
         iterator = tqdm(range(len(pace_list)),
                         desc='Loading player possessions...', ncols=75, leave=False)
         
         for i in iterator:
             year = pace_list.loc[i]["SEASON"]
             team = pace_list.loc[i]["TEAM"]
+            season_type = pace_list.loc[i]["SEASON_TYPE"]
             url = f'https://www.basketball-reference.com/teams/{team}/{year}/gamelog-advanced/'
 
-            if self.season_type == SeasonType.regular_season:
+            if season_type == SeasonType.regular_season:
                 attr_id = "team_game_log_adv_reg"
             else:
                 attr_id = "team_game_log_adv_post"
@@ -314,7 +317,7 @@ class PlayerStats(Endpoint):
                     pass
 
                 self.error = "Failed to estimate player possessions. Pace was not tracked " + \
-                         f"during the {year} {self.season_type}"
+                         f"during the {year} {season_type}"
                 return
 
             adv_log_pd = adv_log_pd\
@@ -361,17 +364,19 @@ class PlayerStats(Endpoint):
 
     def _nba_stats_add_possessions(
         self,
-        _name,
-        logs_df: pd.DataFrame,
-        team_dict: dict,
-        season_type
+        logs_df: pd.DataFrame
     ):
 
         total_poss = 0
-        iterator = tqdm([self.year_range[0], self.year_range[1] + 1],
-                        desc="Loading player possessions...", ncols=75, leave=False)
+        pace_list = pd.DataFrame(logs_df.groupby(['SEASON', 'SEASON_TYPE'])
+                                 .size().reset_index())
 
-        for year in iterator:
+        iterator = tqdm(range(len(pace_list)),
+                        desc='Loading player possessions...', ncols=75, leave=False)
+
+        for i in iterator:
+            year = pace_list.loc[i]["SEASON"]
+            season_type = pace_list.loc[i]["SEASON_TYPE"]
             url = 'https://stats.nba.com/stats/playergamelogs'
             adv_log_pd = Request(
                 url=url,
@@ -382,11 +387,12 @@ class PlayerStats(Endpoint):
             if adv_log_pd.empty:
                 return
 
-            adv_log_pd = adv_log_pd.query('PLAYER_NAME == @_name')\
+            adv_log_pd = adv_log_pd.query('PLAYER_NAME == @self.name')\
                 .iloc[:, [i for i in range(len(adv_log_pd.columns)) if i != 11]]\
                 .rename(columns={"GAME_DATE": "DATE"})
 
             adv_log_pd["DATE"] = adv_log_pd["DATE"].str[:10]
+            
             poss_df = pd.merge(logs_df, adv_log_pd, on=["DATE"], how="inner")
             total_poss += poss_df["POSS"].sum()
 
