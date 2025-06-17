@@ -180,8 +180,7 @@ class PlayerStats(Endpoint):
             add_possessions,
             opp_drtg: int
     ):
-        possessions = add_possessions(self.name, logs_df, \
-                                            teams_dict)
+        possessions = add_possessions(logs_df)
         
         if not possessions:
             return (None, None, None)
