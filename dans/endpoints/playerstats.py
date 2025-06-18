@@ -42,6 +42,7 @@ class PlayerStats(Endpoint):
         self.drtg_range = drtg_range
         self.data_format = data_format
         self.year_range = [player_logs["SEASON"].min(), player_logs["SEASON"].max()]
+        self.adj_drtg = False
         
         season_types = player_logs["SEASON_TYPE"].unique().tolist()
         if len(season_types) > 1:
@@ -58,13 +59,16 @@ class PlayerStats(Endpoint):
 
     def bball_ref(self):
         '''Uses bball-ref to calculate player logs and team defensive metrics.'''
+        self.site_csv = "data\\bball-ref-teams.csv"
         teams_df = Teams(self.year_range, self.drtg_range).bball_ref()
         add_possessions = self._bball_ref_add_possessions
         return self._calculate_stats(self.player_logs, teams_df, add_possessions)
 
-    def nba_stats(self):
+    def nba_stats(self, adj_drtg=False):
         '''Uses nba-stats to calculate player logs and team defensive metrics.'''
-        teams_df = Teams(self.year_range, self.drtg_range).nba_stats()
+        self.adj_drtg = adj_drtg
+        self.site_csv = "data\\nba-stats-teams.csv"
+        teams_df = Teams(self.year_range, self.drtg_range).nba_stats(adj_drtg=adj_drtg)
         add_possessions = self._nba_stats_add_possessions
         return self._calculate_stats(self.player_logs, teams_df, add_possessions)
 
@@ -248,8 +252,13 @@ class PlayerStats(Endpoint):
         teams_dict: dict
     ):
         
+        if self.adj_drtg:
+           drtg = "ADJ_DRTG"
+        else:
+           drtg = "DRTG" 
+        
         path = os.path.join(os.path.dirname(os.path.dirname(__file__)),
-                                     'data\\bball-ref-teams.csv')
+                                     self.site_csv)
         
         opp_drtg_sum = 0
         r_drtg_sum = 0
@@ -260,15 +269,15 @@ class PlayerStats(Endpoint):
             teams = pd.read_csv(path).drop(columns="Unnamed: 0")
             teams = teams[teams["SEASON"] == year]
             
-            la_drtg = teams["DRTG"].mean()
+            la_drtg = teams[drtg].mean()
             la_ts = teams["OPP_TS"].mean()
             
             for opp_team in teams_dict[year]:
                 logs_in_year = logs_df[logs_df['SEASON'] == year]
                 logs_vs_team = logs_in_year[logs_in_year['MATCHUP'] == opp_team]
                 opp = teams_df[(teams_df['TEAM'] == opp_team) & (teams_df['SEASON'] == year)]
-                opp_drtg_sum += (float(opp.DRTG.values[0]) * logs_vs_team.shape[0])
-                r_drtg_sum += ((float(opp.DRTG.values[0]) - la_drtg) * logs_vs_team.shape[0])
+                opp_drtg_sum += (float(opp[drtg].values[0]) * logs_vs_team.shape[0])
+                r_drtg_sum += ((float(opp[drtg].values[0]) - la_drtg) * logs_vs_team.shape[0])
                 opp_ts_sum += (float(opp.OPP_TS.values[0]) * logs_vs_team.shape[0])
                 r_ts_sum += ((float(opp.OPP_TS.values[0] - la_ts) * logs_vs_team.shape[0]))
 
