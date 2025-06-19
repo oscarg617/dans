@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd
 from tqdm import tqdm
 
-from dans.endpoints._base import Endpoint
+from dans.endpoints.boxscore._base import Endpoint
 from dans.library.arguments import SeasonType
 from dans.library.request import Request
 

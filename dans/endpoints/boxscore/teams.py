@@ -2,7 +2,7 @@
 import os
 import pandas as pd
 
-from dans.endpoints._base import Endpoint
+from dans.endpoints.boxscore._base import Endpoint
 
 class Teams(Endpoint):
     '''Endpoint for finding teams with defensive strength that falls within a desired range'''

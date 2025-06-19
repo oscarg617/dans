@@ -10,9 +10,9 @@ from bs4 import BeautifulSoup
 from dans.library.arguments import SeasonType, DataFormat
 from dans.library.request import Request
 from dans.library import constants
-from dans.endpoints._base import Endpoint
-from dans.endpoints.playerlogs import PlayerLogs
-from dans.endpoints.teams import Teams
+from dans.endpoints.boxscore._base import Endpoint
+from dans.endpoints.boxscore.playerlogs import PlayerLogs
+from dans.endpoints.boxscore.teams import Teams
 
 class PlayerStats(Endpoint):
     '''Calculates players stats against opponents within a given range of defensive strength'''
