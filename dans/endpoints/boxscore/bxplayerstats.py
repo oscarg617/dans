@@ -9,12 +9,10 @@ from bs4 import BeautifulSoup
 
 from dans.library.arguments import SeasonType, DataFormat
 from dans.library.request import Request
-from dans.library import constants
-from dans.endpoints.boxscore._base import Endpoint
-from dans.endpoints.boxscore.playerlogs import PlayerLogs
-from dans.endpoints.boxscore.teams import Teams
+from dans.endpoints._base import Endpoint
+from dans.endpoints.boxscore.bxteams import BXTeams
 
-class PlayerStats(Endpoint):
+class BXPlayerStats(Endpoint):
     '''Calculates players stats against opponents within a given range of defensive strength'''
 
     expected_columns = [
@@ -60,7 +58,7 @@ class PlayerStats(Endpoint):
     def bball_ref(self):
         '''Uses bball-ref to calculate player logs and team defensive metrics.'''
         self.site_csv = "data\\bball-ref-teams.csv"
-        teams_df = Teams(self.year_range, self.drtg_range).bball_ref()
+        teams_df = BXTeams(self.year_range, self.drtg_range).bball_ref()
         add_possessions = self._bball_ref_add_possessions
         return self._calculate_stats(self.player_logs, teams_df, add_possessions)
 
@@ -68,7 +66,7 @@ class PlayerStats(Endpoint):
         '''Uses nba-stats to calculate player logs and team defensive metrics.'''
         self.adj_drtg = adj_drtg
         self.site_csv = "data\\nba-stats-teams.csv"
-        teams_df = Teams(self.year_range, self.drtg_range).nba_stats(adj_drtg=adj_drtg)
+        teams_df = BXTeams(self.year_range, self.drtg_range).nba_stats(adj_drtg=adj_drtg)
         add_possessions = self._nba_stats_add_possessions
         return self._calculate_stats(self.player_logs, teams_df, add_possessions)
 
@@ -257,7 +255,7 @@ class PlayerStats(Endpoint):
         else:
            drtg = "DRTG" 
         
-        path = os.path.join(os.path.dirname(os.path.dirname(__file__)),
+        path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))),
                                      self.site_csv)
         
         opp_drtg_sum = 0

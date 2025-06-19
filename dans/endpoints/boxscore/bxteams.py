@@ -2,9 +2,9 @@
 import os
 import pandas as pd
 
-from dans.endpoints.boxscore._base import Endpoint
+from dans.endpoints._base import Endpoint
 
-class Teams(Endpoint):
+class BXTeams(Endpoint):
     '''Endpoint for finding teams with defensive strength that falls within a desired range'''
 
     expected_columns = [
@@ -25,15 +25,15 @@ class Teams(Endpoint):
         self.adj_drtg = False
 
     def bball_ref(self):
-        '''Reads bball-ref team data and return teams that falls within self.drtg_range'''
-        self.path = os.path.join(os.path.dirname(os.path.dirname(__file__)),
+        '''Reads bball-ref team `data` and return teams that falls within self.drtg_range'''
+        self.path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))),
                                      'data\\bball-ref-teams.csv')
         return self._read_path()
 
     def nba_stats(self, adj_drtg=False):
         '''Reads nba-stats team data and return teams that falls within self.drtg_range'''
         self.adj_drtg = adj_drtg
-        self.path = os.path.join(os.path.dirname(os.path.dirname(__file__)),
+        self.path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))),
                                      'data\\nba-stats-teams.csv')
         return self._read_path()
 

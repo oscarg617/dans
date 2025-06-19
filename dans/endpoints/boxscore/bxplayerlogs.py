@@ -5,13 +5,13 @@ import numpy as np
 import pandas as pd
 from tqdm import tqdm
 
-from dans.endpoints.boxscore._base import Endpoint
+from dans.endpoints._base import Endpoint
 from dans.library.arguments import SeasonType
 from dans.library.request import Request
 
 pd.set_option('display.max_rows', None)
 
-class PlayerLogs(Endpoint):
+class BXPlayerLogs(Endpoint):
     '''Finds a player's game logs within a given range of years'''
 
     expected_columns = [
@@ -60,7 +60,8 @@ class PlayerLogs(Endpoint):
         self.suffix = self._lookup(name)
 
     def _lookup(self, name):
-        path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'data\\player_names.csv')
+        path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))),
+                            'data\\player_names.csv')
         names_df = pd.read_csv(path)
         
         player = names_df[names_df["NAME"] == name]["SUFFIX"]
