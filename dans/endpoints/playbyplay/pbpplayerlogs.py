@@ -18,6 +18,7 @@ class PBPPlayerLogs(Endpoint):
 
     expected_columns = [
         'SEASON_ID',
+        'SEASON',
         'Player_ID',
         'Game_ID',
         'GAME_DATE',
@@ -63,7 +64,9 @@ class PBPPlayerLogs(Endpoint):
             player_id=self.player_id,
             season=self.year,
             season_type_all_star=season_type
-        ).get_data_frames()[0][self.expected_columns]
+        ).get_data_frames()[0]
+        self.data_frame['SEASON'] = self.data_frame['GAME_DATE'].str[-4:].astype(int)
+        self.data_frame = self.data_frame[self.expected_columns][::-1].reset_index(drop=True)
         
 
     def _lookup(self, name):
