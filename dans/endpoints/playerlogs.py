@@ -60,7 +60,7 @@ class PlayerLogs(Endpoint):
         self.suffix = self._lookup(name)
 
     def _lookup(self, name):
-        path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'data\\player_names.csv')
+        path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'data/player_names.csv')
         names_df = pd.read_csv(path)
         
         player = names_df[names_df["NAME"] == name]["SUFFIX"]
