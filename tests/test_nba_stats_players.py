@@ -2,14 +2,14 @@
 import unittest
 import pandas as pd
 
-from dans.endpoints.playerstats import PlayerStats
-from dans.endpoints.playerlogs import PlayerLogs
+from dans.endpoints.boxscore.bxplayerstats import BXPlayerStats
+from dans.endpoints.boxscore.bxplayerlogs import BXPlayerLogs
 from dans.library.arguments import DataFormat, SeasonType
 
 class TestNBAStats(unittest.TestCase):
     '''Tests for each dans player endpoint: NBA-Stats only'''
     def test_player_game_logs(self):
-        logs = PlayerLogs(
+        logs = BXPlayerLogs(
             "Stephen Curry",
             year_range=[2015, 2017],
             season_type=SeasonType.playoffs
@@ -24,19 +24,19 @@ class TestNBAStats(unittest.TestCase):
 
     def test_player_stats(self):
         
-        logs = PlayerLogs(
+        logs = BXPlayerLogs(
             "Kobe Bryant",
             year_range=[2003, 2003],
             season_type=SeasonType.playoffs
         ).nba_stats()
 
-        per_game_stats = PlayerStats(
+        per_game_stats = BXPlayerStats(
             logs,
             drtg_range=[90, 100],
             data_format=DataFormat.default
         ).nba_stats()
 
-        per_poss_stats = PlayerStats(
+        per_poss_stats = BXPlayerStats(
             logs,
             drtg_range=[90, 100],
             data_format=DataFormat.per_100_poss

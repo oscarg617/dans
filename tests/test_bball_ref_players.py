@@ -2,15 +2,16 @@
 import unittest
 import pandas as pd
 
-from dans.endpoints.playerstats import PlayerStats
-from dans.endpoints.playerlogs import PlayerLogs
+from dans.endpoints.boxscore.bxplayerstats import BXPlayerStats
+from dans.endpoints.boxscore.bxplayerlogs import BXPlayerLogs
 from dans.library.arguments import DataFormat, SeasonType
 
-class TestPlayerStats(unittest.TestCase):
+
+class TestBXPlayerStats(unittest.TestCase):
     '''Tests for each dans player endpoint: BBall-Ref only'''
     def test_player_game_logs(self):
 
-        logs = PlayerLogs(
+        logs = BXPlayerLogs(
             "Stephen Curry",
             year_range=[2015, 2017],
             season_type=SeasonType.playoffs
@@ -25,19 +26,19 @@ class TestPlayerStats(unittest.TestCase):
 
     def test_player_stats(self):
 
-        logs = PlayerLogs(
+        logs = BXPlayerLogs(
             "Kobe Bryant",
             year_range=[2003, 2003],
             season_type=SeasonType.playoffs
         ).bball_ref()
 
-        per_game_stats = PlayerStats(
+        per_game_stats = BXPlayerStats(
             logs,
             drtg_range=[90, 100],
             data_format=DataFormat.default
         ).bball_ref()
 
-        per_poss_stats = PlayerStats(
+        per_poss_stats = BXPlayerStats(
             logs,
             drtg_range=[90, 100],
             data_format=DataFormat.per_100_poss
@@ -48,13 +49,13 @@ class TestPlayerStats(unittest.TestCase):
 
     def test_no_pace_columns_fail(self):
             
-        logs = PlayerLogs(
+        logs = BXPlayerLogs(
             "Kareem Abdul-Jabbar",
             year_range=[1972, 1972],
             season_type=SeasonType.playoffs
         ).bball_ref()
         
-        per_game_stats = PlayerStats(
+        per_game_stats = BXPlayerStats(
             logs,
             drtg_range=[90, 100],
             data_format=DataFormat.pace_adj
@@ -64,13 +65,13 @@ class TestPlayerStats(unittest.TestCase):
 
     def test_missing_pace_values_fail(self):
             
-        logs = PlayerLogs(
+        logs = BXPlayerLogs(
             "Kareem Abdul-Jabbar",
             year_range=[1974, 1974],
             season_type=SeasonType.regular_season
         ).bball_ref()
         
-        per_game_stats = PlayerStats(
+        per_game_stats = BXPlayerStats(
             logs,
             drtg_range=[95.1, 95.2],
             data_format=DataFormat.pace_adj
@@ -80,12 +81,12 @@ class TestPlayerStats(unittest.TestCase):
 
     def test_missing_pace_values_pass(self):
 
-        logs = PlayerLogs(
+        logs = BXPlayerLogs(
             "Kareem Abdul-Jabbar",
             year_range=[1974, 1974]
         ).bball_ref()
 
-        per_game_stats = PlayerStats(
+        per_game_stats = BXPlayerStats(
             logs,
             drtg_range=[93.6, 93.7],
             data_format=DataFormat.pace_adj

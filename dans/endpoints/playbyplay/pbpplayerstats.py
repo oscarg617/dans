@@ -1,12 +1,12 @@
 '''Player Stats Endpoint'''
 import os
-import sys
 import numpy as np
 import pandas as pd
 from tqdm import tqdm
 
 from dans.endpoints._base import Endpoint
 from dans.library.request import Request
+from dans.library.arguments import DataFormat
 
 from nba_api.stats.endpoints.gamerotation import GameRotation
 from nba_api.stats.endpoints.playbyplayv2 import PlayByPlayV2
@@ -16,6 +16,82 @@ pd.set_option('display.max_rows', None)
 
 class PBPPlayerStats(Endpoint):
     
+    expected_log_columns = [
+        'PLAYER_ID',
+        'SEASON',
+        'GAME_ID',
+        'PTS',
+        'FGM',
+        'FGA',
+        'FG3M',
+        'FG3A',
+        'FTM',
+        'FTA',
+        'REB',
+        'AST',
+        'STL',
+        'BLK',
+        'TOV',
+        'STOV',
+        'TEAM_POSS',
+        'PLAYER_POSS',
+        'OPP_TS',
+        'OPP_ADJ_TS',
+        'OPP_TSC',
+        'OPP_STOV',
+        'OPP_DRTG',
+        'OPP_ADJ_DRTG',
+        'LA_PACE'
+    ]
+    
+    expected_agg_columns = [
+        'PLAYER_ID',
+        'PTS',
+        'FGM',
+        'FGA',
+        'FG3M',
+        'FG3A',
+        'FTM',
+        'FTA',
+        'REB',
+        'AST', 
+        'STL',
+        'BLK',
+        'TOV',
+        'STOV',
+        'TEAM_POSS',
+        'PLAYER_POSS',
+        'rTS%',
+        'rTSC%',
+        'rsTOV%',
+        'TS%',
+        'TSC%',
+        'sTOV%',
+        'OPP_TS',
+        'OPP_ADJ_TS',
+        'OPP_TSC',
+        'OPP_STOV',
+        'OPP_DRTG',
+        'OPP_ADJ_DRTG',
+        'LA_PACE'
+    ]
+    
+    scoring_columns = [
+        'PTS',
+        'rTS%',
+        'rTSC%',
+        'rsTOV%',
+        'TS%',
+        'TSC%',
+        'sTOV%',
+        'OPP_TS',
+        'OPP_ADJ_TS',
+        'OPP_TSC',
+        'OPP_STOV',
+        'OPP_DRTG',
+        'OPP_ADJ_DRTG',
+    ]
+
     def __init__(
         self,
         player_logs: pd.DataFrame,
@@ -29,26 +105,137 @@ class PBPPlayerStats(Endpoint):
             os.path.dirname(__file__))), "data\\nba-stats-teams.csv"))
         self.seasons = pd.read_csv(os.path.join(os.path.dirname(os.path.dirname(
             os.path.dirname(__file__))), "data\\season-averages.csv"))
-        
-        print(player_logs)
+
         ids = player_logs["Player_ID"].unique().tolist()
         if len(ids) > 1:
             print(f"Error: There are {len(ids)} players included in the logs. There should " + 
                   "only be 1.")
 
         self.player_id = ids[0] if len(ids) == 1 else None
-        
+
         self._iterate_through_games()
-    
+
+    def aggregate_logs(
+        self,
+        data_format=DataFormat.default,
+        scoring_columns_only=True,
+        adj_drtg=True
+    ):
+        self.adj_drtg = adj_drtg
+        
+        opp_stats = self._opponent_stats_agg()
+        eff_stats = self._efficiency_stats_agg(opp_stats)
+        misc_stats = {
+            "PLAYER_ID": self.player_id,
+            "TEAM_POSS": self.data_frame["TEAM_POSS"].mean(),
+            "PLAYER_POSS": self.data_frame["PLAYER_POSS"].mean()
+        }
+
+        if data_format == DataFormat.default:
+            box_score_stats = self._mean_box_score()
+        elif data_format == DataFormat.per_100_poss:
+            player_poss = self.data_frame["PLAYER_POSS"].sum()
+            box_score_stats = self._per_poss_box_score(player_poss)
+        elif data_format == DataFormat.pace_adj:
+            team_poss = self.data_frame["TEAM_POSS"].sum()
+            box_score_stats = self._per_poss_box_score(team_poss)
+        elif data_format == DataFormat.opp_adj:
+            drtg = "OPP_ADJ_DRTG" if self.adj_drtg else "OPP_DRTG"
+            box_score_stats["PTS"] = box_score_stats["PTS"] * (110 / opp_stats[drtg])
+        elif data_format == DataFormat.opp_pace_adj:
+            team_poss = self.data_frame["TEAM_POSS"].sum()
+            drtg = "OPP_ADJ_DRTG" if self.adj_drtg else "OPP_DRTG"
+            box_score_stats = self._per_poss_box_score(team_poss)
+            box_score_stats["PTS"] =  box_score_stats["PTS"] *\
+                ((100 + ((team_poss / len(self.data_frame)) - (opp_stats["LA_PACE"]))) / 100) * \
+                (110 / opp_stats[drtg])
+        else:
+            box_score_stats = None
+            print(f'Data format not recognized: {data_format}')
+
+        box_score_stats.update(opp_stats)
+        box_score_stats.update(eff_stats)
+        box_score_stats.update(misc_stats)
+
+        stats = pd.DataFrame(box_score_stats, index=[0])
+
+        if scoring_columns_only:
+            return stats[self.scoring_columns]
+        else:
+            return stats[self.expected_agg_columns]
+        
+    def _mean_box_score(self):
+
+        categories = ['PTS', 'FGM', 'FGA', 'FG3M', 'FG3A', 'FTM', 'FTA', 'REB', 'AST', 'STL',
+                      'BLK', 'TOV', 'STOV']
+
+        box_scores = {}
+        for cat in categories:
+            box_scores[cat] = self.data_frame[cat].mean()
+ 
+        return box_scores
+
+    def _per_poss_box_score(
+        self,
+        poss
+    ):
+        
+        categories = ['PTS', 'FGM', 'FGA', 'FG3M', 'FG3A', 'FTM', 'FTA', 'REB', 'AST', 'STL',
+                      'BLK', 'TOV', 'STOV']
+        
+        box_scores = {}
+        for cat in categories:
+            box_scores[cat] = 100 * self.data_frame[cat].sum() / poss
+            
+        return box_scores
+
+    def _opponent_stats_agg(self):
+        player_poss = self.data_frame["PLAYER_POSS"].copy()
+        player_poss_sum = player_poss.sum()
+        
+        opp_categories_pct = ["OPP_TS", "OPP_ADJ_TS", "OPP_TSC", "OPP_STOV"]
+        opp_categories = ["OPP_DRTG", "OPP_ADJ_DRTG", "LA_PACE"]
+        
+        opp_stats = {}
+        for cat in opp_categories_pct:
+            opp_stats[cat] = 100 * (player_poss * self.data_frame[cat]).sum() / player_poss_sum
+        
+        for cat in opp_categories:
+            opp_stats[cat] = (player_poss * self.data_frame[cat]).sum() / player_poss_sum
+
+        return opp_stats
+
+    def _efficiency_stats_agg(
+        self,
+        opp_stats,
+    ):
+        
+        tsa = self.data_frame["FGA"].sum() + 0.44 * self.data_frame["FTA"].sum()
+        ts_pct = 100 *  self.data_frame["PTS"].sum() / (2 * tsa)
+        tsc_pct = 100 * self.data_frame["PTS"].sum() / (2 * (tsa + self.data_frame["STOV"].sum()))
+        stov_pct = 100 * self.data_frame["STOV"].sum() / tsa
+        
+        opp_ts = "OPP_ADJ_TS" if self.adj_drtg else "OPP_TS"
+        
+        return {
+            'rTS%': ts_pct - opp_stats[opp_ts],
+            'rTSC%': tsc_pct - opp_stats["OPP_TSC"],
+            'rsTOV%': stov_pct - opp_stats["OPP_STOV"],
+            'TS%': ts_pct,
+            'TSC%': tsc_pct,
+            'sTOV%': stov_pct
+        }
+
     def _iterate_through_games(self):
     
-        iterator = self.player_logs.iterrows()
+        iterator = tqdm(range(len(self.player_logs)), desc='Loading play-by-plays...', ncols=75)
         pbp_logs = []
-        for _, player_log in tqdm(iterator, desc='Loading game play-by-plays...', ncols=75):
+        for i in iterator:
+            player_log = self.player_logs.iloc[i]
             stats = self._player_game_stats(player_log['Game_ID'], player_log['SEASON'])
             pbp_logs.append(stats)
         
-        self.data_frame = pd.DataFrame(pbp_logs)
+        self.data_frame = pd.DataFrame(pbp_logs)[self.expected_log_columns]
 
     def _player_game_stats(
         self,
@@ -151,9 +338,9 @@ class PBPPlayerStats(Endpoint):
         player_poss = self._estimate_possessions(dflogs, team_id)
         stats["PLAYER_POSS"] = player_poss
 
-        opp = self.teams[(self.teams['SEASON'] == int(season) + 1) &
+        opp = self.teams[(self.teams['SEASON'] == int(season)) &
                          (self.teams['TEAM'] == opp_tricode)].iloc[0]
-        pace = self.seasons[(self.seasons['SEASON'] == int(season) + 1)]["PACE"].iloc[0]
+        pace = self.seasons[(self.seasons['SEASON'] == int(season))]["PACE"].iloc[0]
         stats["OPP_TS"] = opp['OPP_TS']
         stats["OPP_ADJ_TS"] = opp['ADJ_OPP_TS']
         stats["OPP_TSC"] = opp["OPP_TSC"]

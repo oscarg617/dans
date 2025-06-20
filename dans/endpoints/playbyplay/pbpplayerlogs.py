@@ -7,9 +7,7 @@ from tqdm import tqdm
 
 from dans.endpoints._base import Endpoint
 from dans.library.arguments import SeasonType
-
 from nba_api.stats.endpoints.playergamelog import PlayerGameLog
-from nba_api.stats.endpoints.playergamelogs import PlayerGameLogs
 
 pd.set_option('display.max_rows', None)
 
