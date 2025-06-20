@@ -12,9 +12,10 @@ class Request:
 
     def __init__(
         self,
-        url,
+        url=None,
         attr_id=None,
         function=None,
+        args=None,
         year=None,
         season_type=None,
         measure_type=None,
@@ -24,14 +25,15 @@ class Request:
         self.url = url
         self.attr_id = attr_id
         self.headers = None
+        self.args = args
 
         if function is None:
             self.function = requests.get
 
-        if "stats.nba.com" in self.url:
+        if self.url and "stats.nba.com" in self.url:
             self.headers = parameters._standard_header()
 
-        if "team" in self.url:
+        if self.url and "team" in self.url:
             self.params = parameters\
                 ._team_advanced_params(measure_type, per_mode, year, season_type)
         else:
@@ -86,7 +88,7 @@ class Request:
     @sleep_and_retry
     @limits(calls=19, period=60)
     def get_wrapper(self):
-        '''Wrapper used to limit HTTP calls.'''
+        '''Wrapper used to limit HTTP calls from requests.get.'''
 
         if not self.headers:
             self.headers = {}
@@ -97,3 +99,9 @@ class Request:
             print(f"{response.status_code} Error")
             return
         return response
+
+    @sleep_and_retry
+    @limits(calls=19, period=60)
+    def function_call(self):
+        '''Wrapper used to limit HTTP calls.'''
+        return self.function(**self.args)
