@@ -60,7 +60,7 @@ class BXPlayerLogs(Endpoint):
 
     def _lookup(self, name):
         path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))),
-                            'data\\player_names.csv')
+                            'data/player_names.csv')
         names_df = pd.read_csv(path)
 
         player = names_df[names_df["NAME"] == name]["SUFFIX"]

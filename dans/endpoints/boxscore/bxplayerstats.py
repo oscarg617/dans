@@ -58,7 +58,7 @@ class BXPlayerStats(Endpoint):
 
     def bball_ref(self):
         '''Uses bball-ref to calculate player logs and team defensive metrics.'''
-        self.site_csv = "data\\bball-ref-teams.csv"
+        self.site_csv = "data/bball-ref-teams.csv"
         teams_df = BXTeams(self.year_range, self.drtg_range).bball_ref()
         add_possessions = self._bball_ref_add_possessions
         return self._calculate_stats(self.player_logs, teams_df, add_possessions)
@@ -66,7 +66,7 @@ class BXPlayerStats(Endpoint):
     def nba_stats(self, adj_drtg=False):
         '''Uses nba-stats to calculate player logs and team defensive metrics.'''
         self.adj_drtg = adj_drtg
-        self.site_csv = "data\\nba-stats-teams.csv"
+        self.site_csv = "data/nba-stats-teams.csv"
         teams_df = BXTeams(self.year_range, self.drtg_range).nba_stats(adj_drtg=adj_drtg)
         add_possessions = self._nba_stats_add_possessions
         return self._calculate_stats(self.player_logs, teams_df, add_possessions)
