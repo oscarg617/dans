@@ -1,6 +1,5 @@
 '''Player Logs Endpoint'''
 import os
-import sys
 import numpy as np
 import pandas as pd
 from tqdm import tqdm
@@ -63,11 +62,11 @@ class BXPlayerLogs(Endpoint):
         path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))),
                             'data\\player_names.csv')
         names_df = pd.read_csv(path)
-        
+
         player = names_df[names_df["NAME"] == name]["SUFFIX"]
         if len(player) == 0:
             self.error = f"Player not found: `{name}`"
-            return
+            return None
         return player.iloc[0]
 
     def bball_ref(self):
@@ -76,7 +75,7 @@ class BXPlayerLogs(Endpoint):
         if self.year_range[0] < 1971:
             self.error = "This API does not have support for bball-ref before 1970-71."
             return pd.DataFrame()
-    
+
         if not self.suffix:
             return pd.DataFrame()
 
@@ -96,10 +95,10 @@ class BXPlayerLogs(Endpoint):
             data_pd = Request(url=url, attr_id={"id": attr_id}).get_response()
             if data_pd.empty:
                 return pd.DataFrame()
-            
+
             if len(data_pd.columns) < 10:
                 continue
-            
+
             data_pd = data_pd.drop(columns=["Gtm", "GS", "Result"], axis=1)\
                 .replace("", np.nan)
 
@@ -163,7 +162,7 @@ class BXPlayerLogs(Endpoint):
         if self.year_range[0] < 1997:
             self.error = "This API does not have support for nba-stats before 1996-97."
             return pd.DataFrame()
-        
+
         if not self.suffix:
             return pd.DataFrame()
 

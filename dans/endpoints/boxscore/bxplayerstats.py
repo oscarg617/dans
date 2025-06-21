@@ -41,16 +41,17 @@ class BXPlayerStats(Endpoint):
         self.data_format = data_format
         self.year_range = [player_logs["SEASON"].min(), player_logs["SEASON"].max()]
         self.adj_drtg = False
-        
+        self.site_csv = None
+
         season_types = player_logs["SEASON_TYPE"].unique().tolist()
         if len(season_types) > 1:
             self.season_type = "BOTH"
         else:
             self.season_type = season_types[0] if len(season_types) == 1 else None
-        
+
         names = player_logs["NAME"].unique().tolist()
         if len(names) > 1:
-            print(f"There are {len(names)} players included in the logs. This will lead to " + 
+            print(f"There are {len(names)} players included in the logs. This will lead to " +
                   "unexpected behavior.")
 
         self.name = names[0] if len(names) == 1 else None
@@ -76,7 +77,7 @@ class BXPlayerStats(Endpoint):
             teams_df: pd.DataFrame,
             add_possessions
     ):
-        
+
         if len(logs_df) == 0 or len(teams_df) == 0:
             self.error = "No logs found."
             return pd.DataFrame()
@@ -155,7 +156,7 @@ class BXPlayerStats(Endpoint):
             add_possessions
     ):
         possessions = add_possessions(logs_df)
-        
+
         if not possessions:
             return (None, None, None)
 
@@ -183,7 +184,7 @@ class BXPlayerStats(Endpoint):
             opp_drtg: int
     ):
         possessions = add_possessions(logs_df)
-        
+
         if not possessions:
             return (None, None, None)
 
@@ -249,27 +250,27 @@ class BXPlayerStats(Endpoint):
         teams_df: pd.DataFrame,
         teams_dict: dict
     ):
-        
+
         if self.adj_drtg:
-           drtg = "ADJ_DRTG"
+            drtg = "ADJ_DRTG"
         else:
-           drtg = "DRTG" 
-        
+            drtg = "DRTG"
+
         path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))),
                                      self.site_csv)
-        
+
         opp_drtg_sum = 0
         r_drtg_sum = 0
         opp_ts_sum = 0
         r_ts_sum = 0
         for year in teams_dict:
-            
+
             teams = pd.read_csv(path).drop(columns="Unnamed: 0")
             teams = teams[teams["SEASON"] == year]
-            
+
             la_drtg = teams[drtg].mean()
             la_ts = teams["OPP_TS"].mean()
-            
+
             for opp_team in teams_dict[year]:
                 logs_in_year = logs_df[logs_df['SEASON'] == year]
                 logs_vs_team = logs_in_year[logs_in_year['MATCHUP'] == opp_team]
@@ -277,32 +278,31 @@ class BXPlayerStats(Endpoint):
                 opp_drtg_sum += (float(opp[drtg].values[0]) * logs_vs_team.shape[0])
                 r_drtg_sum += ((float(opp[drtg].values[0]) - la_drtg) * logs_vs_team.shape[0])
                 opp_ts_sum += (float(opp.OPP_TS.values[0]) * logs_vs_team.shape[0])
-                r_ts_sum += ((float(opp.OPP_TS.values[0] - la_ts) * logs_vs_team.shape[0]))
+                r_ts_sum += ((float(opp.OPP_TS.values[0] - la_ts) * logs_vs_team.shape[0]))        
 
-        
-        
         opp_drtg = round((opp_drtg_sum / logs_df.shape[0]), 2)
         r_opp_drtg = round((r_drtg_sum / logs_df.shape[0]), 2)
         opp_ts = (opp_ts_sum / logs_df.shape[0]) * 100
         r_opp_ts = (r_ts_sum / logs_df.shape[0]) * 100
-        
+
         player_true_shooting = self._true_shooting_percentage(
             logs_df.PTS.sum(), logs_df.FGA.sum(), logs_df.FTA.sum()) * 100
         relative_true_shooting = round(player_true_shooting - opp_ts, 2)
-        return (opp_drtg, r_opp_drtg, round(opp_ts, 2), round(r_opp_ts, 2), 
+        return (opp_drtg, r_opp_drtg, round(opp_ts, 2), round(r_opp_ts, 2),
                 round(player_true_shooting, 2), relative_true_shooting)
 
     def _bball_ref_add_possessions(
         self,
         logs_df: pd.DataFrame
     ):
+    
         total_poss = 0
         pace_list = pd.DataFrame(logs_df.groupby(['SEASON', 'SEASON_TYPE', 'TEAM'])
                                  .size().reset_index())
-        
+
         iterator = tqdm(range(len(pace_list)),
                         desc='Loading player possessions...', ncols=75, leave=False)
-        
+
         for i in iterator:
             year = pace_list.loc[i]["SEASON"]
             team = pace_list.loc[i]["TEAM"]
@@ -316,15 +316,15 @@ class BXPlayerStats(Endpoint):
 
             adv_log_pd = Request(url=url, attr_id={"id": attr_id}).get_response()
             if adv_log_pd.empty:
-                return
-            
+                return None
+
             if 'Pace' not in adv_log_pd.columns:
                 for _ in iterator:
                     pass
 
                 self.error = "Failed to estimate player possessions. Pace was not tracked " + \
                          f"during the {year} {season_type}"
-                return
+                return None
 
             adv_log_pd = adv_log_pd\
                 .iloc[:, [i for i in range(len(adv_log_pd.columns)) if i != 6]]\
@@ -332,7 +332,7 @@ class BXPlayerStats(Endpoint):
                     "Date": "DATE",
                     "Opp": "MATCHUP"
                 })
-            
+
             poss_df = pd.merge(logs_df, adv_log_pd, on=["DATE", "MATCHUP"], how="inner")
 
             if (poss_df["Pace"] == "").any():
@@ -342,8 +342,8 @@ class BXPlayerStats(Endpoint):
 
                 self.error = 'Failed to estimate player possessions. At least one of the ' + \
                          'games does not track pace.'
-                return
-                
+                return None
+
             poss_df["POSS"] = ( poss_df["MIN"].astype(float) / 48 ) * \
                 poss_df["Pace"].astype(float)
             total_poss += poss_df["POSS"].sum()
@@ -357,7 +357,7 @@ class BXPlayerStats(Endpoint):
                 f"{date.year}&month={date.month}&day={date.day}"
         response = Request(function=requests.get, url=url).get_wrapper()
         if not response or response.status_code != 200:
-            return
+            return None
 
         suffix = None
         soup = BeautifulSoup(response.content, 'html.parser')
@@ -391,14 +391,14 @@ class BXPlayerStats(Endpoint):
                 measure_type="Advanced"
             ).get_response()
             if adv_log_pd.empty:
-                return
+                return None
 
             adv_log_pd = adv_log_pd.query('PLAYER_NAME == @self.name')\
                 .iloc[:, [i for i in range(len(adv_log_pd.columns)) if i != 11]]\
                 .rename(columns={"GAME_DATE": "DATE"})
 
             adv_log_pd["DATE"] = adv_log_pd["DATE"].str[:10]
-            
+
             poss_df = pd.merge(logs_df, adv_log_pd, on=["DATE"], how="inner")
             total_poss += poss_df["POSS"].sum()
 
