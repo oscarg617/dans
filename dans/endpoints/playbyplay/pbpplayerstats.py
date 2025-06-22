@@ -4,6 +4,7 @@ import pandas as pd
 from tqdm import tqdm
 
 from dans.endpoints._base import Endpoint
+from dans.library.cache import Cache
 from dans.library.arguments import DataFormat
 from dans.library.pbpprocessing import PBPProcessor
 from dans.library.pbpcounter import PBPCounter
@@ -150,15 +151,36 @@ class PBPPlayerStats(Endpoint):
             return stats[self.expected_agg_columns]
 
     def _iterate_through_games(self):
-    
-        iterator = tqdm(range(len(self.player_logs)), desc='Loading play-by-plays...', ncols=75)
-        pbp_logs = []
-        for i in iterator:
-            player_log = self.player_logs.iloc[i]
-            stats = self._player_game_stats(player_log['Game_ID'], player_log['SEASON'])
-            pbp_logs.append(stats)
-        
-        self.data_frame = pd.DataFrame(pbp_logs)[self.expected_log_columns]
+
+        games_ids = self.player_logs["Game_ID"].to_list()
+        seasons = self.player_logs["SEASON"].to_list()
+
+        # Check cache first
+        cache = Cache()
+        cached_logs = cache.lookup_logs(self.player_id, games_ids)
+        cached_game_ids = cached_logs["GAME_ID"].to_list() if not cached_logs.empty else []
+
+        remaining_games = [game for game in zip(games_ids, seasons) if game[0] not in cached_game_ids]
+
+        new_logs_df = pd.DataFrame()
+
+        if remaining_games:
+            new_logs = []
+            iterator = tqdm(range(len(remaining_games)), desc='Loading play-by-plays...', ncols=75)
+            for i in iterator:
+                stats = self._player_game_stats(remaining_games[i][0], remaining_games[i][1])
+                new_logs.append(stats)
+
+            # Convert new_logs to DataFrame only if not empty
+            if new_logs:
+                new_logs_df = pd.DataFrame(new_logs)[self.expected_log_columns].sort_values(by='GAME_ID')
+
+        # Combine DataFrames, filtering out empty ones
+        dfs_to_combine = [df for df in [new_logs_df, cached_logs] if not df.empty]
+        self.data_frame = pd.concat(dfs_to_combine, ignore_index=True) if dfs_to_combine else pd.DataFrame()
+
+        # Insert logs to cache
+        cache.insert_logs(self.data_frame)
 
     def _player_game_stats(self, game_id: str, season: int) -> dict:
 
