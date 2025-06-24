@@ -4,7 +4,7 @@ Play-by-play processing
 import pandas as pd
 import numpy as np
 
-from dans.library.nbaapiclient import NBAApiClient
+from dans.library.nba_api_client import NBAApiClient
 
 class PBPProcessor:
     """Processes data for play-by-play data"""

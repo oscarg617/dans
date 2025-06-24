@@ -1,5 +1,5 @@
 '''Constants.'''
-from dans.library.arguments import Site
+from dans.library.parameters import Site
 
 def teams() -> dict:
     '''Offset for each team in determining team id for nba-stats'''
@@ -12,10 +12,6 @@ def teams() -> dict:
 
 def team_to_team_abbr(site=Site.default) -> dict:
     '''Dictionary for mapping teams to tricodes'''
-    if site == Site.basketball_reference:
-        phoenix_suns = "PHO"
-    else:
-        phoenix_suns = "PHX"
 
     return {
         'ATLANTA HAWKS': 'ATL',
@@ -58,7 +54,7 @@ def team_to_team_abbr(site=Site.default) -> dict:
         'SEATTLE SUPERSONICS' : 'SEA',
         'ORLANDO MAGIC' : 'ORL',
         'PHILADELPHIA 76ERS' : 'PHI',
-        'PHOENIX SUNS' : phoenix_suns,
+        'PHOENIX SUNS' : 'PHO' if site == Site.basketball_reference else 'PHX',
         'PORTLAND TRAIL BLAZERS' : 'POR',
         'SACRAMENTO KINGS' : 'SAC',
         'SAN ANTONIO SPURS' : 'SAS',

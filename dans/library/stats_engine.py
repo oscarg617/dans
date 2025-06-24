@@ -4,11 +4,23 @@ Stat processing classes
 from abc import ABC, abstractmethod
 import pandas as pd
 
-from dans.library.arguments import DataFormat
+from dans.library.parameters import DataFormat
 
-class AggregatorSelector:
-    
-    def select(self, data_format=DataFormat.default):
+class StatsEngine:
+
+    def calculate_all_stats(self, stats: pd.DataFrame, data_format=DataFormat.default, adj_def: bool = True):
+        format = self._select(data_format)
+        
+        if not format:
+            return pd.DataFrame(), pd.DataFrame(), pd.DataFrame()
+        
+        box_score_stats = format.aggregate(stats)
+        opp_stats = OppAggregator().aggregate(stats)
+        eff_stats = EfficiencyCalculator().calculate_effiency(stats, adj_def)
+        
+        return box_score_stats, opp_stats, eff_stats
+
+    def _select(self, data_format=DataFormat.default):
         formatters = {
             DataFormat.default: PerGameAggregator(),
             DataFormat.per_100_poss: Per100PossAggregator(),
