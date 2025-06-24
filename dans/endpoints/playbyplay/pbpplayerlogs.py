@@ -3,7 +3,7 @@ import os
 import pandas as pd
 
 from dans.endpoints._base import Endpoint
-from dans.library.arguments import SeasonType
+from dans.library.parameters import SeasonType
 from nba_api.stats.endpoints.playergamelog import PlayerGameLog
 
 pd.set_option('display.max_rows', None)

@@ -5,8 +5,8 @@ import pandas as pd
 from tqdm import tqdm
 
 from dans.endpoints._base import Endpoint
-from dans.library.arguments import SeasonType
-from dans.library.request import Request
+from dans.library.parameters import SeasonType
+from dans.library.request.request import Request
 
 pd.set_option('display.max_rows', None)
 

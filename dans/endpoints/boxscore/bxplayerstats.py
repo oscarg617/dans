@@ -7,8 +7,8 @@ from tqdm import tqdm
 from typing import Optional
 from bs4 import BeautifulSoup
 
-from dans.library.arguments import SeasonType, DataFormat
-from dans.library.request import Request
+from dans.library.parameters import SeasonType, DataFormat
+from dans.library.request.request import Request
 from dans.endpoints._base import Endpoint
 from dans.endpoints.boxscore.bxteams import BXTeams
 

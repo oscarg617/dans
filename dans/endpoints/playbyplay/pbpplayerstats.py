@@ -5,10 +5,10 @@ from tqdm import tqdm
 
 from dans.endpoints._base import Endpoint
 from dans.library.cache import Cache
-from dans.library.arguments import DataFormat
-from dans.library.pbpprocessing import PBPProcessor
-from dans.library.pbpcounter import PBPCounter
-from dans.library.stataggregation import AggregatorSelector, OppAggregator, EfficiencyCalculator
+from dans.library.parameters import DataFormat
+from dans.library.playbyplay_processor import PBPProcessor
+from dans.library.playbyplay_counter import PBPCounter
+from dans.library.stats_engine import StatsEngine
 
 pd.set_option('display.max_rows', None)
 
@@ -115,14 +115,15 @@ class PBPPlayerStats(Endpoint):
 
     def aggregate_logs(self, data_format=DataFormat.default, scoring_columns_only=True, adj_def=True):
 
-        aggregator = AggregatorSelector().select(data_format)
-
-        if not aggregator:
+        box_score_stats, opp_stats, eff_stats = StatsEngine().calculate_all_stats(
+            stats=self.data_frame,
+            data_format=data_format,
+            adj_def=adj_def
+        )
+        
+        if not box_score_stats:
             return pd.DataFrame()
 
-        box_score_stats = aggregator.aggregate(self.data_frame)
-        opp_stats = OppAggregator().aggregate(self.data_frame)
-        eff_stats = EfficiencyCalculator().calculate_effiency(self.data_frame, adj_def)
         misc_stats = {
             "PLAYER_ID": self.player_id,
             "TEAM_POSS": self.data_frame["TEAM_POSS"].mean(),
