@@ -4,7 +4,7 @@ import pandas as pd
 
 from dans.endpoints.boxscore.bxplayerstats import BXPlayerStats
 from dans.endpoints.boxscore.bxplayerlogs import BXPlayerLogs
-from dans.library.arguments import DataFormat, SeasonType
+from dans.library.parameters import DataFormat, SeasonType
 
 
 class TestBXPlayerStats(unittest.TestCase):
