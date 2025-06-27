@@ -35,16 +35,17 @@ class BBallRefPossCount(PossCount):
                 attr_id = "team_game_log_adv_post"
 
             adv_log_pd = Request(url=url, attr_id={"id": attr_id}).get_response()
+
             if adv_log_pd.empty:
-                return None
+                return pd.DataFrame()
 
             if 'Pace' not in adv_log_pd.columns:
                 for _ in iterator:
                     pass
 
-                self.error = "Failed to estimate player possessions. Pace was not tracked " + \
-                         f"during the {year} {season_type}"
-                return None
+                print("Failed to estimate player possessions. Pace was not tracked " + \
+                         f"during the {year} {season_type}")
+                return pd.DataFrame()
 
             adv_log_pd = adv_log_pd\
                 .iloc[:, [i for i in range(len(adv_log_pd.columns)) if i != 6]]\
@@ -60,15 +61,17 @@ class BBallRefPossCount(PossCount):
                 for _ in iterator:
                     pass
 
-                self.error = 'Failed to estimate player possessions. At least one of the ' + \
-                         'games does not track pace.'
-                return None
+                print('Failed to estimate player possessions. At least one of the ' + \
+                         'games does not track pace.')
+                return pd.DataFrame()
 
             poss_df["POSS"] = ( poss_df["MIN"].astype(float) / 48 ) * \
                 poss_df["Pace"].astype(float)
             
             poss_list.append(poss_df)
 
+        print(poss_list)
+        print("GHELLEOE")
         return pd.concat(poss_list)
 
 class NBAStatsPossCount(PossCount):

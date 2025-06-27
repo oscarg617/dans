@@ -52,14 +52,14 @@ class PerGameAggregator(StatAggregator):
     """Per-Game stat aggregation"""
     
     def aggregate(self, logs: pd.DataFrame) -> dict[str, float]:
-        return {cat: logs[cat].mean() for cat in self.box_categories}
+        return {cat: logs[cat].mean() for cat in self.box_categories if cat in logs.columns}
 
 class Per100PossAggregator(StatAggregator):
     """Per-100 possessions stat aggregation"""
     
     def aggregate(self, logs: pd.DataFrame) -> dict[str, float]:
         player_poss = logs["PLAYER_POSS"].sum()
-        return {cat: 100 * logs[cat].sum() / player_poss for cat in self.box_categories}
+        return {cat: 100 * logs[cat].sum() / player_poss for cat in self.box_categories if cat in logs.columns}
 
 class PaceAdjAggregator(StatAggregator):
     """Pace-adjusted stat aggregation"""
@@ -67,7 +67,7 @@ class PaceAdjAggregator(StatAggregator):
     def aggregate(self, logs: pd.DataFrame) -> dict[str, float]:
         if "TEAM_POSS" in logs.columns:
             team_poss = logs["TEAM_POSS"].sum()
-            return {cat: 100 * logs[cat].sum() / team_poss for cat in self.box_categories}
+            return {cat: 100 * logs[cat].sum() / team_poss for cat in self.box_categories if cat in logs.columns}
         else:
             player_poss = logs["PLAYER_POSS"].sum()
             min_ratio = logs['MIN'].mean() / 48
@@ -81,8 +81,12 @@ class OppAggregator(StatAggregator):
         result = {}
         player_poss_col = logs["PLAYER_POSS"].copy()
         player_poss = player_poss_col.sum()
-        result.update({cat: 100 * (player_poss_col * logs[cat]).sum() / player_poss for cat in self.eff_categories if cat in logs.columns})
-        result.update({cat: (player_poss_col * logs[cat]).sum() / player_poss for cat in self.def_categories if cat in logs.columns})
+        if player_poss:
+            result.update({cat: 100 * (player_poss_col * logs[cat]).sum() / player_poss for cat in self.eff_categories if cat in logs.columns})
+            result.update({cat: (player_poss_col * logs[cat]).sum() / player_poss for cat in self.def_categories if cat in logs.columns})
+        else:
+            result.update({cat: 100 * logs[cat].mean() for cat in self.eff_categories if cat in logs.columns})
+            result.update({cat: logs[cat].mean() for cat in self.def_categories if cat in logs.columns})
         return result
 
 class EfficiencyCalculator:
@@ -101,10 +105,15 @@ class EfficiencyCalculator:
         opp_ts_col = "OPP_ADJ_TS" if adj_def else "OPP_TS"
         player_poss_col = logs["PLAYER_POSS"].copy()
         player_poss = player_poss_col.sum()
-
-        opp_ts = 100 * (player_poss_col * logs[opp_ts_col]).sum() / player_poss
-        opp_tsc = 100 * (player_poss_col * logs["OPP_TSC"]).sum() / player_poss if "OPP_TSC" in logs.columns else 0
-        opp_stov = 100 * (player_poss_col * logs["OPP_STOV"]).sum() / player_poss if "OPP_STOV" in logs.columns else 0
+        
+        if player_poss:
+            opp_ts = 100 * (player_poss_col * logs[opp_ts_col]).sum() / player_poss
+            opp_tsc = 100 * (player_poss_col * logs["OPP_TSC"]).sum() / player_poss if "OPP_TSC" in logs.columns else 0
+            opp_stov = 100 * (player_poss_col * logs["OPP_STOV"]).sum() / player_poss if "OPP_STOV" in logs.columns else 0
+        else:
+            opp_ts = 100 * logs[opp_ts_col].mean()
+            opp_tsc = 100 * logs["OPP_TSC"].mean() if "OPP_TSC" in logs.columns else 0
+            opp_stov = 100 * logs["OPP_STOV"].mean() if "OPP_STOV" in logs.columns else 0
 
         return {
             'rTS%': ts_pct - opp_ts,
