@@ -107,8 +107,10 @@ class BXPlayerStats(StatsEndpoint):
         logs = logs[(logs[drtg] >= self.drtg_range[0]) & (logs[drtg] < self.drtg_range[1])]
 
         logs["PLAYER_POSS"] = 0
-        if self.data_format == DataFormat.pace_adj or self.data_format == DataFormat.opp_pace_adj:
+        if self.data_format == DataFormat.pace_adj or self.data_format == DataFormat.opp_pace_adj or self.data_format == DataFormat.per_100_poss:
             poss = poss_count.count(logs)
+            if poss.empty:
+                return pd.DataFrame()
             logs["PLAYER_POSS"] = pd.merge(logs, poss, on=["GAME_DATE"])["POSS"]
 
         self.processed_logs = logs.copy()
@@ -134,7 +136,9 @@ class BXPlayerStats(StatsEndpoint):
         misc_stats.update(opp_stats)
         misc_stats.update(eff_stats)
         
-        log_columns = set(logs.columns)
-        expected_columns = [col for col in self.expected_stat_columns if col in log_columns]
+        stats = pd.DataFrame(misc_stats, index=[0])
         
-        return pd.DataFrame(misc_stats, index=[0])[expected_columns]
+        stat_columns = set(stats.columns)
+        expected_columns = [col for col in self.expected_stat_columns if col in stat_columns]
+        
+        return stats[expected_columns]
