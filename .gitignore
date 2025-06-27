@@ -164,3 +164,4 @@ todo.txt
 *.toml
 setup.py
 data_scraping
+my-scripts
