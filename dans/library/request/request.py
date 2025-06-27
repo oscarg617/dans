@@ -56,7 +56,7 @@ class Request:
                 url=self.url,
                 headers=headers,
                 params=params,
-                timeout=10
+                timeout=60
             )
             
             # Pass attr_id for Basketball Reference
