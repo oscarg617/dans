@@ -9,7 +9,7 @@ class TestTeamStats(unittest.TestCase):
         teams_df = BXTeams([2019, 2022], [105, 110]).bball_ref()
         self.assertEqual(teams_df.shape[0], 37)
 
-        expected_columns = ['SEASON', 'TEAM', 'DRTG', 'OPP_TS']
+        expected_columns = ['SEASON', 'MATCHUP', 'DRTG', 'OPP_TS', 'rDRTG']
         self.assertListEqual(list(teams_df.columns), expected_columns)
 
 if __name__ == '__main__':

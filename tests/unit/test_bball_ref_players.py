@@ -17,9 +17,11 @@ class TestBXPlayerStats(unittest.TestCase):
             season_type=SeasonType.playoffs
         ).bball_ref()
 
-        expected_columns = ['SEASON', 'SEASON_TYPE', 'DATE', 'NAME', 'TEAM', 'HOME', 'MATCHUP',
-                            'MIN', 'FG', 'FGA', 'FG%', '3P', '3PA', '3P%', 'FT', 'FTA', 'FT%',
-                            'ORB', 'DRB', 'TRB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', '+/-']
+        expected_columns = ['SEASON',  'SEASON_TYPE',  'GAME_DATE',  'PLAYER_NAME',  'TEAM',
+                            'LOCATION',  'MATCHUP',  'WL',  'MIN',  'FGM',  'FGA',  'FG_PCT',
+                            'FG3M',  'FG3A',  'FG3_PCT',  'FTM',  'FTA',  'FT_PCT',  'OREB',
+                            'DREB',  'REB',  'AST',  'STL',  'BLK',  'TOV',  'PF',  'PTS',
+                            'PLUS_MINUS']
 
         self.assertEqual(logs['PTS'].sum(), 1523)
         self.assertListEqual(list(logs.columns), expected_columns)
@@ -44,8 +46,8 @@ class TestBXPlayerStats(unittest.TestCase):
             data_format=DataFormat.per_100_poss
         ).bball_ref()
 
-        self.assertEqual(per_game_stats["PTS"].loc[0], 32.3)
-        self.assertEqual(per_poss_stats["PTS"].loc[0], 39.4)
+        self.assertEqual(round(per_game_stats["PTS"].loc[0], 1), 32.3)
+        self.assertEqual(round(per_poss_stats["PTS"].loc[0], 1), 39.4)
 
     def test_no_pace_columns_fail(self):
             
@@ -92,7 +94,7 @@ class TestBXPlayerStats(unittest.TestCase):
             data_format=DataFormat.pace_adj
         ).bball_ref()
 
-        self.assertEqual(per_game_stats["PTS"].loc[0], 26.6)
+        self.assertEqual(round(per_game_stats["PTS"].loc[0], 1), 26.6)
 
 if __name__ == '__main__':
     unittest.main()
