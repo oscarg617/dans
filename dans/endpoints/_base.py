@@ -1,20 +1,26 @@
 '''Base endpoint class'''
-class Endpoint:
-    '''Stores and returns Dataframe or Dictionary'''
-    data_frame = None
-    data = None
+from abc import ABC, abstractmethod
 
-    def get_data_frame(self):
-        '''Returns data stored in a Pandas Dataframe'''
-        return self.data_frame
+class LogsEndpoint(ABC):
 
-    def get_dict(self):
-        '''Returns data stored in a Dictionary'''
-        return self.data
+    @abstractmethod
+    def nba_stats(self):
+        pass
 
-    def _format_year(self, year):
-        start_year = year - 1
-        end_year_format = year % 100
-        if end_year_format >= 10:
-            return f'{start_year}-{end_year_format}'
-        return f'{start_year}-0{end_year_format}'
+    @abstractmethod
+    def bball_ref(self):
+        pass
+
+class StatsEndpoint(ABC):
+
+    @abstractmethod
+    def nba_stats(self):
+        pass
+
+    @abstractmethod
+    def bball_ref(self):
+        pass
+
+    @abstractmethod
+    def get_processed_logs(self):
+        pass

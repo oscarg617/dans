@@ -16,6 +16,7 @@ class NBAStatsSource(DataSource):
     
     def get_params(self, year=None, season_type=None, measure_type=None, 
                    per_mode=None, url=None, **kwargs) -> dict:
+        
         if url and "team" in url:
             return request_params._team_advanced_params(
                 measure_type, per_mode, year, season_type

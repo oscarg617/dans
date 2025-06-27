@@ -4,48 +4,45 @@ import numpy as np
 import pandas as pd
 from tqdm import tqdm
 
-from dans.endpoints._base import Endpoint
+from dans.endpoints._base import LogsEndpoint
 from dans.library.parameters import SeasonType
 from dans.library.request.request import Request
 
-pd.set_option('display.max_rows', None)
-
-class BXPlayerLogs(Endpoint):
+class BXPlayerLogs(LogsEndpoint):
     '''Finds a player's game logs within a given range of years'''
 
     expected_columns = [
         'SEASON',
         'SEASON_TYPE',
-        'DATE',
-        'NAME',
+        'GAME_DATE',
+        'PLAYER_NAME',
         'TEAM',
-        'HOME',
+        'LOCATION',
         'MATCHUP',
+        'WL',
         'MIN',
-        'FG',
+        'FGM',
         'FGA',
-        'FG%',
-        '3P',
-        '3PA',
-        '3P%',
-        'FT',
+        'FG_PCT',
+        'FG3M',
+        'FG3A',
+        'FG3_PCT',
+        'FTM',
         'FTA',
-        'FT%',
-        'ORB',
-        'DRB',
-        'TRB',
+        'FT_PCT',
+        'OREB',
+        'DREB',
+        'REB',
         'AST',
         'STL',
         'BLK',
         'TOV',
         'PF',
         'PTS',
-        '+/-'
+        'PLUS_MINUS'
     ]
-
+    
     error = None
-    data = None
-    data_frame = None
 
     def __init__(
         self,
@@ -99,7 +96,7 @@ class BXPlayerLogs(Endpoint):
             if len(data_pd.columns) < 10:
                 continue
 
-            data_pd = data_pd.drop(columns=["Gtm", "GS", "Result"], axis=1)\
+            data_pd = data_pd.drop(columns=["Gtm", "GS"], axis=1)\
                 .replace("", np.nan)
 
             data_pd = data_pd[~(
@@ -107,32 +104,45 @@ class BXPlayerLogs(Endpoint):
                 (data_pd["Gcar"].astype(str).str.contains("none"))
                 )]\
                 .rename(columns={
-                    data_pd.columns[1]: "DATE",
+                    data_pd.columns[1]: "GAME_DATE",
+                    'Result': 'WL',
                     "Team": "TEAM",
                     "Opp": "MATCHUP",
                     "MP": "MIN",
-                    "": "HOME"})\
+                    "": "LOCATION",
+                    "FG": "FGM",
+                    "FG%": "FG_PCT",
+                    "3P": "FG3M",
+                    "3PA": "FG3A",
+                    "3P%": "FG3_PCT",
+                    "FT": "FTM",
+                    "FT%": "FT_PCT",
+                    "ORB": "OREB",
+                    "DRB": "DREB",
+                    "TRB": "REB",
+                    "+/-": "PLUS_MINUS"
+                })\
                 .dropna(subset=["AST"])\
                 .drop(columns=["Gcar"])
 
-            # Calculate Season from Date column instead of using `curr_year` because playoff
+            # Calculate Season from Game Date column instead of using `curr_year` because playoff
             # game logs shows for all years
             if self.season_type == SeasonType.regular_season:
                 data_pd["SEASON"] = curr_year
             else:
-                data_pd["SEASON"] = data_pd["DATE"].str[0:4].astype(int)
+                data_pd["SEASON"] = data_pd["GAME_DATE"].str[0:4].astype(int)
             data_pd["MIN"] = data_pd["MIN"].str.extract(r'([1-9]*[0-9]):').astype("int32") + \
                             data_pd["MIN"].str.extract(r':([0-5][0-9])').astype("int32") / 60
 
             convert_dict = {
-                'SEASON': 'int32', 'DATE': 'string', 'TEAM': 'string', 'MATCHUP': 'string',
-                'MIN': 'float64','FG': 'int32', 'FGA': 'int32', 'FG%': 'float64', '3P': 'float32',
-                '3PA': 'float32', '3P%': 'float64', 'FT': 'int32', 'FTA': 'int32',
-                'FT%': 'float32', 'ORB': 'float32', 'DRB': 'float32', 'TRB': 'int32',
+                'SEASON': 'int32', 'GAME_DATE': 'string', 'TEAM': 'string', 'MATCHUP': 'string',
+                'MIN': 'float64','FGM': 'int32', 'FGA': 'int32', 'FG_PCT': 'float64', 'FG3M': 'float32',
+                'FG3A': 'float32', 'FG3_PCT': 'float64', 'FTM': 'int32', 'FTA': 'int32',
+                'FT_PCT': 'float32', 'OREB': 'float32', 'DREB': 'float32', 'REB': 'int32',
                 'AST' : 'int32', 'STL': 'float32', 'BLK': 'float32', 'TOV' : 'float32',
-                'PF': 'int32', 'PTS': 'int32', 'GmSc': 'float64', '+/-' : 'float32',
+                'PF': 'int32', 'PTS': 'int32', 'GmSc': 'float64', 'PLUS_MINUS' : 'float32',
                 '2P': 'float32', "2PA": 'float32', '2P%': 'float64', 'eFG%': "float64",
-                'HOME': 'string'
+                'LOCATION': 'string', 'WL': 'string'
             }
             data_pd = data_pd.astype({key: convert_dict[key] for key in data_pd.columns.values})
 
@@ -146,9 +156,10 @@ class BXPlayerLogs(Endpoint):
 
         result = pd.concat(dfs)\
             .query("SEASON >= @self.year_range[0] and SEASON <= @self.year_range[1]")
-        result["NAME"] = self.name
-        result["HOME"] = result['HOME'].replace(np.nan, "")
+        result["PLAYER_NAME"] = self.name
+        result["LOCATION"] = result['LOCATION'].replace(np.nan, "vs")
         result["SEASON_TYPE"] = self.season_type
+        result['WL'] = result['WL'].str[0]
         # Some stats were not tracked in the 1970s, so we add those columns with value np.nan
         result.loc[:, list(set(self.expected_columns) - set(result.columns.values))] = np.nan
 
@@ -171,7 +182,6 @@ class BXPlayerLogs(Endpoint):
 
         dfs = []
         for curr_year in iterator:
-            curr_year = self._format_year(curr_year)
             url = 'https://stats.nba.com/stats/playergamelogs'
             year_df = Request(
                 url=url,
@@ -179,23 +189,21 @@ class BXPlayerLogs(Endpoint):
                 season_type=self.season_type,
                 per_mode="PerGame"
             ).get_response()
+            
             if year_df.empty:
                 return pd.DataFrame()
 
             year_df = year_df.query('PLAYER_NAME == @self.name')\
-                [['SEASON_YEAR', 'GAME_DATE', 'PLAYER_NAME', 'TEAM_ABBREVIATION', 'MATCHUP', 'MIN',
-                'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT','FTM', 'FTA', 'FT_PCT', 'OREB',
-                'DREB', 'REB', 'AST', 'TOV', 'STL', 'BLK', 'PF', 'PTS', 'PLUS_MINUS']]\
+                [['SEASON_YEAR', 'GAME_DATE', 'PLAYER_NAME', 'TEAM_ABBREVIATION', 'MATCHUP', 'WL',
+                'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT','FTM', 'FTA', 'FT_PCT',
+                'OREB', 'DREB', 'REB', 'AST', 'TOV', 'STL', 'BLK', 'PF', 'PTS', 'PLUS_MINUS']]\
                 .rename(columns={
-                    'SEASON_YEAR': 'SEASON', 'PLAYER_NAME': 'NAME', 'TEAM_ABBREVIATION': 'TEAM',
-                    'PLUS_MINUS': '+/-', 'FG_PCT': 'FG%', 'FG3M': '3P', 'FG3A': '3PA',
-                    'FG3_PCT': '3P%', 'FT_PCT': 'FT%', 'REB': 'TRB', 'GAME_DATE': 'DATE',
-                    'FGM': 'FG', 'FTM': 'FT', 'OREB': 'ORB', 'DREB': 'DRB'})[::-1]
-            year_df['DATE'] = year_df['DATE'].str[:10]
-            year_df['HOME'] = ''
-            year_df.loc[(year_df['MATCHUP'].str.contains('@')), 'HOME'] = '@'
+                    'SEASON_YEAR': 'SEASON', 'TEAM_ABBREVIATION': 'TEAM'})[::-1]
+            year_df['GAME_DATE'] = year_df['GAME_DATE'].str[:10]
+            year_df['LOCATION'] = ''
+            year_df.loc[(year_df['MATCHUP'].str.contains('@')), 'LOCATION'] = '@'
             year_df['MATCHUP'] = year_df['MATCHUP'].str[-3:]
-            year_df['SEASON'] = int(curr_year[:4]) + 1
+            year_df['SEASON'] = curr_year
 
             dfs.append(year_df)
 
@@ -204,10 +212,10 @@ class BXPlayerLogs(Endpoint):
 
         result = pd.concat(dfs)\
             .astype({
-                'FG': 'int32', 'FGA': 'int32', '3P': 'int32', '3PA': 'int32', 'FTA': 'int32',
-                'FT': 'int32', 'ORB': 'int32', 'DRB': 'int32', 'TRB': 'int32', 'AST': 'int32',
+                'FGM': 'int32', 'FGA': 'int32', 'FG3M': 'int32', 'FG3A': 'int32', 'FTA': 'int32',
+                'FTM': 'int32', 'OREB': 'int32', 'DREB': 'int32', 'REB': 'int32', 'AST': 'int32',
                 'TOV': 'int32', 'STL': 'int32', 'BLK': 'int32', 'PF': 'int32', 'PTS': 'int32',
-                '+/-': 'float32', 'SEASON': 'object'})
+                'PLUS_MINUS': 'float32', 'SEASON': 'object'})
 
         result["SEASON_TYPE"] = self.season_type
         if self.error:

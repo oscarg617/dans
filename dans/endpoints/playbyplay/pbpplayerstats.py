@@ -3,16 +3,14 @@ import os
 import pandas as pd
 from tqdm import tqdm
 
-from dans.endpoints._base import Endpoint
+from dans.endpoints._base import StatsEndpoint
 from dans.library.cache import Cache
 from dans.library.parameters import DataFormat
-from dans.library.playbyplay_processor import PBPProcessor
-from dans.library.playbyplay_counter import PBPCounter
+from dans.library.pbp_processor import PBPProcessor
+from dans.library.pbp_counter import PBPCounter
 from dans.library.stats_engine import StatsEngine
 
-pd.set_option('display.max_rows', None)
-
-class PBPPlayerStats(Endpoint):
+class PBPPlayerStats(StatsEndpoint):
     
     expected_log_columns = [
         'PLAYER_ID',
@@ -39,10 +37,11 @@ class PBPPlayerStats(Endpoint):
         'OPP_STOV',
         'DRTG',
         'ADJ_DRTG',
-        'LA_PACE'
+        'rDRTG',
+        'rADJ_DRTG'
     ]
     
-    expected_agg_columns = [
+    expected_stat_columns = [
         'PLAYER_ID',
         'PTS',
         'FGM',
@@ -71,32 +70,21 @@ class PBPPlayerStats(Endpoint):
         'OPP_STOV',
         'DRTG',
         'ADJ_DRTG',
-        'LA_PACE'
+        'LA_PACE',
     ]
-    
-    scoring_columns = [
-        'PTS',
-        'rTS%',
-        'rTSC%',
-        'rsTOV%',
-        'TS%',
-        'TSC%',
-        'sTOV%',
-        'OPP_TS',
-        'OPP_ADJ_TS',
-        'OPP_TSC',
-        'OPP_STOV',
-        'DRTG',
-        'ADJ_DRTG',
-    ]
+
 
     def __init__(
         self,
         player_logs: pd.DataFrame,
-        drtg_range: list
+        drtg_range: list,
+        data_format=DataFormat.default,
+        adj_def=True
     ):
         self.player_logs = player_logs
         self.drtg_range = drtg_range
+        self.data_format = data_format
+        self.adj_def = adj_def
         self.stats = {}
         
         self.teams = pd.read_csv(os.path.join(os.path.dirname(os.path.dirname(
@@ -113,12 +101,15 @@ class PBPPlayerStats(Endpoint):
 
         self._iterate_through_games()
 
-    def aggregate_logs(self, data_format=DataFormat.default, scoring_columns_only=True, adj_def=True):
+    def bball_ref(self):
+        return NotImplementedError()
+
+    def nba_stats(self):
 
         box_score_stats, opp_stats, eff_stats = StatsEngine().calculate_all_stats(
-            stats=self.data_frame,
-            data_format=data_format,
-            adj_def=adj_def
+            logs=self.pbp_logs,
+            data_format=self.data_format,
+            adj_def=self.adj_def
         )
         
         if not box_score_stats:
@@ -126,30 +117,28 @@ class PBPPlayerStats(Endpoint):
 
         misc_stats = {
             "PLAYER_ID": self.player_id,
-            "TEAM_POSS": self.data_frame["TEAM_POSS"].mean(),
-            "PLAYER_POSS": self.data_frame["PLAYER_POSS"].mean()
+            "TEAM_POSS": self.pbp_logs["TEAM_POSS"].mean(),
+            "PLAYER_POSS": self.pbp_logs["PLAYER_POSS"].mean()
         }
 
-        if data_format == DataFormat.opp_adj:
-            drtg = "ADJ_DRTG" if adj_def else "DRTG"
+        if self.data_format == DataFormat.opp_adj:
+            drtg = "ADJ_DRTG" if self.adj_def else "DRTG"
             box_score_stats["PTS"] = box_score_stats["PTS"] * (110 / opp_stats[drtg])
-        elif data_format == DataFormat.opp_pace_adj:
-            team_poss = self.data_frame["TEAM_POSS"].sum()
-            drtg = "ADJ_DRTG" if adj_def else "DRTG"
+        elif self.data_format == DataFormat.opp_pace_adj:
+            team_poss = self.pbp_logs["TEAM_POSS"].sum()
+            drtg = "ADJ_DRTG" if self.adj_def else "DRTG"
             box_score_stats["PTS"] =  box_score_stats["PTS"] *\
-                ((100 + ((team_poss / len(self.data_frame)) - (opp_stats["LA_PACE"]))) / 100) * \
+                ((100 + ((team_poss / len(self.pbp_logs)) - (opp_stats["LA_PACE"]))) / 100) * \
                 (110 / opp_stats[drtg])
 
         box_score_stats.update(opp_stats)
         box_score_stats.update(eff_stats)
         box_score_stats.update(misc_stats)
 
-        stats = pd.DataFrame(box_score_stats, index=[0])
+        return pd.DataFrame(box_score_stats, index=[0])[self.expected_stat_columns]
 
-        if scoring_columns_only:
-            return stats[self.scoring_columns]
-        else:
-            return stats[self.expected_agg_columns]
+    def get_processed_logs(self):
+        return self.pbp_logs
 
     def _iterate_through_games(self):
 
@@ -178,10 +167,10 @@ class PBPPlayerStats(Endpoint):
 
         # Combine DataFrames, filtering out empty ones
         dfs_to_combine = [df for df in [new_logs_df, cached_logs] if not df.empty]
-        self.data_frame = pd.concat(dfs_to_combine, ignore_index=True) if dfs_to_combine else pd.DataFrame()
+        self.pbp_logs = pd.concat(dfs_to_combine, ignore_index=True) if dfs_to_combine else pd.DataFrame()
 
         # Insert logs to cache
-        cache.insert_logs(self.data_frame)
+        cache.insert_logs(self.pbp_logs)
 
     def _player_game_stats(self, game_id: str, season: int) -> dict:
 
@@ -193,21 +182,21 @@ class PBPPlayerStats(Endpoint):
         pbp_v2 = pbp_data["pbp_v2"]
         team_id = pbp_data["team_id"]
         opp_tricode = pbp_data["opp_tricode"]
-        
+
         counter = PBPCounter()
-        
+
         stats = {
             "PLAYER_ID": self.player_id,
             "SEASON": season,
             "GAME_ID": game_id
         }
-        
+
         box_stats = counter.count_stats(pbp_v3, pbp_v2, self.player_id)
         poss_stats = counter.count_possessions(all_logs, pbp_v3, team_id)
         opp_stats = counter.count_opp_stats(self.teams, self.seasons, season, opp_tricode)
-        
+
         stats.update(box_stats)
         stats.update(poss_stats)
         stats.update(opp_stats)
-        
+
         return stats

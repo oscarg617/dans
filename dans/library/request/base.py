@@ -3,6 +3,8 @@ from abc import ABC, abstractmethod
 import pandas as pd
 from ratelimit import sleep_and_retry, limits
 
+from nba_api.stats.endpoints.playergamelog import PlayerGameLog
+
 class DataSource(ABC):
     """Abstract base class for data sources"""
     
@@ -40,11 +42,7 @@ class APISource(DataSource):
     
     def parse_response(self, response) -> pd.DataFrame:
         # For APIs, the response is whatever the function returns
-        # Assume it's already a DataFrame or convert if needed
-        if isinstance(response, pd.DataFrame):
-            return response
-        # Could add more conversion logic here if needed
-        return pd.DataFrame(response) if response else pd.DataFrame()
+        return response
 
 class RateLimiter:
     """Rate limiting functionality"""

@@ -1,22 +1,25 @@
 '''Player Logs Endpoint'''
 import os
+import numpy as np
 import pandas as pd
 
-from dans.endpoints._base import Endpoint
+from dans.endpoints._base import LogsEndpoint
 from dans.library.parameters import SeasonType
-from nba_api.stats.endpoints.playergamelog import PlayerGameLog
+from dans.library.nba_api_client import NBAApiClient
 
-pd.set_option('display.max_rows', None)
-
-class PBPPlayerLogs(Endpoint):
+class PBPPlayerLogs(LogsEndpoint):
     '''Finds a player's game logs within a given range of years'''
 
     expected_columns = [
         'SEASON_ID',
-        'SEASON',
         'Player_ID',
         'Game_ID',
+        'SEASON',
+        'SEASON_TYPE',
         'GAME_DATE',
+        'PLAYER_NAME',
+        'TEAM',
+        'LOCATION',
         'MATCHUP',
         'WL',
         'MIN',
@@ -42,27 +45,36 @@ class PBPPlayerLogs(Endpoint):
     ]
 
     error = None
-    data = None
-    data_frame = None
 
     def __init__(
         self,
         name,
-        year,
+        year_range,
         season_type=SeasonType.default
     ):
         self.name = name
-        self.year = year
+        self.year_range = year_range
         self.season_type = season_type
         self.player_id = self._lookup(name)
-        self.data_frame = PlayerGameLog(
-            player_id=self.player_id,
-            season=self.year,
-            season_type_all_star=season_type
-        ).get_data_frames()[0]
-        self.data_frame['SEASON'] = self.data_frame['GAME_DATE'].str[-4:].astype(int)
-        self.data_frame = self.data_frame[self.expected_columns][::-1].reset_index(drop=True)
         
+    def bball_ref(self):
+        return NotImplementedError()
+
+    def nba_stats(self):
+        
+        dfs = []
+        for year in range(self.year_range[0], self.year_range[1] + 1):
+            
+            df = NBAApiClient().get_player_game_log(player_id=self.player_id, season=year, season_type=self.season_type)
+            df['SEASON'] = year
+            dfs.append(df)
+        
+        df['SEASON_TYPE'] = self.season_type
+        df['PLAYER_NAME'] = self.name
+        df['TEAM'] = df['MATCHUP'].str[:3]
+        df['LOCATION'] = np.where(df['MATCHUP'].str.contains('@'), '@', 'vs')
+        df['MATCHUP'] = df['MATCHUP'].str[-3:]
+        return pd.concat(dfs)[self.expected_columns][::-1].reset_index(drop=True)
 
     def _lookup(self, name):
         path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))),

@@ -21,6 +21,12 @@ class Request:
     def get_response(self) -> pd.DataFrame:
         """Get response using appropriate data source"""
         
+        if self.kwargs and "year" in self.kwargs:
+            self.kwargs["year"] = self._format_year(self.kwargs["year"])
+        
+        if self.args and "season" in self.args:
+            self.args["season"] = self._format_year(self.args["season"])
+    
         # Handle API calls
         if isinstance(self.source, APISource):
             return self._handle_function_call()
@@ -44,7 +50,6 @@ class Request:
         """Handle URL-based requests with rate limiting"""
         headers = self.source.get_headers()
         params = self.source.get_params(url=self.url, **self.kwargs)
-        
         try:
             response = self.rate_limiter.make_request(
                 requests.get,
@@ -63,3 +68,10 @@ class Request:
         except Exception as e:
             print(f"Request failed: {e}")
             return pd.DataFrame()
+
+    def _format_year(self, year):
+        start_year = year - 1
+        end_year_format = year % 100
+        if end_year_format >= 10:
+            return f'{start_year}-{end_year_format}'
+        return f'{start_year}-0{end_year_format}'
