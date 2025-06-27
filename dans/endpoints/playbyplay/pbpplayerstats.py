@@ -106,6 +106,10 @@ class PBPPlayerStats(StatsEndpoint):
 
     def nba_stats(self):
 
+        if self.pbp_logs.empty:
+            print("No logs found.")
+            return pd.DataFrame()
+
         box_score_stats, opp_stats, eff_stats = StatsEngine().calculate_all_stats(
             logs=self.pbp_logs,
             data_format=self.data_format,
@@ -142,15 +146,21 @@ class PBPPlayerStats(StatsEndpoint):
 
     def _iterate_through_games(self):
 
-        games_ids = self.player_logs["Game_ID"].to_list()
+        logs = self.player_logs[["Game_ID", "SEASON", "MATCHUP"]]
         seasons = self.player_logs["SEASON"].to_list()
+        
+        drtg = 'ADJ_DRTG' if self.adj_def else 'DRTG'
+        
+        logs = pd.merge(logs, self.teams, on=["SEASON", "MATCHUP"])
+        logs = logs[(logs[drtg] >= self.drtg_range[0]) & (logs[drtg] < self.drtg_range[1])]
+        game_ids = logs["Game_ID"].to_list()
 
         # Check cache first
         cache = Cache()
-        cached_logs = cache.lookup_logs(self.player_id, games_ids)
+        cached_logs = cache.lookup_logs(self.player_id, game_ids)
         cached_game_ids = cached_logs["GAME_ID"].to_list() if not cached_logs.empty else []
 
-        remaining_games = [game for game in zip(games_ids, seasons) if game[0] not in cached_game_ids]
+        remaining_games = [game for game in zip(game_ids, seasons) if game[0] not in cached_game_ids]
 
         new_logs_df = pd.DataFrame()
 
