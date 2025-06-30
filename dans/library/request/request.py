@@ -36,15 +36,15 @@ class Request:
     
     def _handle_function_call(self) -> pd.DataFrame:
         """Handle API calls with rate limiting"""
-        try:
-            response = self.rate_limiter.make_function_call(
-                self.source.function, 
-                **self.source.args
-            )
-            return self.source.parse_response(response)
-        except Exception as e:
-            print(f"Function call failed: {e}")
-            return pd.DataFrame()
+        # try:
+        response = self.rate_limiter.make_request(
+            self.source.function, 
+            **self.source.args
+        )
+        return self.source.parse_response(response)
+        # except Exception as e:
+        #     print(f"Function call failed: {e}")
+        #     return pd.DataFrame()
     
     def _handle_url_request(self) -> pd.DataFrame:
         """Handle URL-based requests with rate limiting"""
@@ -56,7 +56,7 @@ class Request:
                 url=self.url,
                 headers=headers,
                 params=params,
-                timeout=60
+                timeout=10
             )
             
             # Pass attr_id for Basketball Reference

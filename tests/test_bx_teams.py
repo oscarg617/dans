@@ -1,10 +1,10 @@
-'''Testing team methods.'''
+'''Testing boxscore team methods.'''
 import unittest
 
 from dans.endpoints.boxscore.bxteams import BXTeams
 
-class TestTeamStats(unittest.TestCase):
-    '''Tests for each method in opponent_adjusted_nba_scraper.bball_ref.players'''
+class TestBXTeams(unittest.TestCase):
+    '''Tests for the boxscore teams endpoint'''
     def test_team_within_drtg(self):
         teams_df = BXTeams([2019, 2022], [105, 110]).bball_ref()
         self.assertEqual(teams_df.shape[0], 37)

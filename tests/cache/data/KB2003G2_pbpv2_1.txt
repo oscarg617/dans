@@ -1,0 +1,435 @@
+GAME_ID,EVENTNUM,EVENTMSGTYPE,EVENTMSGACTIONTYPE,PERIOD,WCTIMESTRING,PCTIMESTRING,HOMEDESCRIPTION,NEUTRALDESCRIPTION,VISITORDESCRIPTION,SCORE,SCOREMARGIN,PERSON1TYPE,PLAYER1_ID,PLAYER1_NAME,PLAYER1_TEAM_ID,PLAYER1_TEAM_CITY,PLAYER1_TEAM_NICKNAME,PLAYER1_TEAM_ABBREVIATION,PERSON2TYPE,PLAYER2_ID,PLAYER2_NAME,PLAYER2_TEAM_ID,PLAYER2_TEAM_CITY,PLAYER2_TEAM_NICKNAME,PLAYER2_TEAM_ABBREVIATION,PERSON3TYPE,PLAYER3_ID,PLAYER3_NAME,PLAYER3_TEAM_ID,PLAYER3_TEAM_CITY,PLAYER3_TEAM_NICKNAME,PLAYER3_TEAM_ABBREVIATION,VIDEO_AVAILABLE_FLAG
+0040200222,0,12,0,1,9:55 PM,12:00,,Start of 1st Period (9:55 PM EST),,,,0,0,,,,,,0,0,,,,,,0,0,,,,,,0
+0040200222,1,10,0,1,9:56 PM,12:00,Jump Ball Robinson vs. O'Neal: Tip to Parker,,,,,4,764,David Robinson,1610612759.0,San Antonio,Spurs,SAS,5,406,Shaquille O'Neal,1610612747.0,Los Angeles,Lakers,LAL,4,2225,Tony Parker,1610612759.0,San Antonio,Spurs,SAS,0
+0040200222,2,1,58,1,9:56 PM,11:43,Duncan 8' Turnaround Hook Shot (2 PTS),,,0 - 2,2,4,1495,Tim Duncan,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,3,6,1,1,9:56 PM,11:27,Bowen P.FOUL (P1.T1),,,,,4,1477,Bruce Bowen,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,1,0,,,,,,0
+0040200222,4,1,63,1,9:57 PM,11:15,,,Bryant 9' Fadeaway Jumper (2 PTS) (Fisher 1 AST),2 - 2,TIE,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,5,965,Derek Fisher,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0
+0040200222,5,2,1,1,9:57 PM,10:55,MISS Duncan 13' Jump Shot,,,,,4,1495,Tim Duncan,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,6,4,0,1,9:57 PM,10:53,,,O'Neal REBOUND (Off:0 Def:1),,,5,406,Shaquille O'Neal,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,7,2,1,1,9:57 PM,10:40,,,MISS Horry 22' Jump Shot,,,5,109,Robert Horry,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,8,4,0,1,9:58 PM,10:38,Parker REBOUND (Off:0 Def:1),,,,,4,2225,Tony Parker,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,9,1,1,1,9:58 PM,10:24,Bowen 25' 3PT Jump Shot (3 PTS) (Duncan 1 AST),,,2 - 5,3,4,1477,Bruce Bowen,1610612759.0,San Antonio,Spurs,SAS,4,1495,Tim Duncan,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,10,1,42,1,9:58 PM,10:10,,,Shaw 1' Driving Layup (2 PTS),4 - 5,1,5,216,Brian Shaw,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,11,1,1,1,9:58 PM,9:56,Bowen  3PT Jump Shot (6 PTS) (Robinson 1 AST),,,4 - 8,4,4,1477,Bruce Bowen,1610612759.0,San Antonio,Spurs,SAS,4,764,David Robinson,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,12,1,1,1,9:59 PM,9:37,,,Fisher 17' Jump Shot (2 PTS),6 - 8,2,5,965,Derek Fisher,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,13,6,1,1,9:59 PM,9:25,,,Shaw P.FOUL (P1.T1),,,5,216,Brian Shaw,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,1,0,,,,,,0
+0040200222,14,5,1,1,9:59 PM,9:21,Jackson Bad Pass Turnover (P1.T1),,,,,4,1536,Stephen Jackson,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,15,1,8,1,9:59 PM,9:13,,,O'Neal 2' Slam Dunk (2 PTS) (Shaw 1 AST),8 - 8,TIE,5,406,Shaquille O'Neal,1610612747.0,Los Angeles,Lakers,LAL,5,216,Brian Shaw,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0
+0040200222,16,1,7,1,10:00 PM,8:55,Duncan 1' Dunk (4 PTS),,,8 - 10,2,4,1495,Tim Duncan,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,17,2,46,1,10:00 PM,8:32,,,MISS Bryant 10' Running Jump Shot,,,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,18,4,0,1,10:00 PM,8:30,Robinson REBOUND (Off:0 Def:1),,,,,4,764,David Robinson,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,19,5,13,1,10:00 PM,8:19,Parker Backcourt Turnover (P1.T2),,,,,4,2225,Tony Parker,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,1,0,,,,,,0
+0040200222,20,8,0,1,10:00 PM,8:19,SUB: Ginobili FOR Jackson,,,,,4,1536,Stephen Jackson,1610612759.0,San Antonio,Spurs,SAS,4,1938,Manu Ginobili,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,21,2,1,1,10:01 PM,8:09,,,MISS O'Neal 10' Jump Shot,,,5,406,Shaquille O'Neal,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,22,4,0,1,10:01 PM,8:07,Duncan REBOUND (Off:0 Def:1),,,,,4,1495,Tim Duncan,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,23,1,5,1,10:01 PM,7:59,Parker 1' Layup (2 PTS),,,8 - 12,4,4,2225,Tony Parker,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,24,2,5,1,10:01 PM,7:40,,,MISS O'Neal 2' Layup,,,5,406,Shaquille O'Neal,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,25,4,0,1,10:01 PM,7:38,Duncan REBOUND (Off:0 Def:2),,,,,4,1495,Tim Duncan,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,26,5,4,1,10:02 PM,7:28,Duncan Traveling Turnover (P1.T3),,,,,4,1495,Tim Duncan,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,1,0,,,,,,0
+0040200222,27,6,4,1,10:02 PM,7:15,,,O'Neal OFF.Foul (P1),,,5,406,Shaquille O'Neal,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,1,0,,,,,,0
+0040200222,28,5,5,1,10:02 PM,7:15,,,O'Neal Foul Turnover (P1.T1),,,5,406,Shaquille O'Neal,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,29,6,2,1,10:02 PM,7:02,,,Horry S.FOUL (P1.T2),,,5,109,Robert Horry,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,1,0,,,,,,0
+0040200222,30,3,11,1,10:03 PM,7:02,Parker Free Throw 1 of 2 (3 PTS),,,8 - 13,5,4,2225,Tony Parker,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,31,3,12,1,10:03 PM,7:02,Parker Free Throw 2 of 2 (4 PTS),,,8 - 14,6,4,2225,Tony Parker,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,32,5,2,1,10:03 PM,6:48,Parker STEAL (1 STL),,Fisher Lost Ball Turnover (P1.T2),,,5,965,Derek Fisher,1610612747.0,Los Angeles,Lakers,LAL,4,2225,Tony Parker,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,33,1,5,1,10:03 PM,6:45,Ginobili 2' Layup (2 PTS) (Parker 1 AST),,,8 - 16,8,4,1938,Manu Ginobili,1610612759.0,San Antonio,Spurs,SAS,4,2225,Tony Parker,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,34,1,1,1,10:04 PM,6:29,,,Bryant 23' Jump Shot (4 PTS),10 - 16,6,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,35,1,46,1,10:04 PM,6:09,Bowen 6' Running Jump Shot (8 PTS) (Parker 2 AST),,,10 - 18,8,4,1477,Bruce Bowen,1610612759.0,San Antonio,Spurs,SAS,4,2225,Tony Parker,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,36,6,1,1,10:04 PM,5:50,Robinson P.FOUL (P1.T2),,,,,4,764,David Robinson,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,1,0,,,,,,0
+0040200222,37,9,1,1,10:04 PM,5:50,SPURS Timeout: Regular (Full 1 Short 0),,,,,2,1610612759,,,,,,0,0,,,,,,0,0,,,,,,0
+0040200222,39,1,65,1,10:08 PM,5:45,,,O'Neal 3' Jump Hook Shot (4 PTS) (Bryant 1 AST),12 - 18,6,5,406,Shaquille O'Neal,1610612747.0,Los Angeles,Lakers,LAL,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0
+0040200222,40,2,5,1,10:08 PM,5:23,MISS Duncan 3' Layup,,,,,4,1495,Tim Duncan,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,41,4,0,1,10:08 PM,5:21,,,Bryant REBOUND (Off:0 Def:1),,,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,42,2,5,1,10:09 PM,5:10,,,MISS Horry 3' Layup,,,5,109,Robert Horry,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,43,4,0,1,10:09 PM,5:08,Duncan REBOUND (Off:0 Def:3),,,,,4,1495,Tim Duncan,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,44,6,2,1,10:09 PM,5:06,,,Shaw S.FOUL (P2.T3),,,5,216,Brian Shaw,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,1,0,,,,,,0
+0040200222,45,8,0,1,10:09 PM,5:06,SUB: Rose FOR Robinson,,,,,4,764,David Robinson,1610612759.0,San Antonio,Spurs,SAS,4,990,Malik Rose,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,46,3,11,1,10:09 PM,5:06,Ginobili Free Throw 1 of 2 (3 PTS),,,12 - 19,7,4,1938,Manu Ginobili,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,47,3,12,1,10:09 PM,5:06,Ginobili Free Throw 2 of 2 (4 PTS),,,12 - 20,8,4,1938,Manu Ginobili,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,48,2,1,1,10:10 PM,4:47,,,MISS Bryant 16' Jump Shot,,,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,49,4,0,1,10:10 PM,4:45,Parker REBOUND (Off:0 Def:2),,,,,4,2225,Tony Parker,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,50,2,1,1,10:10 PM,4:37,MISS Parker 20' Jump Shot,,,,,4,2225,Tony Parker,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,51,4,0,1,10:10 PM,4:35,,,O'Neal REBOUND (Off:0 Def:2),,,5,406,Shaquille O'Neal,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,52,1,42,1,10:10 PM,4:26,,,Bryant 1' Driving Layup (6 PTS),14 - 20,6,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,53,2,7,1,10:10 PM,4:07,MISS Rose 2' Dunk,,,,,4,990,Malik Rose,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,54,4,0,1,10:10 PM,4:05,Bowen REBOUND (Off:1 Def:0),,,,,4,1477,Bruce Bowen,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,55,1,42,1,10:11 PM,4:00,Ginobili 1' Driving Layup (6 PTS),,,14 - 22,8,4,1938,Manu Ginobili,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,56,6,4,1,10:11 PM,3:40,,,O'Neal OFF.Foul (P2),,,5,406,Shaquille O'Neal,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,1,0,,,,,,0
+0040200222,57,5,5,1,10:11 PM,3:40,,,O'Neal Foul Turnover (P2.T3),,,5,406,Shaquille O'Neal,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,58,8,0,1,10:11 PM,3:40,,,SUB: Madsen FOR O'Neal,,,5,406,Shaquille O'Neal,1610612747.0,Los Angeles,Lakers,LAL,5,2058,Mark Madsen,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0
+0040200222,59,6,4,1,10:11 PM,3:31,Rose OFF.Foul (P1),,,,,4,990,Malik Rose,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,1,0,,,,,,0
+0040200222,60,5,5,1,10:11 PM,3:31,Rose Foul Turnover (P1.T4),,,,,4,990,Malik Rose,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,61,2,5,1,10:12 PM,3:22,,,MISS Fisher 2' Layup,,,5,965,Derek Fisher,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,62,4,0,1,10:12 PM,3:20,Rose REBOUND (Off:0 Def:1),,,,,4,990,Malik Rose,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,63,1,5,1,10:12 PM,3:12,Ginobili 2' Layup (8 PTS) (Duncan 2 AST),,,14 - 24,10,4,1938,Manu Ginobili,1610612759.0,San Antonio,Spurs,SAS,4,1495,Tim Duncan,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,64,9,1,1,10:12 PM,3:04,,,Lakers Timeout: Regular (Reg.1 Short 0),,,3,1610612747,,,,,,0,0,,,,,,0,0,,,,,,0
+0040200222,66,8,0,1,10:15 PM,3:04,,,SUB: Rush FOR Shaw,,,5,216,Brian Shaw,1610612747.0,Los Angeles,Lakers,LAL,5,2416,Kareem Rush,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0
+0040200222,67,1,63,1,10:16 PM,2:51,,,Bryant 13' Fadeaway Jumper (8 PTS),16 - 24,8,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,68,1,42,1,10:16 PM,2:34,Ginobili 3' Driving Layup (10 PTS),,,16 - 26,10,4,1938,Manu Ginobili,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,69,1,1,1,10:16 PM,2:16,,,Horry 14' Jump Shot (2 PTS),18 - 26,8,5,109,Robert Horry,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,70,6,2,1,10:16 PM,2:16,Rose S.FOUL (P2.T3),,,,,4,990,Malik Rose,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,1,0,,,,,,0
+0040200222,71,8,0,1,10:17 PM,2:16,SUB: Ferry FOR Rose,,,,,4,990,Malik Rose,1610612759.0,San Antonio,Spurs,SAS,4,198,Danny Ferry,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,72,3,10,1,10:17 PM,2:16,,,MISS Horry Free Throw 1 of 1,,,5,109,Robert Horry,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,73,4,0,1,10:17 PM,2:15,Duncan REBOUND (Off:0 Def:4),,,,,4,1495,Tim Duncan,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,74,5,4,1,10:17 PM,2:03,Ginobili Traveling Turnover (P1.T5),,,,,4,1938,Manu Ginobili,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,1,0,,,,,,0
+0040200222,140,5,1,1,10:17 PM,1:56,Ginobili STEAL (1 STL),,Rush Bad Pass Turnover (P1.T4),,,5,2416,Kareem Rush,1610612747.0,Los Angeles,Lakers,LAL,4,1938,Manu Ginobili,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,141,5,2,1,10:18 PM,1:52,Ginobili Lost Ball Turnover (P2.T6),,Horry STEAL (1 STL),,,4,1938,Manu Ginobili,1610612759.0,San Antonio,Spurs,SAS,5,109,Robert Horry,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0
+0040200222,75,2,1,1,10:18 PM,1:40,,,MISS Rush 12' Jump Shot,,,5,2416,Kareem Rush,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,76,4,0,1,10:18 PM,1:35,Ferry REBOUND (Off:0 Def:1),,,,,4,198,Danny Ferry,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,77,2,1,1,10:18 PM,1:23,MISS Ferry 25' 3PT Jump Shot,,,,,4,198,Danny Ferry,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,78,4,0,1,10:18 PM,1:21,Duncan REBOUND (Off:1 Def:4),,,,,4,1495,Tim Duncan,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,79,1,5,1,10:18 PM,1:19,Duncan 2' Layup (6 PTS),,,18 - 28,10,4,1495,Tim Duncan,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,80,2,1,1,10:18 PM,1:01,,,MISS Bryant 17' Jump Shot,,,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,81,4,0,1,10:19 PM,0:59,Ferry REBOUND (Off:0 Def:2),,,,,4,198,Danny Ferry,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,82,6,1,1,10:19 PM,0:44,,,Rush P.FOUL (P1.T4),,,5,2416,Kareem Rush,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,1,0,,,,,,0
+0040200222,83,8,0,1,10:19 PM,0:44,SUB: Claxton FOR Parker,,,,,4,2225,Tony Parker,1610612759.0,San Antonio,Spurs,SAS,4,2049,Speedy Claxton,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,84,2,1,1,10:19 PM,0:35,MISS Duncan 13' Jump Shot,,,,,4,1495,Tim Duncan,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,85,4,0,1,10:19 PM,0:33,,,Fisher REBOUND (Off:0 Def:1),,,5,965,Derek Fisher,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,86,2,1,1,10:20 PM,0:25,,,MISS Fisher 14' Jump Shot,,,5,965,Derek Fisher,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,87,4,0,1,10:20 PM,0:22,Claxton REBOUND (Off:0 Def:1),,,,,4,2049,Speedy Claxton,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,88,1,1,1,10:20 PM,0:04,Ferry 24' 3PT Jump Shot (3 PTS) (Claxton 1 AST),,,18 - 31,13,4,198,Danny Ferry,1610612759.0,San Antonio,Spurs,SAS,4,2049,Speedy Claxton,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,89,2,1,1,10:20 PM,0:00,,,MISS Rush 14' Jump Shot,,,5,2416,Kareem Rush,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,90,4,0,1,10:20 PM,0:00,,,Lakers Rebound,,,3,1610612747,,,,,,0,0,,,,,,0,0,,,,,,0
+0040200222,91,13,0,1,10:20 PM,0:00,,End of 1st Period (10:20 PM EST),,18 - 31,13,0,0,,,,,,0,0,,,,,,0,0,,,,,,0
+0040200222,93,12,0,2,10:24 PM,12:00,,Start of 2nd Period (10:24 PM EST),,18 - 31,13,0,0,,,,,,0,0,,,,,,0,0,,,,,,0
+0040200222,94,2,5,2,10:25 PM,11:39,,,MISS Bryant 1' Layup,,,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,96,4,0,2,10:25 PM,11:37,,,O'Neal REBOUND (Off:1 Def:2),,,5,406,Shaquille O'Neal,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,95,1,7,2,10:25 PM,11:37,,,O'Neal 1' Dunk (6 PTS),20 - 31,11,5,406,Shaquille O'Neal,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,97,6,4,2,10:26 PM,11:24,Duncan OFF.Foul (P1),,,,,4,1495,Tim Duncan,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,1,0,,,,,,0
+0040200222,98,5,5,2,10:26 PM,11:24,Duncan Foul Turnover (P2.T7),,,,,4,1495,Tim Duncan,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,99,8,0,2,10:26 PM,11:24,SUB: Robinson FOR Duncan,,,,,4,1495,Tim Duncan,1610612759.0,San Antonio,Spurs,SAS,4,764,David Robinson,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,100,5,2,2,10:26 PM,11:11,Claxton STEAL (1 STL),,Bryant Lost Ball Turnover (P1.T5),,,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,4,2049,Speedy Claxton,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,101,1,5,2,10:26 PM,11:06,Claxton 1' Layup (2 PTS),,,20 - 33,13,4,2049,Speedy Claxton,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,102,6,1,2,10:27 PM,10:51,Robinson P.FOUL (P2.T1),,,,,4,764,David Robinson,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,1,0,,,,,,0
+0040200222,103,1,1,2,10:27 PM,10:46,,,O'Neal 4' Jump Shot (8 PTS),22 - 33,11,5,406,Shaquille O'Neal,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,104,6,2,2,10:27 PM,10:46,Ferry S.FOUL (P1.T2),,,,,4,198,Danny Ferry,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,1,0,,,,,,0
+0040200222,106,7,3,2,10:27 PM,10:46,Robinson Violation:Lane,,,,,4,764,David Robinson,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,1,0,,,,,,0
+0040200222,107,3,10,2,10:28 PM,10:46,,,O'Neal Free Throw 1 of 1 (9 PTS),23 - 33,10,5,406,Shaquille O'Neal,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,109,2,1,2,10:28 PM,10:29,MISS Jackson 12' Jump Shot,,,,,4,1536,Stephen Jackson,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,110,4,0,2,10:28 PM,10:27,,,Medvedenko REBOUND (Off:0 Def:1),,,5,2098,Slava Medvedenko,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,111,6,2,2,10:29 PM,10:04,Jackson S.FOUL (P1.T3),,,,,4,1536,Stephen Jackson,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,1,0,,,,,,0
+0040200222,112,3,11,2,10:29 PM,10:04,,,MISS O'Neal Free Throw 1 of 2,,,5,406,Shaquille O'Neal,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,113,4,1,2,10:29 PM,10:04,,,Lakers Rebound,,,3,1610612747,,,,,,0,0,,,,,,0,0,,,,,,0
+0040200222,114,3,12,2,10:30 PM,10:04,,,O'Neal Free Throw 2 of 2 (10 PTS),24 - 33,9,5,406,Shaquille O'Neal,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,115,6,1,2,10:30 PM,9:55,,,Bryant P.FOUL (P1.T1),,,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,1,0,,,,,,0
+0040200222,116,2,1,2,10:31 PM,9:43,MISS Jackson 24' 3PT Jump Shot,,,,,4,1536,Stephen Jackson,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,117,4,0,2,10:31 PM,9:41,,,Bryant REBOUND (Off:0 Def:2),,,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,118,6,2,2,10:31 PM,9:24,Ferry S.FOUL (P2.T4),,,,,4,198,Danny Ferry,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,1,0,,,,,,0
+0040200222,119,8,0,2,10:31 PM,9:24,SUB: Bowen FOR Ginobili,,,,,4,1938,Manu Ginobili,1610612759.0,San Antonio,Spurs,SAS,4,1477,Bruce Bowen,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,120,8,0,2,10:31 PM,9:24,SUB: Duncan FOR Ferry,,,,,4,198,Danny Ferry,1610612759.0,San Antonio,Spurs,SAS,4,1495,Tim Duncan,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,121,3,11,2,10:31 PM,9:24,,,Bryant Free Throw 1 of 2 (9 PTS),25 - 33,8,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,122,3,12,2,10:31 PM,9:24,,,Bryant Free Throw 2 of 2 (10 PTS),26 - 33,7,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,123,2,1,2,10:32 PM,9:08,MISS Robinson 15' Jump Shot,,,,,4,764,David Robinson,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,124,4,0,2,10:32 PM,9:06,,,Medvedenko REBOUND (Off:0 Def:2),,,5,2098,Slava Medvedenko,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,125,2,1,2,10:32 PM,9:00,,,MISS Rush 8' Jump Shot,,,5,2416,Kareem Rush,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,126,4,0,2,10:32 PM,8:58,Robinson REBOUND (Off:0 Def:2),,,,,4,764,David Robinson,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,127,1,1,2,10:32 PM,8:45,Bowen  3PT Jump Shot (11 PTS) (Duncan 3 AST),,,26 - 36,10,4,1477,Bruce Bowen,1610612759.0,San Antonio,Spurs,SAS,4,1495,Tim Duncan,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,128,1,1,2,10:33 PM,8:25,,,O'Neal 7' Jump Shot (12 PTS) (Pargo 1 AST),28 - 36,8,5,406,Shaquille O'Neal,1610612747.0,Los Angeles,Lakers,LAL,5,2457,Jannero Pargo,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0
+0040200222,129,1,1,2,10:33 PM,8:05,Claxton 16' Jump Shot (4 PTS),,,28 - 38,10,4,2049,Speedy Claxton,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,130,1,1,2,10:33 PM,7:48,,,Pargo 16' Jump Shot (2 PTS),30 - 38,8,5,2457,Jannero Pargo,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,131,1,7,2,10:34 PM,7:32,Jackson 2' Dunk (2 PTS) (Robinson 2 AST),,,30 - 40,10,4,1536,Stephen Jackson,1610612759.0,San Antonio,Spurs,SAS,4,764,David Robinson,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,132,1,3,2,10:34 PM,7:12,,,O'Neal 6' Hook Shot (14 PTS),32 - 40,8,5,406,Shaquille O'Neal,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,133,5,2,2,10:34 PM,7:05,Claxton Lost Ball Turnover (P1.T8),,Pargo STEAL (1 STL),,,4,2049,Speedy Claxton,1610612759.0,San Antonio,Spurs,SAS,5,2457,Jannero Pargo,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0
+0040200222,134,2,44,2,10:34 PM,6:59,Duncan BLOCK (1 BLK),,MISS Bryant 2' Reverse Layup,,,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,4,1495,Tim Duncan,1610612759.0,San Antonio,Spurs,SAS,0
+0040200222,135,4,0,2,10:34 PM,6:56,Duncan REBOUND (Off:1 Def:5),,,,,4,1495,Tim Duncan,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,136,1,1,2,10:34 PM,6:49,Bowen  3PT Jump Shot (14 PTS) (Jackson 1 AST),,,32 - 43,11,4,1477,Bruce Bowen,1610612759.0,San Antonio,Spurs,SAS,4,1536,Stephen Jackson,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,137,1,44,2,10:34 PM,6:37,,,Bryant 1' Reverse Layup (12 PTS),34 - 43,9,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,138,9,1,2,10:35 PM,6:30,SPURS Timeout: Regular (Full 2 Short 0),,,,,2,1610612759,,,,,,0,0,,,,,,0,0,,,,,,0
+0040200222,142,8,0,2,10:38 PM,6:30,SUB: Parker FOR Claxton,,,,,4,2049,Speedy Claxton,1610612759.0,San Antonio,Spurs,SAS,4,2225,Tony Parker,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,143,8,0,2,10:38 PM,6:30,SUB: Rose FOR Robinson,,,,,4,764,David Robinson,1610612759.0,San Antonio,Spurs,SAS,4,990,Malik Rose,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,144,8,0,2,10:38 PM,6:30,,,SUB: Shaw FOR Medvedenko,,,5,2098,Slava Medvedenko,1610612747.0,Los Angeles,Lakers,LAL,5,216,Brian Shaw,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0
+0040200222,145,8,0,2,10:38 PM,6:30,,,SUB: Horry FOR Rush,,,5,2416,Kareem Rush,1610612747.0,Los Angeles,Lakers,LAL,5,109,Robert Horry,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0
+0040200222,146,2,1,2,10:39 PM,6:15,MISS Jackson 26' 3PT Jump Shot,,,,,4,1536,Stephen Jackson,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,147,4,0,2,10:39 PM,6:13,,,Horry REBOUND (Off:0 Def:1),,,5,109,Robert Horry,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,148,1,63,2,10:39 PM,5:54,,,Bryant 13' Fadeaway Jumper (14 PTS),36 - 43,7,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,149,1,5,2,10:39 PM,5:38,Parker 2' Layup (6 PTS) (Duncan 4 AST),,,36 - 45,9,4,2225,Tony Parker,1610612759.0,San Antonio,Spurs,SAS,4,1495,Tim Duncan,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,150,2,1,2,10:39 PM,5:20,,,MISS O'Neal 9' Jump Shot,,,5,406,Shaquille O'Neal,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,151,4,0,2,10:40 PM,5:19,SPURS Rebound,,,,,2,1610612759,,,,,,0,0,,,,,,0,0,,,,,,0
+0040200222,152,9,4,2,10:40 PM,5:19,,Timeout: Official,,,,1,0,,,,,,0,0,,,,,,0,0,,,,,,0
+0040200222,154,8,0,2,10:42 PM,5:19,,,SUB: Fisher FOR Pargo,,,5,2457,Jannero Pargo,1610612747.0,Los Angeles,Lakers,LAL,5,965,Derek Fisher,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0
+0040200222,155,1,7,2,10:43 PM,5:09,Jackson 2' Dunk (4 PTS) (Parker 3 AST),,,36 - 47,11,4,1536,Stephen Jackson,1610612759.0,San Antonio,Spurs,SAS,4,2225,Tony Parker,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,156,5,1,2,10:43 PM,4:49,Rose STEAL (1 STL),,Shaw Bad Pass Turnover (P1.T6),,,5,216,Brian Shaw,1610612747.0,Los Angeles,Lakers,LAL,4,990,Malik Rose,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,157,2,1,2,10:43 PM,4:42,MISS Bowen 24' 3PT Jump Shot,,,,,4,1477,Bruce Bowen,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,158,4,0,2,10:43 PM,4:40,,,Horry REBOUND (Off:0 Def:2),,,5,109,Robert Horry,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,159,6,2,2,10:44 PM,4:29,Duncan S.FOUL (P2.PN),,,,,4,1495,Tim Duncan,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,1,0,,,,,,0
+0040200222,160,3,11,2,10:44 PM,4:29,,,O'Neal Free Throw 1 of 2 (15 PTS),37 - 47,10,5,406,Shaquille O'Neal,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,161,8,0,2,10:44 PM,4:29,SUB: Ginobili FOR Jackson,,,,,4,1536,Stephen Jackson,1610612759.0,San Antonio,Spurs,SAS,4,1938,Manu Ginobili,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,162,3,12,2,10:44 PM,4:29,,,MISS O'Neal Free Throw 2 of 2,,,5,406,Shaquille O'Neal,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,163,4,0,2,10:44 PM,4:28,Duncan REBOUND (Off:1 Def:6),,,,,4,1495,Tim Duncan,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,164,6,2,2,10:45 PM,4:16,,,Fisher S.FOUL (P1.T2),,,5,965,Derek Fisher,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,1,0,,,,,,0
+0040200222,165,3,11,2,10:45 PM,4:16,Parker Free Throw 1 of 2 (7 PTS),,,37 - 48,11,4,2225,Tony Parker,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,166,3,12,2,10:45 PM,4:16,Parker Free Throw 2 of 2 (8 PTS),,,37 - 49,12,4,2225,Tony Parker,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,167,2,42,2,10:45 PM,4:04,,,MISS Bryant 2' Driving Layup,,,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,169,4,0,2,10:45 PM,4:01,,,O'Neal REBOUND (Off:2 Def:2),,,5,406,Shaquille O'Neal,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,168,1,7,2,10:45 PM,4:01,,,O'Neal 2' Dunk (17 PTS),39 - 49,10,5,406,Shaquille O'Neal,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,170,2,1,2,10:46 PM,3:45,MISS Rose 18' Jump Shot,,,,,4,990,Malik Rose,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,171,4,0,2,10:46 PM,3:43,,,Bryant REBOUND (Off:0 Def:3),,,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,172,5,4,2,10:46 PM,3:40,,,Bryant Traveling Turnover (P2.T7),,,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,1,0,,,,,,0
+0040200222,173,2,1,2,10:46 PM,3:30,MISS Duncan 13' Jump Shot,,,,,4,1495,Tim Duncan,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,174,4,0,2,10:46 PM,3:28,,,Shaw REBOUND (Off:0 Def:1),,,5,216,Brian Shaw,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,175,2,1,2,10:46 PM,3:15,,,MISS Shaw 25' 3PT Jump Shot,,,5,216,Brian Shaw,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,176,4,0,2,10:46 PM,3:13,Duncan REBOUND (Off:1 Def:7),,,,,4,1495,Tim Duncan,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,177,2,1,2,10:47 PM,2:54,MISS Ginobili 5' Jump Shot,,,,,4,1938,Manu Ginobili,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,178,4,0,2,10:47 PM,2:52,,,Horry REBOUND (Off:0 Def:3),,,5,109,Robert Horry,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,179,6,4,2,10:47 PM,2:46,,,Bryant OFF.Foul (P2),,,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,1,0,,,,,,0
+0040200222,180,5,5,2,10:47 PM,2:46,,,Bryant Foul Turnover (P3.T8),,,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,181,9,1,2,10:47 PM,2:46,,,Lakers Timeout: Regular (Reg.2 Short 0),,,3,1610612747,,,,,,0,0,,,,,,0,0,,,,,,0
+0040200222,183,2,5,2,10:51 PM,2:31,MISS Ginobili 2' Layup,,,,,4,1938,Manu Ginobili,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,185,4,0,2,10:51 PM,2:28,Duncan REBOUND (Off:2 Def:7),,,,,4,1495,Tim Duncan,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,184,1,4,2,10:51 PM,2:28,Duncan 1' Tip Shot (8 PTS),,,39 - 51,12,4,1495,Tim Duncan,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,186,1,41,2,10:51 PM,2:14,,,Shaw 3' Running Layup (4 PTS),41 - 51,10,5,216,Brian Shaw,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,187,1,1,2,10:51 PM,1:56,Ginobili 11' Jump Shot (12 PTS),,,41 - 53,12,4,1938,Manu Ginobili,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,188,6,2,2,10:52 PM,1:41,Rose S.FOUL (P3.PN),,,,,4,990,Malik Rose,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,1,0,,,,,,0
+0040200222,189,8,0,2,10:52 PM,1:41,SUB: Robinson FOR Rose,,,,,4,990,Malik Rose,1610612759.0,San Antonio,Spurs,SAS,4,764,David Robinson,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,190,3,11,2,10:52 PM,1:41,,,O'Neal Free Throw 1 of 2 (18 PTS),42 - 53,11,5,406,Shaquille O'Neal,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,191,3,12,2,10:52 PM,1:41,,,O'Neal Free Throw 2 of 2 (19 PTS),43 - 53,10,5,406,Shaquille O'Neal,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,192,2,1,2,10:53 PM,1:30,MISS Parker 19' Jump Shot,,,,,4,2225,Tony Parker,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,193,4,0,2,10:53 PM,1:28,,,Horry REBOUND (Off:0 Def:4),,,5,109,Robert Horry,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,194,2,5,2,10:53 PM,1:23,,,MISS Bryant 1' Layup,,,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,195,4,0,2,10:53 PM,1:21,Robinson REBOUND (Off:0 Def:3),,,,,4,764,David Robinson,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,196,1,1,2,10:53 PM,1:11,Bowen 24' 3PT Jump Shot (17 PTS) (Parker 4 AST),,,43 - 56,13,4,1477,Bruce Bowen,1610612759.0,San Antonio,Spurs,SAS,4,2225,Tony Parker,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,197,2,1,2,10:53 PM,0:52,,,MISS Bryant  3PT Jump Shot,,,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,198,4,0,2,10:53 PM,0:49,Robinson REBOUND (Off:0 Def:4),,,,,4,764,David Robinson,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,200,7,2,2,10:53 PM,0:43,,,O'Neal Violation:Defensive Goaltending,,,5,406,Shaquille O'Neal,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,1,0,,,,,,0
+0040200222,199,1,46,2,10:53 PM,0:43,Parker 5' Running Jump Shot (10 PTS),,,43 - 58,15,4,2225,Tony Parker,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,201,6,4,2,10:54 PM,0:36,,,Bryant OFF.Foul (P3),,,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,1,0,,,,,,0
+0040200222,202,5,5,2,10:54 PM,0:36,,,Bryant Foul Turnover (P4.T9),,,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,203,8,0,2,10:54 PM,0:36,SUB: Willis FOR Robinson,,,,,4,764,David Robinson,1610612759.0,San Antonio,Spurs,SAS,4,788,Kevin Willis,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,204,8,0,2,10:54 PM,0:36,SUB: Ferry FOR Duncan,,,,,4,1495,Tim Duncan,1610612759.0,San Antonio,Spurs,SAS,4,198,Danny Ferry,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,205,6,4,2,10:54 PM,0:31,Parker OFF.Foul (P1),,,,,4,2225,Tony Parker,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,1,0,,,,,,0
+0040200222,206,5,5,2,10:54 PM,0:31,Parker Foul Turnover (P2.T9),,,,,4,2225,Tony Parker,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,207,2,1,2,10:55 PM,0:22,Bowen BLOCK (1 BLK),,MISS Bryant 11' Jump Shot,,,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,4,1477,Bruce Bowen,1610612759.0,San Antonio,Spurs,SAS,0
+0040200222,208,4,0,2,10:55 PM,0:19,Ginobili REBOUND (Off:0 Def:1),,,,,4,1938,Manu Ginobili,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,209,1,41,2,10:55 PM,0:04,Parker 3' Running Layup (12 PTS),,,43 - 60,17,4,2225,Tony Parker,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,210,2,1,2,10:56 PM,0:00,,,MISS Bryant 22' Jump Shot,,,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,211,4,0,2,10:56 PM,0:00,Willis REBOUND (Off:0 Def:1),,,,,4,788,Kevin Willis,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,212,13,0,2,10:56 PM,0:00,,End of 2nd Period (10:56 PM EST),,43 - 60,17,0,0,,,,,,0,0,,,,,,0,0,,,,,,0
+0040200222,214,12,0,3,11:16 PM,12:00,,Start of 3rd Period (11:16 PM EST),,43 - 60,17,0,0,,,,,,0,0,,,,,,0,0,,,,,,0
+0040200222,215,1,1,3,11:16 PM,11:40,,,Fisher  3PT Jump Shot (5 PTS) (O'Neal 1 AST),46 - 60,14,5,965,Derek Fisher,1610612747.0,Los Angeles,Lakers,LAL,5,406,Shaquille O'Neal,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0
+0040200222,216,1,5,3,11:17 PM,11:16,Robinson 1' Layup (2 PTS) (Duncan 5 AST),,,46 - 62,16,4,764,David Robinson,1610612759.0,San Antonio,Spurs,SAS,4,1495,Tim Duncan,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,217,2,1,3,11:17 PM,10:59,,,MISS O'Neal 7' Jump Shot,,,5,406,Shaquille O'Neal,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,218,4,0,3,11:17 PM,10:57,Duncan REBOUND (Off:2 Def:8),,,,,4,1495,Tim Duncan,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,219,1,1,3,11:17 PM,10:44,Robinson 15' Jump Shot (4 PTS) (Duncan 6 AST),,,46 - 64,18,4,764,David Robinson,1610612759.0,San Antonio,Spurs,SAS,4,1495,Tim Duncan,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,220,6,2,3,11:18 PM,10:26,Robinson S.FOUL (P3.T1),,,,,4,764,David Robinson,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,1,0,,,,,,0
+0040200222,221,3,11,3,11:18 PM,10:26,,,O'Neal Free Throw 1 of 2 (20 PTS),47 - 64,17,5,406,Shaquille O'Neal,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,222,3,12,3,11:18 PM,10:26,,,MISS O'Neal Free Throw 2 of 2,,,5,406,Shaquille O'Neal,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,223,4,0,3,11:18 PM,10:25,Duncan REBOUND (Off:2 Def:9),,,,,4,1495,Tim Duncan,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,224,2,47,3,11:19 PM,10:10,MISS Duncan 10' Turnaround Jump Shot,,,,,4,1495,Tim Duncan,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,225,4,0,3,11:19 PM,10:08,,,O'Neal REBOUND (Off:2 Def:3),,,5,406,Shaquille O'Neal,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,226,2,1,3,11:19 PM,9:50,,,MISS Bryant 7' Jump Shot,,,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,228,4,0,3,11:19 PM,9:48,,,O'Neal REBOUND (Off:3 Def:3),,,5,406,Shaquille O'Neal,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,227,1,7,3,11:19 PM,9:48,,,O'Neal 3' Dunk (22 PTS),49 - 64,15,5,406,Shaquille O'Neal,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,229,1,1,3,11:19 PM,9:31,Jackson 22' Jump Shot (6 PTS) (Bowen 1 AST),,,49 - 66,17,4,1536,Stephen Jackson,1610612759.0,San Antonio,Spurs,SAS,4,1477,Bruce Bowen,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,230,2,1,3,11:19 PM,9:17,,,MISS Shaw 25' 3PT Jump Shot,,,5,216,Brian Shaw,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,231,4,0,3,11:20 PM,9:14,,,Horry REBOUND (Off:1 Def:4),,,5,109,Robert Horry,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,232,6,4,3,11:20 PM,9:13,,,Fisher OFF.Foul (P2),,,5,965,Derek Fisher,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,1,0,,,,,,0
+0040200222,233,5,5,3,11:20 PM,9:13,,,Fisher Foul Turnover (P2.T10),,,5,965,Derek Fisher,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,234,1,1,3,11:20 PM,8:54,Parker 18' Jump Shot (14 PTS),,,49 - 68,19,4,2225,Tony Parker,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,235,1,1,3,11:20 PM,8:37,,,O'Neal 5' Jump Shot (24 PTS),51 - 68,17,5,406,Shaquille O'Neal,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,236,2,1,3,11:21 PM,8:20,MISS Parker 16' Jump Shot,,,,,4,2225,Tony Parker,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,237,4,0,3,11:21 PM,8:18,,,Horry REBOUND (Off:1 Def:5),,,5,109,Robert Horry,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,238,2,1,3,11:21 PM,8:01,,,MISS Horry 25' 3PT Jump Shot,,,5,109,Robert Horry,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,239,4,0,3,11:21 PM,7:59,Parker REBOUND (Off:0 Def:3),,,,,4,2225,Tony Parker,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,240,1,1,3,11:21 PM,7:50,Bowen 18' Jump Shot (19 PTS),,,51 - 70,19,4,1477,Bruce Bowen,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,241,6,2,3,11:22 PM,7:25,Robinson S.FOUL (P4.T2),,,,,4,764,David Robinson,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,1,0,,,,,,0
+0040200222,242,3,11,3,11:22 PM,7:25,,,O'Neal Free Throw 1 of 2 (25 PTS),52 - 70,18,5,406,Shaquille O'Neal,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,243,8,0,3,11:22 PM,7:25,SUB: Rose FOR Robinson,,,,,4,764,David Robinson,1610612759.0,San Antonio,Spurs,SAS,4,990,Malik Rose,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,244,3,12,3,11:23 PM,7:25,,,MISS O'Neal Free Throw 2 of 2,,,5,406,Shaquille O'Neal,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,245,4,0,3,11:23 PM,7:24,Jackson REBOUND (Off:0 Def:1),,,,,4,1536,Stephen Jackson,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,246,6,2,3,11:23 PM,7:10,,,Shaw S.FOUL (P3.T1),,,5,216,Brian Shaw,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,1,0,,,,,,0
+0040200222,247,3,11,3,11:23 PM,7:10,Duncan Free Throw 1 of 2 (9 PTS),,,52 - 71,19,4,1495,Tim Duncan,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,248,3,12,3,11:23 PM,7:10,Duncan Free Throw 2 of 2 (10 PTS),,,52 - 72,20,4,1495,Tim Duncan,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,249,6,2,3,11:24 PM,7:00,Bowen S.FOUL (P2.T3),,,,,4,1477,Bruce Bowen,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,1,0,,,,,,0
+0040200222,250,3,11,3,11:24 PM,7:00,,,MISS Bryant Free Throw 1 of 2,,,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,251,4,1,3,11:24 PM,7:00,,,Lakers Rebound,,,3,1610612747,,,,,,0,0,,,,,,0,0,,,,,,0
+0040200222,252,3,12,3,11:25 PM,7:00,,,MISS Bryant Free Throw 2 of 2,,,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,253,4,0,3,11:25 PM,6:58,,,O'Neal REBOUND (Off:4 Def:3),,,5,406,Shaquille O'Neal,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,254,1,7,3,11:25 PM,6:56,,,O'Neal 2' Dunk (27 PTS),54 - 72,18,5,406,Shaquille O'Neal,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,255,2,1,3,11:25 PM,6:34,MISS Parker 8' Jump Shot,,,,,4,2225,Tony Parker,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,256,4,0,3,11:25 PM,6:31,,,Bryant REBOUND (Off:0 Def:4),,,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,257,1,46,3,11:25 PM,6:24,,,Bryant 4' Running Jump Shot (16 PTS),56 - 72,16,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,258,2,1,3,11:26 PM,6:03,MISS Rose 19' Jump Shot,,,,,4,990,Malik Rose,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,259,4,0,3,11:26 PM,6:01,,,Bryant REBOUND (Off:0 Def:5),,,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,260,2,1,3,11:26 PM,5:40,Bowen BLOCK (2 BLK),,MISS Bryant 25' 3PT Jump Shot,,,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,4,1477,Bruce Bowen,1610612759.0,San Antonio,Spurs,SAS,0
+0040200222,261,4,0,3,11:26 PM,5:35,Duncan REBOUND (Off:2 Def:10),,,,,4,1495,Tim Duncan,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,262,1,48,3,11:26 PM,5:32,Bowen 1' Dunk (21 PTS) (Duncan 7 AST),,,56 - 74,18,4,1477,Bruce Bowen,1610612759.0,San Antonio,Spurs,SAS,4,1495,Tim Duncan,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,263,6,4,3,11:27 PM,5:16,,,O'Neal OFF.Foul (P3),,,5,406,Shaquille O'Neal,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,1,0,,,,,,0
+0040200222,264,5,5,3,11:27 PM,5:16,,,O'Neal Foul Turnover (P3.T11),,,5,406,Shaquille O'Neal,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,265,9,1,3,11:27 PM,5:16,SPURS Timeout: Regular (Full 3 Short 0),,,,,2,1610612759,,,,,,0,0,,,,,,0,0,,,,,,0
+0040200222,268,1,1,3,11:30 PM,4:59,Duncan 14' Jump Shot (12 PTS) (Bowen 2 AST),,,56 - 76,20,4,1495,Tim Duncan,1610612759.0,San Antonio,Spurs,SAS,4,1477,Bruce Bowen,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,269,2,1,3,11:31 PM,4:40,,,MISS Horry 24' 3PT Jump Shot,,,5,109,Robert Horry,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,270,4,0,3,11:31 PM,4:38,Bowen REBOUND (Off:1 Def:1),,,,,4,1477,Bruce Bowen,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,271,2,1,3,11:31 PM,4:29,MISS Bowen 15' Jump Shot,,,,,4,1477,Bruce Bowen,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,272,4,0,3,11:31 PM,4:25,,,O'Neal REBOUND (Off:4 Def:4),,,5,406,Shaquille O'Neal,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,273,6,1,3,11:31 PM,4:18,Rose P.FOUL (P4.T4),,,,,4,990,Malik Rose,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,1,0,,,,,,0
+0040200222,274,8,0,3,11:31 PM,4:18,SUB: Ginobili FOR Jackson,,,,,4,1536,Stephen Jackson,1610612759.0,San Antonio,Spurs,SAS,4,1938,Manu Ginobili,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,275,8,0,3,11:31 PM,4:18,SUB: Willis FOR Rose,,,,,4,990,Malik Rose,1610612759.0,San Antonio,Spurs,SAS,4,788,Kevin Willis,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,276,2,63,3,11:32 PM,4:04,,,MISS Bryant 16' Fadeaway Jumper,,,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,277,4,0,3,11:32 PM,4:01,Willis REBOUND (Off:0 Def:2),,,,,4,788,Kevin Willis,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,278,6,1,3,11:32 PM,3:51,,,O'Neal P.FOUL (P4.T2),,,5,406,Shaquille O'Neal,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,1,0,,,,,,0
+0040200222,279,1,1,3,11:33 PM,3:44,Bowen  3PT Jump Shot (24 PTS) (Ginobili 1 AST),,,56 - 79,23,4,1477,Bruce Bowen,1610612759.0,San Antonio,Spurs,SAS,4,1938,Manu Ginobili,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,280,2,1,3,11:33 PM,3:24,,,MISS Shaw 25' 3PT Jump Shot,,,5,216,Brian Shaw,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,281,4,0,3,11:33 PM,3:22,Willis REBOUND (Off:0 Def:3),,,,,4,788,Kevin Willis,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,282,6,2,3,11:33 PM,3:02,,,Fisher S.FOUL (P3.T3),,,5,965,Derek Fisher,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,1,0,,,,,,0
+0040200222,283,3,11,3,11:34 PM,3:02,Parker Free Throw 1 of 2 (15 PTS),,,56 - 80,24,4,2225,Tony Parker,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,284,9,1,3,11:34 PM,3:02,,,Lakers Timeout: Regular (Reg.3 Short 0),,,3,1610612747,,,,,,0,0,,,,,,0,0,,,,,,0
+0040200222,286,8,0,3,11:37 PM,3:02,,,SUB: Madsen FOR Horry,,,5,109,Robert Horry,1610612747.0,Los Angeles,Lakers,LAL,5,2058,Mark Madsen,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0
+0040200222,287,8,0,3,11:37 PM,3:02,,,SUB: Pargo FOR Shaw,,,5,216,Brian Shaw,1610612747.0,Los Angeles,Lakers,LAL,5,2457,Jannero Pargo,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0
+0040200222,288,3,12,3,11:37 PM,3:02,Parker Free Throw 2 of 2 (16 PTS),,,56 - 81,25,4,2225,Tony Parker,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,289,6,2,3,11:38 PM,2:48,Bowen S.FOUL (P3.PN),,,,,4,1477,Bruce Bowen,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,1,0,,,,,,0
+0040200222,290,3,11,3,11:38 PM,2:48,,,MISS Bryant Free Throw 1 of 2,,,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,291,4,1,3,11:38 PM,2:48,,,Lakers Rebound,,,3,1610612747,,,,,,0,0,,,,,,0,0,,,,,,0
+0040200222,292,3,12,3,11:38 PM,2:48,,,Bryant Free Throw 2 of 2 (17 PTS),57 - 81,24,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,293,1,1,3,11:39 PM,2:34,Bowen 24' 3PT Jump Shot (27 PTS) (Ginobili 2 AST),,,57 - 84,27,4,1477,Bruce Bowen,1610612759.0,San Antonio,Spurs,SAS,4,1938,Manu Ginobili,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,294,5,1,3,11:39 PM,2:24,Duncan STEAL (1 STL),,Fisher Bad Pass Turnover (P3.T12),,,5,965,Derek Fisher,1610612747.0,Los Angeles,Lakers,LAL,4,1495,Tim Duncan,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,295,6,14,3,11:39 PM,2:20,,,Pargo FLAGRANT.FOUL.TYPE1 (P1.T4),,,5,2457,Jannero Pargo,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,1,0,,,,,,0
+0040200222,296,3,18,3,11:39 PM,2:20,Ginobili Free Throw Flagrant 1 of 2 (13 PTS),,,57 - 85,28,4,1938,Manu Ginobili,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,297,3,19,3,11:39 PM,2:20,Ginobili Free Throw Flagrant 2 of 2 (14 PTS),,,57 - 86,29,4,1938,Manu Ginobili,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,298,8,0,3,11:40 PM,2:20,SUB: Claxton FOR Parker,,,,,4,2225,Tony Parker,1610612759.0,San Antonio,Spurs,SAS,4,2049,Speedy Claxton,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,299,6,1,3,11:40 PM,2:17,,,Madsen P.FOUL (P1.PN),,,5,2058,Mark Madsen,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,1,0,,,,,,0
+0040200222,300,3,11,3,11:40 PM,2:17,Ginobili Free Throw 1 of 2 (15 PTS),,,57 - 87,30,4,1938,Manu Ginobili,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,301,3,12,3,11:40 PM,2:17,Ginobili Free Throw 2 of 2 (16 PTS),,,57 - 88,31,4,1938,Manu Ginobili,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,302,2,1,3,11:41 PM,2:10,Bowen BLOCK (3 BLK),,MISS Bryant 24' 3PT Jump Shot,,,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,4,1477,Bruce Bowen,1610612759.0,San Antonio,Spurs,SAS,0
+0040200222,303,4,0,3,11:41 PM,2:07,Duncan REBOUND (Off:2 Def:11),,,,,4,1495,Tim Duncan,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,304,1,1,3,11:41 PM,1:56,Willis 14' Jump Shot (2 PTS) (Ginobili 3 AST),,,57 - 90,33,4,788,Kevin Willis,1610612759.0,San Antonio,Spurs,SAS,4,1938,Manu Ginobili,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,305,2,1,3,11:41 PM,1:43,,,MISS Bryant 25' 3PT Jump Shot,,,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,306,4,0,3,11:41 PM,1:41,,,O'Neal REBOUND (Off:5 Def:4),,,5,406,Shaquille O'Neal,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,307,6,2,3,11:41 PM,1:36,Duncan S.FOUL (P3.PN),,,,,4,1495,Tim Duncan,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,1,0,,,,,,0
+0040200222,308,3,11,3,11:42 PM,1:36,,,Bryant Free Throw 1 of 2 (18 PTS),58 - 90,32,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,309,3,12,3,11:42 PM,1:36,,,Bryant Free Throw 2 of 2 (19 PTS),59 - 90,31,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,310,6,2,3,11:42 PM,1:24,,,Bryant S.FOUL (P4.PN),,,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,1,0,,,,,,0
+0040200222,311,3,11,3,11:42 PM,1:24,Ginobili Free Throw 1 of 2 (17 PTS),,,59 - 91,32,4,1938,Manu Ginobili,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,312,3,12,3,11:43 PM,1:24,MISS Ginobili Free Throw 2 of 2,,,,,4,1938,Manu Ginobili,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,313,4,0,3,11:43 PM,1:23,,,Madsen REBOUND (Off:0 Def:1),,,5,2058,Mark Madsen,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,314,6,1,3,11:43 PM,1:16,Bowen P.FOUL (P4.PN),,,,,4,1477,Bruce Bowen,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,1,0,,,,,,0
+0040200222,315,8,0,3,11:43 PM,1:16,SUB: Jackson FOR Bowen,,,,,4,1477,Bruce Bowen,1610612759.0,San Antonio,Spurs,SAS,4,1536,Stephen Jackson,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,316,3,11,3,11:43 PM,1:16,,,Bryant Free Throw 1 of 2 (20 PTS),60 - 91,31,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,317,3,12,3,11:44 PM,1:16,,,Bryant Free Throw 2 of 2 (21 PTS),61 - 91,30,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,318,6,1,3,11:44 PM,1:02,,,Fisher P.FOUL (P4.PN),,,5,965,Derek Fisher,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,1,0,,,,,,0
+0040200222,319,3,11,3,11:44 PM,1:02,Claxton Free Throw 1 of 2 (5 PTS),,,61 - 92,31,4,2049,Speedy Claxton,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,321,8,0,3,11:45 PM,1:02,,,SUB: Rush FOR Fisher,,,5,965,Derek Fisher,1610612747.0,Los Angeles,Lakers,LAL,5,2416,Kareem Rush,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0
+0040200222,322,3,12,3,11:45 PM,1:02,MISS Claxton Free Throw 2 of 2,,,,,4,2049,Speedy Claxton,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,323,4,0,3,11:45 PM,1:01,,,O'Neal REBOUND (Off:5 Def:5),,,5,406,Shaquille O'Neal,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,324,6,2,3,11:45 PM,0:44,Ginobili S.FOUL (P1.PN),,,,,4,1938,Manu Ginobili,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,1,0,,,,,,0
+0040200222,325,8,0,3,11:45 PM,0:44,SUB: Ferry FOR Duncan,,,,,4,1495,Tim Duncan,1610612759.0,San Antonio,Spurs,SAS,4,198,Danny Ferry,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,326,3,11,3,11:46 PM,0:44,,,MISS Madsen Free Throw 1 of 2,,,5,2058,Mark Madsen,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,327,4,1,3,11:46 PM,0:44,,,Lakers Rebound,,,3,1610612747,,,,,,0,0,,,,,,0,0,,,,,,0
+0040200222,328,8,0,3,11:46 PM,0:44,,,SUB: Medvedenko FOR O'Neal,,,5,406,Shaquille O'Neal,1610612747.0,Los Angeles,Lakers,LAL,5,2098,Slava Medvedenko,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0
+0040200222,329,3,12,3,11:46 PM,0:44,,,Madsen Free Throw 2 of 2 (1 PTS),62 - 92,30,5,2058,Mark Madsen,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,330,6,1,3,11:46 PM,0:40,,,Pargo P.FOUL (P2.PN),,,5,2457,Jannero Pargo,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,1,0,,,,,,0
+0040200222,331,3,11,3,11:47 PM,0:40,Claxton Free Throw 1 of 2 (6 PTS),,,62 - 93,31,4,2049,Speedy Claxton,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,332,3,12,3,11:47 PM,0:40,Claxton Free Throw 2 of 2 (7 PTS),,,62 - 94,32,4,2049,Speedy Claxton,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,333,1,1,3,11:47 PM,0:29,,,Rush 23' Jump Shot (2 PTS) (Pargo 2 AST),64 - 94,30,5,2416,Kareem Rush,1610612747.0,Los Angeles,Lakers,LAL,5,2457,Jannero Pargo,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0
+0040200222,334,2,5,3,11:48 PM,0:15,MISS Willis 2' Layup,,,,,4,788,Kevin Willis,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,335,4,0,3,11:48 PM,0:15,,,Lakers Rebound,,,3,1610612747,,,,,,0,0,,,,,,0,0,,,,,,0
+0040200222,336,1,1,3,11:48 PM,0:00,,,Bryant  3PT Jump Shot (24 PTS) (Madsen 1 AST),67 - 94,27,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,5,2058,Mark Madsen,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0
+0040200222,337,13,0,3,11:48 PM,0:00,,End of 3rd Period (11:48 PM EST),,67 - 94,27,0,0,,,,,,0,0,,,,,,0,0,,,,,,0
+0040200222,341,12,0,4,11:52 PM,12:00,,Start of 4th Period (11:52 PM EST),,67 - 94,27,0,0,,,,,,0,0,,,,,,0,0,,,,,,0
+0040200222,342,1,59,4,11:52 PM,11:42,Willis 3' Finger Roll (4 PTS) (Claxton 2 AST),,,67 - 96,29,4,788,Kevin Willis,1610612759.0,San Antonio,Spurs,SAS,4,2049,Speedy Claxton,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,343,2,1,4,11:53 PM,11:23,,,MISS Shaw 15' Jump Shot,,,5,216,Brian Shaw,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,344,4,0,4,11:53 PM,11:23,,,Lakers Rebound,,,3,1610612747,,,,,,0,0,,,,,,0,0,,,,,,0
+0040200222,345,6,3,4,11:53 PM,11:23,Ginobili L.B.FOUL (P2.T1),,,,,4,1938,Manu Ginobili,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,1,0,,,,,,0
+0040200222,346,2,1,4,11:53 PM,11:14,,,MISS Shaw 22' Jump Shot,,,5,216,Brian Shaw,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,347,4,0,4,11:53 PM,11:11,Ginobili REBOUND (Off:0 Def:2),,,,,4,1938,Manu Ginobili,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,348,5,1,4,11:53 PM,11:06,Ginobili Bad Pass Turnover (P3.T10),,Horry STEAL (2 STL),,,4,1938,Manu Ginobili,1610612759.0,San Antonio,Spurs,SAS,5,109,Robert Horry,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0
+0040200222,349,2,5,4,11:53 PM,11:01,Ginobili BLOCK (1 BLK),,MISS Rush 1' Layup,,,5,2416,Kareem Rush,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,4,1938,Manu Ginobili,1610612759.0,San Antonio,Spurs,SAS,0
+0040200222,350,4,0,4,11:53 PM,11:01,,,Lakers Rebound,,,3,1610612747,,,,,,0,0,,,,,,0,0,,,,,,0
+0040200222,351,5,2,4,11:54 PM,11:00,Ginobili STEAL (2 STL),,Shaw Lost Ball Turnover (P2.T13),,,5,216,Brian Shaw,1610612747.0,Los Angeles,Lakers,LAL,4,1938,Manu Ginobili,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,352,2,5,4,11:54 PM,10:55,MISS Claxton 2' Layup,,,,,4,2049,Speedy Claxton,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,353,4,0,4,11:54 PM,10:53,,,Madsen REBOUND (Off:0 Def:2),,,5,2058,Mark Madsen,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,354,1,1,4,11:54 PM,10:45,,,Pargo 25' 3PT Jump Shot (5 PTS) (Shaw 2 AST),70 - 96,26,5,2457,Jannero Pargo,1610612747.0,Los Angeles,Lakers,LAL,5,216,Brian Shaw,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0
+0040200222,355,5,2,4,11:54 PM,10:38,Jackson Lost Ball Turnover (P2.T11),,,,,4,1536,Stephen Jackson,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,356,2,1,4,11:54 PM,10:27,,,MISS Pargo 25' 3PT Jump Shot,,,5,2457,Jannero Pargo,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,357,4,0,4,11:54 PM,10:26,SPURS Rebound,,,,,2,1610612759,,,,,,0,0,,,,,,0,0,,,,,,0
+0040200222,358,6,1,4,11:55 PM,10:12,,,Horry P.FOUL (P2.T1),,,5,109,Robert Horry,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,1,0,,,,,,0
+0040200222,359,2,1,4,11:55 PM,10:07,MISS Jackson 18' Jump Shot,,,,,4,1536,Stephen Jackson,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,360,4,0,4,11:55 PM,10:05,,,Lakers Rebound,,,3,1610612747,,,,,,0,0,,,,,,0,0,,,,,,0
+0040200222,361,2,1,4,11:56 PM,9:47,,,MISS Shaw 25' 3PT Jump Shot,,,5,216,Brian Shaw,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,362,4,0,4,11:56 PM,9:46,,,Lakers Rebound,,,3,1610612747,,,,,,0,0,,,,,,0,0,,,,,,0
+0040200222,363,6,3,4,11:56 PM,9:46,Jackson L.B.FOUL (P2.T2),,,,,4,1536,Stephen Jackson,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,1,0,,,,,,0
+0040200222,364,1,1,4,11:56 PM,9:32,,,Rush 24' 3PT Jump Shot (5 PTS),73 - 96,23,5,2416,Kareem Rush,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,365,1,1,4,11:57 PM,9:08,Willis 6' Jump Shot (6 PTS) (Ferry 1 AST),,,73 - 98,25,4,788,Kevin Willis,1610612759.0,San Antonio,Spurs,SAS,4,198,Danny Ferry,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,366,2,1,4,11:57 PM,8:54,,,MISS Rush 25' 3PT Jump Shot,,,5,2416,Kareem Rush,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,367,4,0,4,11:57 PM,8:52,Ferry REBOUND (Off:0 Def:3),,,,,4,198,Danny Ferry,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,368,1,44,4,11:57 PM,8:43,Willis 2' Reverse Layup (8 PTS) (Claxton 3 AST),,,73 - 100,27,4,788,Kevin Willis,1610612759.0,San Antonio,Spurs,SAS,4,2049,Speedy Claxton,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,369,1,5,4,11:58 PM,8:23,,,Shaw 2' Layup (6 PTS),75 - 100,25,5,216,Brian Shaw,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,370,2,1,4,11:58 PM,8:00,MISS Ferry 21' Jump Shot,,,,,4,198,Danny Ferry,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,371,4,0,4,11:58 PM,7:58,,,Pargo REBOUND (Off:0 Def:1),,,5,2457,Jannero Pargo,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,372,2,1,4,11:58 PM,7:53,,,MISS Pargo 25' 3PT Jump Shot,,,5,2457,Jannero Pargo,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,373,4,0,4,11:58 PM,7:51,Ginobili REBOUND (Off:0 Def:3),,,,,4,1938,Manu Ginobili,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,374,9,1,4,11:58 PM,7:45,SPURS Timeout: Regular (Full 4 Short 0),,,,,2,1610612759,,,,,,0,0,,,,,,0,0,,,,,,0
+0040200222,378,8,0,4,12:01 PM,7:45,,,SUB: Bryant FOR Horry,,,5,109,Robert Horry,1610612747.0,Los Angeles,Lakers,LAL,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0
+0040200222,379,8,0,4,12:01 PM,7:45,,,SUB: Medvedenko FOR Shaw,,,5,216,Brian Shaw,1610612747.0,Los Angeles,Lakers,LAL,5,2098,Slava Medvedenko,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0
+0040200222,380,8,0,4,12:01 PM,7:45,,,SUB: Walker FOR Madsen,,,5,2058,Mark Madsen,1610612747.0,Los Angeles,Lakers,LAL,5,955,Samaki Walker,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0
+0040200222,381,8,0,4,12:02 PM,7:45,SUB: Smith FOR Ginobili,,,,,4,1938,Manu Ginobili,1610612759.0,San Antonio,Spurs,SAS,4,120,Steven Smith,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,382,8,0,4,12:02 PM,7:45,SUB: Rose FOR Willis,,,,,4,788,Kevin Willis,1610612759.0,San Antonio,Spurs,SAS,4,990,Malik Rose,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,383,1,1,4,12:02 PM,7:32,Claxton 21' Jump Shot (9 PTS) (Rose 1 AST),,,75 - 102,27,4,2049,Speedy Claxton,1610612759.0,San Antonio,Spurs,SAS,4,990,Malik Rose,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,384,5,1,4,12:02 PM,7:20,Jackson STEAL (1 STL),,Medvedenko Bad Pass Turnover (P1.T14),,,5,2098,Slava Medvedenko,1610612747.0,Los Angeles,Lakers,LAL,4,1536,Stephen Jackson,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,385,2,1,4,12:03 PM,6:57,MISS Ferry 20' Jump Shot,,,,,4,198,Danny Ferry,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,386,4,0,4,12:03 PM,6:55,,,Bryant REBOUND (Off:0 Def:6),,,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,387,6,1,4,12:03 PM,6:48,Jackson P.FOUL (P3.T3),,,,,4,1536,Stephen Jackson,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,1,0,,,,,,0
+0040200222,388,5,1,4,12:04 PM,6:39,Jackson STEAL (2 STL),,Bryant Bad Pass Turnover (P5.T15),,,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,4,1536,Stephen Jackson,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,389,1,5,4,12:04 PM,6:37,Claxton 2' Layup (11 PTS) (Jackson 2 AST),,,75 - 104,29,4,2049,Speedy Claxton,1610612759.0,San Antonio,Spurs,SAS,4,1536,Stephen Jackson,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,390,6,2,4,12:04 PM,6:37,,,Pargo S.FOUL (P3.T2),,,5,2457,Jannero Pargo,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,1,0,,,,,,0
+0040200222,391,3,10,4,12:04 PM,6:37,MISS Claxton Free Throw 1 of 1,,,,,4,2049,Speedy Claxton,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,392,4,0,4,12:04 PM,6:36,,,Walker REBOUND (Off:0 Def:1),,,5,955,Samaki Walker,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,393,1,5,4,12:04 PM,6:29,,,Pargo 1' Layup (7 PTS),77 - 104,27,5,2457,Jannero Pargo,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,394,1,1,4,12:05 PM,6:12,Claxton 21' Jump Shot (13 PTS),,,77 - 106,29,4,2049,Speedy Claxton,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,395,6,1,4,12:05 PM,5:57,Claxton P.FOUL (P1.T4),,,,,4,2049,Speedy Claxton,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,1,0,,,,,,0
+0040200222,396,9,4,4,12:05 PM,5:57,,Timeout: Official,,,,1,0,,,,,,0,0,,,,,,0,0,,,,,,0
+0040200222,397,8,0,4,12:09 PM,5:57,SUB: Kerr FOR Claxton,,,,,4,2049,Speedy Claxton,1610612759.0,San Antonio,Spurs,SAS,4,70,Steve Kerr,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,398,1,1,4,12:09 PM,5:51,,,Bryant 24' 3PT Jump Shot (27 PTS),80 - 106,26,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,399,6,2,4,12:10 PM,5:33,,,Medvedenko S.FOUL (P1.T3),,,5,2098,Slava Medvedenko,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,1,0,,,,,,0
+0040200222,400,3,11,4,12:10 PM,5:33,Jackson Free Throw 1 of 2 (7 PTS),,,80 - 107,27,4,1536,Stephen Jackson,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,401,3,12,4,12:10 PM,5:33,Jackson Free Throw 2 of 2 (8 PTS),,,80 - 108,28,4,1536,Stephen Jackson,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,402,1,1,4,12:10 PM,5:28,,,Rush 25' 3PT Jump Shot (8 PTS),83 - 108,25,5,2416,Kareem Rush,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,403,2,1,4,12:11 PM,5:01,MISS Ferry 14' Jump Shot,,,,,4,198,Danny Ferry,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,404,4,0,4,12:11 PM,4:59,,,Walker REBOUND (Off:0 Def:2),,,5,955,Samaki Walker,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,405,2,1,4,12:11 PM,4:51,,,MISS Rush 14' Jump Shot,,,5,2416,Kareem Rush,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,406,4,0,4,12:11 PM,4:49,Ferry REBOUND (Off:0 Def:4),,,,,4,198,Danny Ferry,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,407,2,1,4,12:11 PM,4:28,MISS Kerr 26' 3PT Jump Shot,,,,,4,70,Steve Kerr,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,408,4,0,4,12:11 PM,4:25,,,Medvedenko REBOUND (Off:0 Def:3),,,5,2098,Slava Medvedenko,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,409,1,47,4,12:12 PM,4:11,,,Rush 16' Turnaround Jump Shot (10 PTS),85 - 108,23,5,2416,Kareem Rush,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,410,5,1,4,12:12 PM,4:00,Smith Bad Pass Turnover (P1.T12),,Pargo STEAL (2 STL),,,4,120,Steven Smith,1610612759.0,San Antonio,Spurs,SAS,5,2457,Jannero Pargo,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0
+0040200222,411,2,1,4,12:12 PM,3:56,,,MISS Rush  3PT Jump Shot,,,5,2416,Kareem Rush,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,412,4,0,4,12:12 PM,3:54,,,Medvedenko REBOUND (Off:1 Def:3),,,5,2098,Slava Medvedenko,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,413,1,5,4,12:12 PM,3:53,,,Medvedenko 2' Layup (2 PTS),87 - 108,21,5,2098,Slava Medvedenko,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,414,2,5,4,12:12 PM,3:39,MISS Kerr 3' Layup,,Walker BLOCK (1 BLK),,,4,70,Steve Kerr,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,5,955,Samaki Walker,1610612747.0,Los Angeles,Lakers,LAL,0
+0040200222,415,4,0,4,12:12 PM,3:36,,,Walker REBOUND (Off:0 Def:3),,,5,955,Samaki Walker,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,416,1,1,4,12:13 PM,3:17,,,Pargo  3PT Jump Shot (10 PTS),90 - 108,18,5,2457,Jannero Pargo,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,417,6,2,4,12:13 PM,3:06,,,Medvedenko S.FOUL (P2.T4),,,5,2098,Slava Medvedenko,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,1,0,,,,,,0
+0040200222,418,8,0,4,12:13 PM,3:06,,,SUB: Shaw FOR Bryant,,,5,977,Kobe Bryant,1610612747.0,Los Angeles,Lakers,LAL,5,216,Brian Shaw,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0
+0040200222,419,3,11,4,12:13 PM,3:06,Jackson Free Throw 1 of 2 (9 PTS),,,90 - 109,19,4,1536,Stephen Jackson,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,420,8,0,4,12:13 PM,3:06,SUB: Claxton FOR Ferry,,,,,4,198,Danny Ferry,1610612759.0,San Antonio,Spurs,SAS,4,2049,Speedy Claxton,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,421,3,12,4,12:13 PM,3:06,Jackson Free Throw 2 of 2 (10 PTS),,,90 - 110,20,4,1536,Stephen Jackson,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,422,2,5,4,12:14 PM,2:53,,,MISS Rush 2' Layup,,,5,2416,Kareem Rush,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,423,4,0,4,12:14 PM,2:51,SPURS Rebound,,,,,2,1610612759,,,,,,0,0,,,,,,0,0,,,,,,0
+0040200222,424,8,0,4,12:14 PM,2:51,SUB: Willis FOR Jackson,,,,,4,1536,Stephen Jackson,1610612759.0,San Antonio,Spurs,SAS,4,788,Kevin Willis,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,425,9,1,4,12:14 PM,2:51,,,Lakers Timeout: Regular (Reg.4 Short 0),,,3,1610612747,,,,,,0,0,,,,,,0,0,,,,,,0
+0040200222,426,1,1,4,12:17 PM,2:34,Claxton 18' Jump Shot (15 PTS) (Kerr 1 AST),,,90 - 112,22,4,2049,Speedy Claxton,1610612759.0,San Antonio,Spurs,SAS,4,70,Steve Kerr,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,427,5,3,4,12:17 PM,2:28,,,Pargo Out Of Bounds Turnover (P1.T16),,,5,2457,Jannero Pargo,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,428,2,1,4,12:18 PM,2:16,MISS Willis 15' Jump Shot,,,,,4,788,Kevin Willis,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,429,4,0,4,12:18 PM,2:14,,,Medvedenko REBOUND (Off:1 Def:4),,,5,2098,Slava Medvedenko,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,430,1,1,4,12:18 PM,2:07,,,Medvedenko 18' Jump Shot (4 PTS) (Pargo 3 AST),92 - 112,20,5,2098,Slava Medvedenko,1610612747.0,Los Angeles,Lakers,LAL,5,2457,Jannero Pargo,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0
+0040200222,431,2,65,4,12:18 PM,1:43,MISS Willis 11' Jump Hook Shot,,,,,4,788,Kevin Willis,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,433,4,0,4,12:18 PM,1:40,Rose REBOUND (Off:1 Def:1),,,,,4,990,Malik Rose,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,432,2,53,4,12:18 PM,1:40,MISS Rose 2' Tip Shot,,,,,4,990,Malik Rose,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,434,4,0,4,12:18 PM,1:37,,,Medvedenko REBOUND (Off:1 Def:5),,,5,2098,Slava Medvedenko,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,435,2,1,4,12:19 PM,1:33,,,MISS Rush 25' 3PT Jump Shot,,,5,2416,Kareem Rush,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,436,4,0,4,12:19 PM,1:32,SPURS Rebound,,,,,2,1610612759,,,,,,0,0,,,,,,0,0,,,,,,0
+0040200222,437,8,0,4,12:19 PM,1:32,SUB: Ferry FOR Claxton,,,,,4,2049,Speedy Claxton,1610612759.0,San Antonio,Spurs,SAS,4,198,Danny Ferry,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,438,1,1,4,12:19 PM,1:15,Ferry 20' Jump Shot (5 PTS) (Smith 1 AST),,,92 - 114,22,4,198,Danny Ferry,1610612759.0,San Antonio,Spurs,SAS,4,120,Steven Smith,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0
+0040200222,440,2,1,4,12:19 PM,1:06,,,MISS Walker 14' Jump Shot,,,5,955,Samaki Walker,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,441,4,0,4,12:19 PM,1:04,Smith REBOUND (Off:0 Def:1),,,,,4,120,Steven Smith,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,442,6,1,4,12:20 PM,0:52,,,Medvedenko P.FOUL (P3.PN),,,5,2098,Slava Medvedenko,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,1,0,,,,,,0
+0040200222,443,3,11,4,12:20 PM,0:52,MISS Rose Free Throw 1 of 2,,,,,4,990,Malik Rose,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,444,4,1,4,12:20 PM,0:52,SPURS Rebound,,,,,2,1610612759,,,,,,0,0,,,,,,0,0,,,,,,0
+0040200222,445,3,12,4,12:20 PM,0:52,MISS Rose Free Throw 2 of 2,,,,,4,990,Malik Rose,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,446,4,0,4,12:20 PM,0:52,,,Shaw REBOUND (Off:0 Def:2),,,5,216,Brian Shaw,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,447,2,5,4,12:20 PM,0:43,,,MISS Medvedenko 3' Layup,,,5,2098,Slava Medvedenko,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0,0,,,,,,0
+0040200222,448,4,0,4,12:20 PM,0:41,Ferry REBOUND (Off:0 Def:5),,,,,4,198,Danny Ferry,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,449,5,1,4,12:20 PM,0:36,Kerr Bad Pass Turnover (P1.T13),,Rush STEAL (1 STL),,,4,70,Steve Kerr,1610612759.0,San Antonio,Spurs,SAS,5,2416,Kareem Rush,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0
+0040200222,450,1,1,4,12:21 PM,0:29,,,Pargo 25' 3PT Jump Shot (13 PTS) (Rush 1 AST),95 - 114,19,5,2457,Jannero Pargo,1610612747.0,Los Angeles,Lakers,LAL,5,2416,Kareem Rush,1610612747.0,Los Angeles,Lakers,LAL,0,0,,,,,,0
+0040200222,451,2,1,4,12:21 PM,0:22,MISS Smith  3PT Jump Shot,,,,,4,120,Steven Smith,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,452,4,0,4,12:21 PM,0:20,Willis REBOUND (Off:1 Def:3),,,,,4,788,Kevin Willis,1610612759.0,San Antonio,Spurs,SAS,0,0,,,,,,0,0,,,,,,0
+0040200222,454,13,0,4,12:21 PM,0:00,,End of 4th Period (12:21 PM EST),,95 - 114,19,0,0,,,,,,0,0,,,,,,0,0,,,,,,0

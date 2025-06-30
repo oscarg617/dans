@@ -37,6 +37,7 @@ class PBPPlayerStats(StatsEndpoint):
         'OPP_STOV',
         'DRTG',
         'ADJ_DRTG',
+        'LA_PACE',
         'rDRTG',
         'rADJ_DRTG'
     ]
@@ -71,6 +72,8 @@ class PBPPlayerStats(StatsEndpoint):
         'DRTG',
         'ADJ_DRTG',
         'LA_PACE',
+        'rDRTG',
+        'rADJ_DRTG'
     ]
 
 
@@ -183,7 +186,7 @@ class PBPPlayerStats(StatsEndpoint):
         cache.insert_logs(self.pbp_logs)
 
     def _player_game_stats(self, game_id: str, season: int) -> dict:
-
+        
         processor = PBPProcessor()
         pbp_data =  processor.process(game_id, self.player_id)
         

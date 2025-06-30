@@ -20,15 +20,15 @@ class NBAApiClient:
         }).get_response().get_data_frames())
     
     def get_play_by_play_v3(self, game_id: str) -> pd.DataFrame:
-        return self._get_endpoint_game_id_only(game_id, PlayByPlayV3)
+        return pd.concat(self._get_endpoint_game_id_only(game_id, PlayByPlayV3))
 
     def get_play_by_play_v2(self, game_id: str) -> pd.DataFrame:
-        return self._get_endpoint_game_id_only(game_id, PlayByPlayV2)
+        return pd.concat(self._get_endpoint_game_id_only(game_id, PlayByPlayV2))
 
     def get_rotations(self, game_id: str) -> pd.DataFrame:
         return self._get_endpoint_game_id_only(game_id, GameRotation)
 
     def _get_endpoint_game_id_only(self, game_id: str, endpoint) -> pd.DataFrame:
-        return pd.concat(Request(function=endpoint, args={
+        return Request(function=endpoint, args={
             "game_id": game_id
-        }).get_response().get_data_frames())
+        }).get_response().get_data_frames()

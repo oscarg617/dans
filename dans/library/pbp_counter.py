@@ -36,10 +36,11 @@ class PBPCounter:
         return stats
 
     def count_opp_stats(self, teams: pd.DataFrame, seasons: pd.DateOffset, season: int, opp_tricode: str):
-        opp = teams[(teams['SEASON'] == season) & (teams['TEAM'] == opp_tricode)].iloc[0]
+        
+        opp = teams[(teams['SEASON'] == season) & (teams['MATCHUP'] == opp_tricode)].iloc[0]
         pace = seasons[(seasons['SEASON'] == season)]["PACE"].iloc[0]
         
-        categories = ["OPP_TS", "OPP_ADJ_TS", "OPP_TSC", "OPP_STOV", "DRTG", "ADJ_DRTG"]
+        categories = ["OPP_TS", "OPP_ADJ_TS", "OPP_TSC", "OPP_STOV", "DRTG", "ADJ_DRTG", "rDRTG", "rADJ_DRTG"]
         stats = {cat: opp[cat] for cat in categories}
         stats["LA_PACE"] = pace
         

@@ -70,8 +70,6 @@ class BBallRefPossCount(PossCount):
             
             poss_list.append(poss_df)
 
-        print(poss_list)
-        print("GHELLEOE")
         return pd.concat(poss_list)
 
 class NBAStatsPossCount(PossCount):

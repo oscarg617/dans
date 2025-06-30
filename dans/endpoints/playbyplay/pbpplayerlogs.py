@@ -67,14 +67,20 @@ class PBPPlayerLogs(LogsEndpoint):
             
             df = NBAApiClient().get_player_game_log(player_id=self.player_id, season=year, season_type=self.season_type)
             df['SEASON'] = year
-            dfs.append(df)
+            if not df.empty:
+                dfs.append(df)
         
-        df['SEASON_TYPE'] = self.season_type
-        df['PLAYER_NAME'] = self.name
-        df['TEAM'] = df['MATCHUP'].str[:3]
-        df['LOCATION'] = np.where(df['MATCHUP'].str.contains('@'), '@', 'vs')
-        df['MATCHUP'] = df['MATCHUP'].str[-3:]
-        return pd.concat(dfs)[self.expected_columns][::-1].reset_index(drop=True)
+        if not dfs:
+            print("No logs found.")
+            return pd.DataFrame()
+        
+        logs = pd.concat(dfs)
+        logs['SEASON_TYPE'] = self.season_type
+        logs['PLAYER_NAME'] = self.name
+        logs['TEAM'] = logs['MATCHUP'].str[:3]
+        logs['LOCATION'] = np.where(logs['MATCHUP'].str.contains('@'), '@', 'vs')
+        logs['MATCHUP'] = logs['MATCHUP'].str[-3:]
+        return logs[self.expected_columns][::-1].reset_index(drop=True)
 
     def _lookup(self, name):
         path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))),

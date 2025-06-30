@@ -47,7 +47,7 @@ class PBPProcessor:
         pbp_v3['prevTeam'] = pbp_v3['teamId'].shift(1)
         pbp_v3['prevFGA'] = pbp_v3['isFieldGoal'].shift(1)
         pbp_v3['prevFTA'] = pbp_v3['actionType'].shift(1)
-
+        
         # Calculate rotations for each play
         pbp_v3, pbp_v2, team_id, opp_tricode, bins  = self._handle_rotations(pbp_v3, pbp_v2, rotations, player_id)
 
@@ -125,10 +125,12 @@ class PBPProcessor:
         -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
 
         all_logs = pbp_v3.copy()
+        
 
         all_logs.loc[:, 'counted'] = 1
         pbp_v3.loc[:, 'counted'] = 1
         pbp_v2.loc[:, 'counted'] = 1
+        
 
         curr = False
         curr_other = False
@@ -137,7 +139,7 @@ class PBPProcessor:
             curr_other = curr_other | ((pbp_v2['time'] >= bin_[0]) & (pbp_v2['time'] <= bin_[1]))
         pbp_v3 = pbp_v3[curr]
         pbp_v2 = pbp_v2[curr_other]
-
+        
         all_logs_garbage_time = \
             (all_logs['period'] == 4) & \
             (all_logs['margin'] >= all_logs['maxMargin']) & \
@@ -151,9 +153,11 @@ class PBPProcessor:
             (pbp_v2['margin'] >= pbp_v2['maxMargin']) & \
             (pbp_v2['totalStarters'] <= 2)
 
+    
         all_logs.loc[all_logs_garbage_time, 'counted'] = 0
         pbp_v3.loc[garbage_time, 'counted'] = 0
         pbp_v2.loc[garbage_time_other, 'counted'] = 0
+        
 
         all_logs.loc[:, 'counted'] = all_logs['counted'].replace(0, np.nan).bfill().replace(np.nan, 0)
         pbp_v3.loc[:, 'counted'] = pbp_v3['counted'].replace(0, np.nan).bfill().replace(np.nan, 0)

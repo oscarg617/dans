@@ -1,0 +1,449 @@
+gameId,actionNumber,clock,period,teamId,teamTricode,personId,playerName,playerNameI,xLegacy,yLegacy,shotDistance,shotResult,isFieldGoal,scoreHome,scoreAway,pointsTotal,location,description,actionType,subType,videoAvailable,shotValue,actionId
+0040200225,0,PT12M00.00S,1,0,,0,,,0,0,0,,0,0,0,0, ,Start of 1st Period (9:52 PM EST),period,start,0,0,1
+0040200225,1,PT12M00.00S,1,1610612759,SAS,764,Robinson,D. Robinson,0,0,0,,0,0,0,0,h,Jump Ball Robinson vs. O'Neal: Tip to,Jump Ball,,0,0,2
+0040200225,2,PT12M00.00S,1,1610612747,LAL,406,O'Neal,S. O'Neal,0,0,0,,0,0,0,0,v,O'Neal Violation:Jump Ball,Violation,Jump Ball,0,0,3
+0040200225,4,PT11M37.00S,1,1610612759,SAS,2225,Parker,T. Parker,-179,76,19,Missed,1,0,0,0,h,MISS Parker 19' Jump Shot,Missed Shot,Jump Shot,0,2,4
+0040200225,6,PT11M35.00S,1,1610612759,SAS,764,Robinson,D. Robinson,0,0,0,,0,0,0,0,h,Robinson REBOUND (Off:1 Def:0),Rebound,Unknown,0,0,5
+0040200225,5,PT11M35.00S,1,1610612759,SAS,764,Robinson,D. Robinson,-11,5,1,Made,1,2,0,2,h,Robinson 1' Layup (2 PTS),Made Shot,Layup Shot,0,2,6
+0040200225,7,PT11M19.00S,1,1610612747,LAL,1904,George,D. George,-151,109,19,Missed,1,0,0,0,v,MISS George 19' Jump Shot,Missed Shot,Jump Shot,0,2,7
+0040200225,8,PT11M17.00S,1,1610612759,SAS,1495,Duncan,T. Duncan,0,0,0,,0,0,0,0,h,Duncan REBOUND (Off:0 Def:1),Rebound,Unknown,0,0,8
+0040200225,9,PT10M57.00S,1,1610612759,SAS,764,Robinson,D. Robinson,136,-6,14,Missed,1,0,0,0,h,MISS Robinson 14' Jump Shot,Missed Shot,Jump Shot,0,2,9
+0040200225,10,PT10M54.00S,1,1610612759,SAS,1495,Duncan,T. Duncan,0,0,0,,0,0,0,0,h,Duncan REBOUND (Off:1 Def:1),Rebound,Unknown,0,0,10
+0040200225,11,PT10M52.00S,1,1610612759,SAS,1495,Duncan,T. Duncan,0,0,0,,0,0,0,0,h,Duncan Lost Ball Turnover (P1.T1),Turnover,Lost Ball,0,0,11
+0040200225,11,PT10M52.00S,1,1610612747,LAL,1904,George,D. George,0,0,0,,0,0,0,0,v,George STEAL (1 STL),,,0,0,12
+0040200225,12,PT10M44.00S,1,1610612747,LAL,977,Bryant,K. Bryant,0,10,1,Made,1,2,2,4,v,Bryant 1' Reverse Layup (2 PTS) (O'Neal 1 AST),Made Shot,Reverse Layup Shot,0,2,13
+0040200225,13,PT10M30.00S,1,1610612759,SAS,1536,Jackson,S. Jackson,-38,173,18,Missed,1,0,0,0,h,MISS Jackson 18' Jump Shot,Missed Shot,Jump Shot,0,2,14
+0040200225,14,PT10M28.00S,1,1610612747,LAL,109,Horry,R. Horry,0,0,0,,0,0,0,0,v,Horry REBOUND (Off:0 Def:1),Rebound,Unknown,0,0,15
+0040200225,15,PT10M06.00S,1,1610612747,LAL,406,O'Neal,S. O'Neal,33,0,3,Missed,1,0,0,0,v,MISS O'Neal 3' Jump Shot,Missed Shot,Jump Shot,0,2,16
+0040200225,16,PT10M05.00S,1,1610612747,LAL,406,O'Neal,S. O'Neal,0,0,0,,0,0,0,0,v,O'Neal REBOUND (Off:1 Def:0),Rebound,Unknown,0,0,17
+0040200225,17,PT10M04.00S,1,1610612747,LAL,406,O'Neal,S. O'Neal,-8,17,2,Missed,1,0,0,0,v,MISS O'Neal 2' Layup,Missed Shot,Layup Shot,0,2,18
+0040200225,17,PT10M04.00S,1,1610612759,SAS,1536,Jackson,S. Jackson,0,0,0,,0,0,0,0,h,Jackson BLOCK (1 BLK),,,0,2,19
+0040200225,18,PT10M00.00S,1,1610612759,SAS,2225,Parker,T. Parker,0,0,0,,0,0,0,0,h,Parker REBOUND (Off:0 Def:1),Rebound,Unknown,0,0,20
+0040200225,19,PT09M57.00S,1,1610612759,SAS,764,Robinson,D. Robinson,-11,8,1,Made,1,4,2,6,h,Robinson 1' Alley Oop Dunk (4 PTS) (Jackson 1 AST),Made Shot,Alley Oop Dunk Shot,0,2,21
+0040200225,20,PT09M37.00S,1,1610612759,SAS,764,Robinson,D. Robinson,0,0,0,,0,0,0,0,h,Robinson S.FOUL (P1.T1),Foul,Shooting,0,0,22
+0040200225,21,PT09M37.00S,1,1610612747,LAL,406,O'Neal,S. O'Neal,0,0,0,,0,0,0,0,v,MISS O'Neal Free Throw 1 of 2,Free Throw,Free Throw 1 of 2,0,0,23
+0040200225,22,PT09M37.00S,1,0,,1610612747,,,0,0,0,,0,0,0,0,v,Lakers Rebound,Rebound,Normal Rebound,0,0,24
+0040200225,23,PT09M37.00S,1,1610612747,LAL,406,O'Neal,S. O'Neal,0,0,0,,0,0,0,0,v,MISS O'Neal Free Throw 2 of 2,Free Throw,Free Throw 2 of 2,0,0,25
+0040200225,24,PT09M35.00S,1,1610612759,SAS,1477,Bowen,B. Bowen,0,0,0,,0,0,0,0,h,Bowen REBOUND (Off:0 Def:1),Rebound,Unknown,0,0,26
+0040200225,25,PT09M24.00S,1,1610612759,SAS,1495,Duncan,T. Duncan,-5,12,1,Made,1,6,2,8,h,Duncan 1' Layup (2 PTS),Made Shot,Layup Shot,0,2,27
+0040200225,26,PT09M06.00S,1,1610612747,LAL,406,O'Neal,S. O'Neal,3,10,1,Made,1,6,4,10,v,O'Neal 1' Dunk (2 PTS) (Bryant 1 AST),Made Shot,Dunk Shot,0,2,28
+0040200225,27,PT08M47.00S,1,1610612747,LAL,109,Horry,R. Horry,0,0,0,,0,0,0,0,v,Horry S.FOUL (P1.T1),Foul,Shooting,0,0,29
+0040200225,28,PT08M47.00S,1,1610612759,SAS,1495,Duncan,T. Duncan,0,0,0,,0,0,0,0,h,MISS Duncan Free Throw 1 of 2,Free Throw,Free Throw 1 of 2,0,0,30
+0040200225,29,PT08M47.00S,1,0,,1610612759,,,0,0,0,,0,0,0,0,h,SPURS Rebound,Rebound,Normal Rebound,0,0,31
+0040200225,30,PT08M47.00S,1,1610612759,SAS,1495,Duncan,T. Duncan,0,0,0,,0,7,4,11,h,Duncan Free Throw 2 of 2 (3 PTS),Free Throw,Free Throw 2 of 2,0,0,32
+0040200225,31,PT08M33.00S,1,1610612747,LAL,1904,George,D. George,130,209,25,Missed,1,0,0,0,v,MISS George 25' 3PT Jump Shot,Missed Shot,Jump Shot,0,3,33
+0040200225,32,PT08M31.00S,1,1610612759,SAS,1495,Duncan,T. Duncan,0,0,0,,0,0,0,0,h,Duncan REBOUND (Off:1 Def:2),Rebound,Unknown,0,0,34
+0040200225,33,PT08M20.00S,1,1610612759,SAS,2225,Parker,T. Parker,-41,196,20,Made,1,9,4,13,h,Parker 20' Jump Shot (2 PTS),Made Shot,Jump Shot,0,2,35
+0040200225,34,PT07M51.00S,1,1610612747,LAL,109,Horry,R. Horry,-102,33,11,Missed,1,0,0,0,v,MISS Horry 11' Jump Shot,Missed Shot,Jump Shot,0,2,36
+0040200225,35,PT07M48.00S,1,1610612747,LAL,109,Horry,R. Horry,0,0,0,,0,0,0,0,v,Horry REBOUND (Off:1 Def:1),Rebound,Unknown,0,0,37
+0040200225,36,PT07M45.00S,1,1610612759,SAS,1536,Jackson,S. Jackson,0,0,0,,0,0,0,0,h,Jackson S.FOUL (P1.T2),Foul,Shooting,0,0,38
+0040200225,37,PT07M45.00S,1,1610612747,LAL,1904,George,D. George,0,0,0,,0,9,5,14,v,George Free Throw 1 of 2 (1 PTS),Free Throw,Free Throw 1 of 2,0,0,39
+0040200225,38,PT07M45.00S,1,1610612747,LAL,1904,George,D. George,0,0,0,,0,9,6,15,v,George Free Throw 2 of 2 (2 PTS),Free Throw,Free Throw 2 of 2,0,0,40
+0040200225,39,PT07M35.00S,1,1610612759,SAS,2225,Parker,T. Parker,97,169,19,Missed,1,0,0,0,h,MISS Parker 19' Jump Shot,Missed Shot,Jump Shot,0,2,41
+0040200225,40,PT07M33.00S,1,1610612747,LAL,977,Bryant,K. Bryant,0,0,0,,0,0,0,0,v,Bryant REBOUND (Off:0 Def:1),Rebound,Unknown,0,0,42
+0040200225,41,PT07M26.00S,1,1610612747,LAL,977,Bryant,K. Bryant,-10,5,1,Missed,1,0,0,0,v,MISS Bryant 1' Driving Layup,Missed Shot,Driving Layup Shot,0,2,43
+0040200225,41,PT07M26.00S,1,1610612759,SAS,1477,Bowen,B. Bowen,0,0,0,,0,0,0,0,h,Bowen BLOCK (1 BLK),,,0,2,44
+0040200225,42,PT07M24.00S,1,1610612759,SAS,1495,Duncan,T. Duncan,0,0,0,,0,0,0,0,h,Duncan REBOUND (Off:1 Def:3),Rebound,Unknown,0,0,45
+0040200225,43,PT07M20.00S,1,1610612759,SAS,2225,Parker,T. Parker,5,10,1,Made,1,11,6,17,h,Parker 1' Reverse Layup (4 PTS) (Duncan 1 AST),Made Shot,Reverse Layup Shot,0,2,46
+0040200225,44,PT07M09.00S,1,1610612747,LAL,977,Bryant,K. Bryant,0,0,0,,0,0,0,0,v,Bryant Lost Ball Turnover (P1.T1),Turnover,Lost Ball,0,0,47
+0040200225,45,PT06M56.00S,1,1610612759,SAS,764,Robinson,D. Robinson,69,150,17,Missed,1,0,0,0,h,MISS Robinson 17' Jump Shot,Missed Shot,Jump Shot,0,2,48
+0040200225,46,PT06M54.00S,1,1610612747,LAL,977,Bryant,K. Bryant,0,0,0,,0,0,0,0,v,Bryant REBOUND (Off:0 Def:2),Rebound,Unknown,0,0,49
+0040200225,47,PT06M34.00S,1,1610612747,LAL,109,Horry,R. Horry,-80,229,24,Missed,1,0,0,0,v,MISS Horry 24' 3PT Jump Shot,Missed Shot,Jump Shot,0,3,50
+0040200225,48,PT06M32.00S,1,1610612759,SAS,1495,Duncan,T. Duncan,0,0,0,,0,0,0,0,h,Duncan REBOUND (Off:1 Def:4),Rebound,Unknown,0,0,51
+0040200225,49,PT06M27.00S,1,1610612747,LAL,977,Bryant,K. Bryant,0,0,0,,0,0,0,0,v,Bryant S.FOUL (P1.T2),Foul,Shooting,0,0,52
+0040200225,50,PT06M27.00S,1,1610612759,SAS,764,Robinson,D. Robinson,0,0,0,,0,0,0,0,h,SUB: Rose FOR Robinson,Substitution,,0,0,53
+0040200225,51,PT06M27.00S,1,1610612759,SAS,1536,Jackson,S. Jackson,0,0,0,,0,12,6,18,h,Jackson Free Throw 1 of 2 (1 PTS),Free Throw,Free Throw 1 of 2,0,0,54
+0040200225,52,PT06M27.00S,1,1610612759,SAS,1536,Jackson,S. Jackson,0,0,0,,0,13,6,19,h,Jackson Free Throw 2 of 2 (2 PTS),Free Throw,Free Throw 2 of 2,0,0,55
+0040200225,53,PT06M04.00S,1,1610612747,LAL,977,Bryant,K. Bryant,-72,110,13,Made,1,13,8,21,v,Bryant 13' Turnaround Jump Shot (4 PTS),Made Shot,Turnaround Jump Shot,0,2,56
+0040200225,54,PT05M45.00S,1,1610612759,SAS,990,Rose,M. Rose,-166,41,17,Made,1,15,8,23,h,Rose 17' Jump Shot (2 PTS) (Bowen 1 AST),Made Shot,Jump Shot,0,2,57
+0040200225,55,PT05M22.00S,1,1610612747,LAL,109,Horry,R. Horry,-8,186,19,Made,1,15,10,25,v,Horry 19' Jump Shot (2 PTS) (Bryant 2 AST),Made Shot,Jump Shot,0,2,58
+0040200225,56,PT05M14.00S,1,0,,1610612759,,,0,0,0,,0,0,0,0,h,SPURS Timeout: Regular (Full 1 Short 0),Timeout,Regular,0,0,59
+0040200225,58,PT05M06.00S,1,1610612759,SAS,1536,Jackson,S. Jackson,33,168,17,Made,1,17,10,27,h,Jackson 17' Jump Shot (4 PTS) (Duncan 2 AST),Made Shot,Jump Shot,0,2,60
+0040200225,59,PT04M44.00S,1,1610612747,LAL,109,Horry,R. Horry,-130,209,25,Missed,1,0,0,0,v,MISS Horry 25' 3PT Jump Shot,Missed Shot,Jump Shot,0,3,61
+0040200225,60,PT04M42.00S,1,0,,1610612747,,,0,0,0,,0,0,0,0,v,Lakers Rebound,Rebound,Unknown,0,0,62
+0040200225,61,PT04M42.00S,1,1610612759,SAS,1477,Bowen,B. Bowen,0,0,0,,0,0,0,0,h,Bowen L.B.FOUL (P1.T3),Foul,Loose Ball,0,0,63
+0040200225,62,PT04M32.00S,1,1610612747,LAL,977,Bryant,K. Bryant,-100,166,19,Missed,1,0,0,0,v,MISS Bryant 19' Jump Shot,Missed Shot,Jump Shot,0,2,64
+0040200225,63,PT04M30.00S,1,1610612759,SAS,2225,Parker,T. Parker,0,0,0,,0,0,0,0,h,Parker REBOUND (Off:0 Def:2),Rebound,Unknown,0,0,65
+0040200225,64,PT04M17.00S,1,1610612759,SAS,990,Rose,M. Rose,100,8,10,Made,1,19,10,29,h,Rose 10' Jump Hook Shot (4 PTS) (Parker 1 AST),Made Shot,Jump Hook Shot,0,2,66
+0040200225,65,PT04M03.00S,1,1610612747,LAL,406,O'Neal,S. O'Neal,11,3,1,Missed,1,0,0,0,v,MISS O'Neal 1' Reverse Layup,Missed Shot,Reverse Layup Shot,0,2,67
+0040200225,66,PT04M01.00S,1,1610612759,SAS,2225,Parker,T. Parker,0,0,0,,0,0,0,0,h,Parker REBOUND (Off:0 Def:3),Rebound,Unknown,0,0,68
+0040200225,67,PT03M57.00S,1,1610612759,SAS,2225,Parker,T. Parker,-3,10,1,Made,1,21,10,31,h,Parker 1' Layup (6 PTS),Made Shot,Layup Shot,0,2,69
+0040200225,68,PT03M42.00S,1,1610612747,LAL,406,O'Neal,S. O'Neal,0,0,0,,0,0,0,0,v,O'Neal Lost Ball Turnover (P1.T2),Turnover,Lost Ball,0,0,70
+0040200225,68,PT03M42.00S,1,1610612759,SAS,1495,Duncan,T. Duncan,0,0,0,,0,0,0,0,h,Duncan STEAL (1 STL),,,0,0,71
+0040200225,69,PT03M33.00S,1,1610612759,SAS,1477,Bowen,B. Bowen,223,28,0,Missed,1,0,0,0,h,MISS Bowen  3PT Jump Shot,Missed Shot,Jump Shot,0,3,72
+0040200225,70,PT03M32.00S,1,1610612747,LAL,965,Fisher,D. Fisher,0,0,0,,0,0,0,0,v,Fisher REBOUND (Off:0 Def:1),Rebound,Unknown,0,0,73
+0040200225,71,PT03M26.00S,1,1610612747,LAL,965,Fisher,D. Fisher,-10,3,1,Made,1,21,12,33,v,Fisher 1' Layup (2 PTS),Made Shot,Layup Shot,0,2,74
+0040200225,72,PT03M14.00S,1,1610612747,LAL,1904,George,D. George,0,0,0,,0,0,0,0,v,George S.FOUL (P1.T3),Foul,Shooting,0,0,75
+0040200225,73,PT03M14.00S,1,1610612759,SAS,1477,Bowen,B. Bowen,0,0,0,,0,0,0,0,h,SUB: Ginobili FOR Bowen,Substitution,,0,0,76
+0040200225,74,PT03M14.00S,1,1610612759,SAS,2225,Parker,T. Parker,0,0,0,,0,22,12,34,h,Parker Free Throw 1 of 2 (7 PTS),Free Throw,Free Throw 1 of 2,0,0,77
+0040200225,75,PT03M14.00S,1,1610612759,SAS,2225,Parker,T. Parker,0,0,0,,0,23,12,35,h,Parker Free Throw 2 of 2 (8 PTS),Free Throw,Free Throw 2 of 2,0,0,78
+0040200225,76,PT03M03.00S,1,1610612747,LAL,1904,George,D. George,0,0,0,,0,0,0,0,v,George Bad Pass Turnover (P1.T3),Turnover,Bad Pass,0,0,79
+0040200225,76,PT03M03.00S,1,1610612759,SAS,1938,Ginobili,M. Ginobili,0,0,0,,0,0,0,0,h,Ginobili STEAL (1 STL),,,0,0,80
+0040200225,77,PT03M00.00S,1,1610612759,SAS,1938,Ginobili,M. Ginobili,8,5,1,Made,1,25,12,37,h,Ginobili 1' Layup (2 PTS),Made Shot,Layup Shot,0,2,81
+0040200225,78,PT02M35.00S,1,1610612747,LAL,406,O'Neal,S. O'Neal,0,13,1,Made,1,25,14,39,v,O'Neal 1' Layup (4 PTS),Made Shot,Layup Shot,0,2,82
+0040200225,79,PT02M21.00S,1,1610612759,SAS,990,Rose,M. Rose,62,168,18,Missed,1,0,0,0,h,MISS Rose 18' Jump Shot,Missed Shot,Jump Shot,0,2,83
+0040200225,80,PT02M20.00S,1,1610612747,LAL,109,Horry,R. Horry,0,0,0,,0,0,0,0,v,Horry REBOUND (Off:1 Def:2),Rebound,Unknown,0,0,84
+0040200225,81,PT02M09.00S,1,1610612747,LAL,977,Bryant,K. Bryant,-3,12,1,Made,1,25,16,41,v,Bryant 1' Driving Layup (6 PTS),Made Shot,Driving Layup Shot,0,2,85
+0040200225,82,PT01M47.00S,1,1610612759,SAS,1495,Duncan,T. Duncan,-61,17,6,Missed,1,0,0,0,h,MISS Duncan 6' Jump Shot,Missed Shot,Jump Shot,0,2,86
+0040200225,84,PT01M43.00S,1,1610612759,SAS,1495,Duncan,T. Duncan,0,0,0,,0,0,0,0,h,Duncan REBOUND (Off:2 Def:4),Rebound,Unknown,0,0,87
+0040200225,83,PT01M43.00S,1,1610612759,SAS,1495,Duncan,T. Duncan,-31,23,4,Missed,1,0,0,0,h,MISS Duncan 4' Jump Shot,Missed Shot,Jump Shot,0,2,88
+0040200225,85,PT01M42.00S,1,1610612747,LAL,109,Horry,R. Horry,0,0,0,,0,0,0,0,v,Horry REBOUND (Off:1 Def:3),Rebound,Unknown,0,0,89
+0040200225,86,PT01M29.00S,1,1610612747,LAL,109,Horry,R. Horry,13,252,25,Missed,1,0,0,0,v,MISS Horry 25' 3PT Jump Shot,Missed Shot,Jump Shot,0,3,90
+0040200225,87,PT01M27.00S,1,1610612759,SAS,1495,Duncan,T. Duncan,0,0,0,,0,0,0,0,h,Duncan REBOUND (Off:2 Def:5),Rebound,Unknown,0,0,91
+0040200225,88,PT01M21.00S,1,1610612759,SAS,1495,Duncan,T. Duncan,-20,128,13,Made,1,27,16,43,h,Duncan 13' Running Jump Shot (5 PTS),Made Shot,Running Jump Shot,0,2,92
+0040200225,89,PT01M10.00S,1,0,,1610612747,,,0,0,0,,0,0,0,0,v,Lakers Timeout: Regular (Reg.1 Short 0),Timeout,Regular,0,0,93
+0040200225,91,PT01M10.00S,1,1610612747,LAL,109,Horry,R. Horry,0,0,0,,0,0,0,0,v,SUB: Madsen FOR Horry,Substitution,,0,0,94
+0040200225,92,PT01M10.00S,1,1610612747,LAL,1904,George,D. George,0,0,0,,0,0,0,0,v,SUB: Shaw FOR George,Substitution,,0,0,95
+0040200225,93,PT01M02.00S,1,1610612747,LAL,977,Bryant,K. Bryant,120,137,18,Made,1,27,18,45,v,Bryant 18' Jump Shot (8 PTS),Made Shot,Jump Shot,0,2,96
+0040200225,94,PT00M45.30S,1,1610612759,SAS,990,Rose,M. Rose,149,66,16,Missed,1,0,0,0,h,MISS Rose 16' Jump Shot,Missed Shot,Jump Shot,0,2,97
+0040200225,95,PT00M44.00S,1,1610612747,LAL,216,Shaw,B. Shaw,0,0,0,,0,0,0,0,v,Shaw REBOUND (Off:0 Def:1),Rebound,Unknown,0,0,98
+0040200225,96,PT00M39.00S,1,1610612759,SAS,990,Rose,M. Rose,0,0,0,,0,0,0,0,h,Rose P.FOUL (P1.T4),Foul,Personal,0,0,99
+0040200225,97,PT00M39.00S,1,1610612759,SAS,1536,Jackson,S. Jackson,0,0,0,,0,0,0,0,h,SUB: Bowen FOR Jackson,Substitution,,0,0,100
+0040200225,98,PT00M24.30S,1,1610612747,LAL,977,Bryant,K. Bryant,172,79,19,Missed,1,0,0,0,v,MISS Bryant 19' Jump Shot,Missed Shot,Jump Shot,0,2,101
+0040200225,99,PT00M22.90S,1,0,,1610612759,,,0,0,0,,0,0,0,0,h,SPURS Rebound,Rebound,Unknown,0,0,102
+0040200225,100,PT00M05.50S,1,1610612759,SAS,2225,Parker,T. Parker,-71,202,21,Made,1,29,18,47,h,Parker 21' Jump Shot (10 PTS),Made Shot,Jump Shot,0,2,103
+0040200225,101,PT00M00.00S,1,0,,0,,,0,0,0,,0,29,18,47, ,End of 1st Period (10:21 PM EST),period,end,0,0,104
+0040200225,103,PT12M00.00S,2,0,,0,,,0,0,0,,0,29,18,47, ,Start of 2nd Period (10:25 PM EST),period,start,0,0,105
+0040200225,104,PT11M41.00S,2,1610612747,LAL,977,Bryant,K. Bryant,120,5,12,Missed,1,0,0,0,v,MISS Bryant 12' Jump Shot,Missed Shot,Jump Shot,0,2,106
+0040200225,105,PT11M38.00S,2,1610612759,SAS,990,Rose,M. Rose,0,0,0,,0,0,0,0,h,Rose REBOUND (Off:0 Def:1),Rebound,Unknown,0,0,107
+0040200225,106,PT11M31.00S,2,1610612759,SAS,1495,Duncan,T. Duncan,-10,5,1,Made,1,31,18,49,h,Duncan 1' Dunk (7 PTS) (Ginobili 1 AST),Made Shot,Dunk Shot,0,2,108
+0040200225,107,PT11M09.00S,2,1610612747,LAL,216,Shaw,B. Shaw,-2,92,9,Missed,1,0,0,0,v,MISS Shaw 9' Turnaround Jump Shot,Missed Shot,Turnaround Jump Shot,0,2,109
+0040200225,108,PT11M08.00S,2,1610612759,SAS,2049,Claxton,S. Claxton,0,0,0,,0,0,0,0,h,Claxton REBOUND (Off:0 Def:1),Rebound,Unknown,0,0,110
+0040200225,109,PT10M56.00S,2,1610612759,SAS,1938,Ginobili,M. Ginobili,143,206,25,Made,1,34,18,52,h,Ginobili 25' 3PT Jump Shot (5 PTS) (Duncan 3 AST),Made Shot,Jump Shot,0,3,111
+0040200225,110,PT10M35.00S,2,1610612747,LAL,977,Bryant,K. Bryant,-28,31,4,Made,1,34,20,54,v,Bryant 4' Jump Shot (10 PTS),Made Shot,Jump Shot,0,2,112
+0040200225,111,PT10M23.00S,2,1610612747,LAL,2058,Madsen,M. Madsen,0,0,0,,0,0,0,0,v,Madsen P.FOUL (P1.T1),Foul,Personal,0,0,113
+0040200225,112,PT10M13.00S,2,1610612759,SAS,1938,Ginobili,M. Ginobili,-31,179,18,Missed,1,0,0,0,h,MISS Ginobili 18' Jump Shot,Missed Shot,Jump Shot,0,2,114
+0040200225,113,PT10M10.00S,2,1610612759,SAS,1477,Bowen,B. Bowen,0,0,0,,0,0,0,0,h,Bowen REBOUND (Off:1 Def:1),Rebound,Unknown,0,0,115
+0040200225,114,PT09M55.00S,2,1610612759,SAS,1477,Bowen,B. Bowen,233,12,0,Made,1,37,20,57,h,Bowen  3PT Jump Shot (3 PTS) (Claxton 1 AST),Made Shot,Jump Shot,0,3,116
+0040200225,115,PT09M37.00S,2,1610612747,LAL,1904,George,D. George,-120,164,20,Missed,1,0,0,0,v,MISS George 20' Jump Shot,Missed Shot,Jump Shot,0,2,117
+0040200225,116,PT09M35.00S,2,1610612759,SAS,1495,Duncan,T. Duncan,0,0,0,,0,0,0,0,h,Duncan REBOUND (Off:2 Def:6),Rebound,Unknown,0,0,118
+0040200225,117,PT09M24.00S,2,1610612759,SAS,1495,Duncan,T. Duncan,95,155,18,Made,1,39,20,59,h,Duncan 18' Jump Shot (9 PTS),Made Shot,Jump Shot,0,2,119
+0040200225,118,PT09M15.00S,2,0,,1610612747,,,0,0,0,,0,0,0,0,v,Lakers Timeout: Regular (Reg.2 Short 0),Timeout,Regular,0,0,120
+0040200225,120,PT09M15.00S,2,1610612759,SAS,1495,Duncan,T. Duncan,0,0,0,,0,0,0,0,h,SUB: Robinson FOR Duncan,Substitution,,0,0,121
+0040200225,121,PT09M15.00S,2,1610612747,LAL,1904,George,D. George,0,0,0,,0,0,0,0,v,SUB: O'Neal FOR George,Substitution,,0,0,122
+0040200225,122,PT09M15.00S,2,1610612747,LAL,965,Fisher,D. Fisher,0,0,0,,0,0,0,0,v,SUB: Pargo FOR Fisher,Substitution,,0,0,123
+0040200225,123,PT09M03.00S,2,1610612747,LAL,216,Shaw,B. Shaw,3,56,6,Made,1,39,22,61,v,Shaw 6' Running Jump Shot (2 PTS),Made Shot,Running Jump Shot,0,2,124
+0040200225,124,PT08M41.00S,2,1610612759,SAS,2049,Claxton,S. Claxton,-146,107,18,Made,1,41,22,63,h,Claxton 18' Jump Shot (2 PTS),Made Shot,Jump Shot,0,2,125
+0040200225,125,PT08M21.00S,2,1610612747,LAL,216,Shaw,B. Shaw,0,0,0,,0,0,0,0,v,Shaw Bad Pass Turnover (P1.T4),Turnover,Bad Pass,0,0,126
+0040200225,126,PT08M04.00S,2,1610612759,SAS,2049,Claxton,S. Claxton,-2,69,7,Missed,1,0,0,0,h,MISS Claxton 7' Running Jump Shot,Missed Shot,Running Jump Shot,0,2,127
+0040200225,126,PT08M04.00S,2,1610612747,LAL,2457,Pargo,J. Pargo,0,0,0,,0,0,0,0,v,Pargo BLOCK (1 BLK),,,0,2,128
+0040200225,127,PT08M01.00S,2,1610612759,SAS,990,Rose,M. Rose,0,0,0,,0,0,0,0,h,Rose REBOUND (Off:1 Def:1),Rebound,Unknown,0,0,129
+0040200225,128,PT07M59.00S,2,1610612759,SAS,990,Rose,M. Rose,3,18,2,Missed,1,0,0,0,h,MISS Rose 2' Layup,Missed Shot,Layup Shot,0,2,130
+0040200225,128,PT07M59.00S,2,1610612747,LAL,406,O'Neal,S. O'Neal,0,0,0,,0,0,0,0,v,O'Neal BLOCK (1 BLK),,,0,2,131
+0040200225,129,PT07M56.00S,2,1610612747,LAL,406,O'Neal,S. O'Neal,0,0,0,,0,0,0,0,v,O'Neal REBOUND (Off:1 Def:1),Rebound,Unknown,0,0,132
+0040200225,130,PT07M32.00S,2,1610612747,LAL,977,Bryant,K. Bryant,167,61,18,Missed,1,0,0,0,v,MISS Bryant 18' Jump Shot,Missed Shot,Jump Shot,0,2,133
+0040200225,131,PT07M31.00S,2,1610612759,SAS,2049,Claxton,S. Claxton,0,0,0,,0,0,0,0,h,Claxton REBOUND (Off:0 Def:2),Rebound,Unknown,0,0,134
+0040200225,132,PT07M26.00S,2,1610612759,SAS,2049,Claxton,S. Claxton,-3,13,1,Made,1,43,22,65,h,Claxton 1' Reverse Layup (4 PTS) (Bowen 2 AST),Made Shot,Reverse Layup Shot,0,2,135
+0040200225,133,PT07M13.00S,2,1610612747,LAL,406,O'Neal,S. O'Neal,-117,25,12,Made,1,43,24,67,v,O'Neal 12' Turnaround Jump Shot (6 PTS) (Shaw 1 AST),Made Shot,Turnaround Jump Shot,0,2,136
+0040200225,134,PT06M51.00S,2,1610612759,SAS,2049,Claxton,S. Claxton,-6,7,1,Made,1,45,24,69,h,Claxton 1' Driving Layup (6 PTS),Made Shot,Driving Layup Shot,0,2,137
+0040200225,135,PT06M37.00S,2,1610612747,LAL,977,Bryant,K. Bryant,161,41,17,Made,1,45,26,71,v,Bryant 17' Jump Shot (12 PTS),Made Shot,Jump Shot,0,2,138
+0040200225,136,PT06M19.00S,2,1610612759,SAS,2049,Claxton,S. Claxton,-117,128,17,Missed,1,0,0,0,h,MISS Claxton 17' Jump Shot,Missed Shot,Jump Shot,0,2,139
+0040200225,137,PT06M17.00S,2,1610612759,SAS,1938,Ginobili,M. Ginobili,0,0,0,,0,0,0,0,h,Ginobili REBOUND (Off:1 Def:0),Rebound,Unknown,0,0,140
+0040200225,138,PT06M14.00S,2,1610612759,SAS,1938,Ginobili,M. Ginobili,-23,63,7,Made,1,47,26,73,h,Ginobili 7' Jump Shot (7 PTS),Made Shot,Jump Shot,0,2,141
+0040200225,139,PT06M05.00S,2,1610612747,LAL,216,Shaw,B. Shaw,-10,2,1,Missed,1,0,0,0,v,MISS Shaw 1' Driving Layup,Missed Shot,Driving Layup Shot,0,2,142
+0040200225,139,PT06M05.00S,2,1610612759,SAS,1938,Ginobili,M. Ginobili,0,0,0,,0,0,0,0,h,Ginobili BLOCK (1 BLK),,,0,2,143
+0040200225,140,PT06M02.00S,2,1610612759,SAS,990,Rose,M. Rose,0,0,0,,0,0,0,0,h,Rose REBOUND (Off:1 Def:2),Rebound,Unknown,0,0,144
+0040200225,141,PT05M55.00S,2,1610612747,LAL,2058,Madsen,M. Madsen,0,0,0,,0,0,0,0,v,Madsen P.FOUL (P2.T2),Foul,Personal,0,0,145
+0040200225,142,PT05M55.00S,2,0,,0,,,0,0,0,,0,0,0,0, ,Timeout: Official,Timeout,Official,0,0,146
+0040200225,149,PT05M55.00S,2,1610612759,SAS,990,Rose,M. Rose,0,0,0,,0,0,0,0,h,SUB: Duncan FOR Rose,Substitution,,0,0,147
+0040200225,143,PT05M55.00S,2,1610612759,SAS,2049,Claxton,S. Claxton,0,0,0,,0,0,0,0,h,SUB: Parker FOR Claxton,Substitution,,0,0,148
+0040200225,144,PT05M55.00S,2,1610612747,LAL,216,Shaw,B. Shaw,0,0,0,,0,0,0,0,v,SUB: Rush FOR Shaw,Substitution,,0,0,149
+0040200225,145,PT05M55.00S,2,1610612747,LAL,2058,Madsen,M. Madsen,0,0,0,,0,0,0,0,v,SUB: Medvedenko FOR Madsen,Substitution,,0,0,150
+0040200225,146,PT05M55.00S,2,1610612747,LAL,2457,Pargo,J. Pargo,0,0,0,,0,0,0,0,v,SUB: Fisher FOR Pargo,Substitution,,0,0,151
+0040200225,147,PT05M44.00S,2,1610612759,SAS,1495,Duncan,T. Duncan,57,71,9,Missed,1,0,0,0,h,MISS Duncan 9' Jump Shot,Missed Shot,Jump Shot,0,2,152
+0040200225,148,PT05M41.00S,2,1610612747,LAL,406,O'Neal,S. O'Neal,0,0,0,,0,0,0,0,v,O'Neal REBOUND (Off:1 Def:2),Rebound,Unknown,0,0,153
+0040200225,150,PT05M24.00S,2,1610612747,LAL,406,O'Neal,S. O'Neal,80,40,9,Missed,1,0,0,0,v,MISS O'Neal 9' Jump Shot,Missed Shot,Jump Shot,0,2,154
+0040200225,151,PT05M21.00S,2,1610612759,SAS,1495,Duncan,T. Duncan,0,0,0,,0,0,0,0,h,Duncan REBOUND (Off:2 Def:7),Rebound,Unknown,0,0,155
+0040200225,152,PT05M09.00S,2,1610612759,SAS,1477,Bowen,B. Bowen,94,79,12,Made,1,49,26,75,h,Bowen 12' Jump Shot (5 PTS),Made Shot,Jump Shot,0,2,156
+0040200225,153,PT04M51.00S,2,1610612747,LAL,965,Fisher,D. Fisher,-25,141,14,Made,1,49,28,77,v,Fisher 14' Jump Shot (4 PTS),Made Shot,Jump Shot,0,2,157
+0040200225,154,PT04M38.00S,2,1610612759,SAS,1938,Ginobili,M. Ginobili,158,187,24,Missed,1,0,0,0,h,MISS Ginobili 24' 3PT Jump Shot,Missed Shot,Jump Shot,0,3,158
+0040200225,155,PT04M36.00S,2,1610612759,SAS,764,Robinson,D. Robinson,0,0,0,,0,0,0,0,h,Robinson REBOUND (Off:2 Def:0),Rebound,Unknown,0,0,159
+0040200225,156,PT04M26.00S,2,1610612759,SAS,2225,Parker,T. Parker,113,150,19,Missed,1,0,0,0,h,MISS Parker 19' Jump Shot,Missed Shot,Jump Shot,0,2,160
+0040200225,157,PT04M24.00S,2,1610612747,LAL,977,Bryant,K. Bryant,0,0,0,,0,0,0,0,v,Bryant REBOUND (Off:0 Def:3),Rebound,Unknown,0,0,161
+0040200225,158,PT04M18.00S,2,1610612747,LAL,2416,Rush,K. Rush,26,10,3,Missed,1,0,0,0,v,MISS Rush 3' Layup,Missed Shot,Layup Shot,0,2,162
+0040200225,159,PT04M15.00S,2,1610612747,LAL,2416,Rush,K. Rush,0,0,0,,0,0,0,0,v,Rush REBOUND (Off:1 Def:0),Rebound,Unknown,0,0,163
+0040200225,160,PT04M12.00S,2,1610612747,LAL,2416,Rush,K. Rush,0,0,0,,0,0,0,0,v,Rush Bad Pass Turnover (P1.T5),Turnover,Bad Pass,0,0,164
+0040200225,160,PT04M12.00S,2,1610612759,SAS,1938,Ginobili,M. Ginobili,0,0,0,,0,0,0,0,h,Ginobili STEAL (2 STL),,,0,0,165
+0040200225,161,PT04M08.00S,2,1610612759,SAS,2225,Parker,T. Parker,-3,2,0,Made,1,51,28,79,h,Parker  Reverse Layup (12 PTS) (Ginobili 2 AST),Made Shot,Reverse Layup Shot,0,2,166
+0040200225,162,PT03M44.00S,2,1610612747,LAL,406,O'Neal,S. O'Neal,-13,7,1,Made,1,51,30,81,v,O'Neal 1' Layup (8 PTS) (Bryant 3 AST),Made Shot,Layup Shot,0,2,167
+0040200225,163,PT03M25.00S,2,1610612747,LAL,2098,Medvedenko,S. Medvedenko,0,0,0,,0,0,0,0,v,Medvedenko S.FOUL (P1.T3),Foul,Shooting,0,0,168
+0040200225,164,PT03M25.00S,2,1610612759,SAS,764,Robinson,D. Robinson,0,0,0,,0,0,0,0,h,SUB: Rose FOR Robinson,Substitution,,0,0,169
+0040200225,165,PT03M25.00S,2,1610612759,SAS,1938,Ginobili,M. Ginobili,0,0,0,,0,0,0,0,h,SUB: Jackson FOR Ginobili,Substitution,,0,0,170
+0040200225,166,PT03M25.00S,2,1610612759,SAS,1477,Bowen,B. Bowen,0,0,0,,0,0,0,0,h,MISS Bowen Free Throw 1 of 2,Free Throw,Free Throw 1 of 2,0,0,171
+0040200225,167,PT03M25.00S,2,0,,1610612759,,,0,0,0,,0,0,0,0,h,SPURS Rebound,Rebound,Normal Rebound,0,0,172
+0040200225,168,PT03M25.00S,2,1610612759,SAS,1477,Bowen,B. Bowen,0,0,0,,0,52,30,82,h,Bowen Free Throw 2 of 2 (6 PTS),Free Throw,Free Throw 2 of 2,0,0,173
+0040200225,169,PT03M12.00S,2,1610612747,LAL,2098,Medvedenko,S. Medvedenko,166,71,18,Made,1,52,32,84,v,Medvedenko 18' Jump Shot (2 PTS),Made Shot,Jump Shot,0,2,174
+0040200225,170,PT02M58.00S,2,1610612759,SAS,1536,Jackson,S. Jackson,-117,53,13,Made,1,54,32,86,h,Jackson 13' Jump Shot (6 PTS),Made Shot,Jump Shot,0,2,175
+0040200225,171,PT02M39.00S,2,1610612747,LAL,2416,Rush,K. Rush,0,5,1,Made,1,54,34,88,v,Rush 1' Reverse Layup (2 PTS) (O'Neal 2 AST),Made Shot,Reverse Layup Shot,0,2,176
+0040200225,172,PT02M18.00S,2,1610612759,SAS,1536,Jackson,S. Jackson,-15,10,2,Missed,1,0,0,0,h,MISS Jackson 2' Layup,Missed Shot,Layup Shot,0,2,177
+0040200225,174,PT02M16.00S,2,1610612759,SAS,1495,Duncan,T. Duncan,0,0,0,,0,0,0,0,h,Duncan REBOUND (Off:3 Def:7),Rebound,Unknown,0,0,178
+0040200225,173,PT02M16.00S,2,1610612759,SAS,1495,Duncan,T. Duncan,-6,8,1,Made,1,56,34,90,h,Duncan 1' Layup (11 PTS),Made Shot,Layup Shot,0,2,179
+0040200225,175,PT01M53.00S,2,1610612747,LAL,977,Bryant,K. Bryant,0,0,0,,0,0,0,0,v,Bryant Bad Pass Turnover (P2.T6),Turnover,Bad Pass,0,0,180
+0040200225,175,PT01M53.00S,2,1610612759,SAS,1536,Jackson,S. Jackson,0,0,0,,0,0,0,0,h,Jackson STEAL (1 STL),,,0,0,181
+0040200225,176,PT01M41.00S,2,0,,1610612759,,,0,0,0,,0,0,0,0,h,SPURS Timeout: Regular (Full 2 Short 0),Timeout,Regular,0,0,182
+0040200225,177,PT01M41.00S,2,1610612747,LAL,2416,Rush,K. Rush,0,0,0,,0,0,0,0,v,SUB: George FOR Rush,Substitution,,0,0,183
+0040200225,178,PT01M41.00S,2,1610612747,LAL,2098,Medvedenko,S. Medvedenko,0,0,0,,0,0,0,0,v,SUB: Horry FOR Medvedenko,Substitution,,0,0,184
+0040200225,179,PT01M33.00S,2,1610612759,SAS,1495,Duncan,T. Duncan,-135,26,14,Missed,1,0,0,0,h,MISS Duncan 14' Jump Shot,Missed Shot,Jump Shot,0,2,185
+0040200225,180,PT01M31.00S,2,1610612747,LAL,965,Fisher,D. Fisher,0,0,0,,0,0,0,0,v,Fisher REBOUND (Off:0 Def:2),Rebound,Unknown,0,0,186
+0040200225,181,PT01M15.00S,2,1610612759,SAS,2225,Parker,T. Parker,0,0,0,,0,0,0,0,h,Parker P.FOUL (P1.T1),Foul,Personal,0,0,187
+0040200225,182,PT01M09.00S,2,1610612747,LAL,406,O'Neal,S. O'Neal,0,0,0,,0,0,0,0,v,O'Neal Lost Ball Turnover (P2.T7),Turnover,Lost Ball,0,0,188
+0040200225,182,PT01M09.00S,2,1610612759,SAS,990,Rose,M. Rose,0,0,0,,0,0,0,0,h,Rose STEAL (1 STL),,,0,0,189
+0040200225,183,PT01M06.00S,2,1610612759,SAS,990,Rose,M. Rose,0,0,0,,0,0,0,0,h,Rose Lost Ball Turnover (P1.T2),Turnover,Lost Ball,0,0,190
+0040200225,184,PT01M02.00S,2,1610612747,LAL,977,Bryant,K. Bryant,110,150,19,Missed,1,0,0,0,v,MISS Bryant 19' Jump Shot,Missed Shot,Jump Shot,0,2,191
+0040200225,185,PT01M01.00S,2,0,,1610612747,,,0,0,0,,0,0,0,0,v,Lakers Rebound,Rebound,Unknown,0,0,192
+0040200225,186,PT00M59.20S,2,1610612759,SAS,2225,Parker,T. Parker,0,0,0,,0,0,0,0,h,Parker S.FOUL (P2.PN),Foul,Shooting,0,0,193
+0040200225,187,PT00M59.20S,2,1610612747,LAL,965,Fisher,D. Fisher,0,0,0,,0,56,35,91,v,Fisher Free Throw 1 of 2 (5 PTS),Free Throw,Free Throw 1 of 2,0,0,194
+0040200225,188,PT00M59.20S,2,1610612759,SAS,2225,Parker,T. Parker,0,0,0,,0,0,0,0,h,SUB: Claxton FOR Parker,Substitution,,0,0,195
+0040200225,189,PT00M59.20S,2,1610612747,LAL,965,Fisher,D. Fisher,0,0,0,,0,56,36,92,v,Fisher Free Throw 2 of 2 (6 PTS),Free Throw,Free Throw 2 of 2,0,0,196
+0040200225,190,PT00M43.20S,2,1610612759,SAS,1536,Jackson,S. Jackson,232,-5,0,Missed,1,0,0,0,h,MISS Jackson  3PT Jump Shot,Missed Shot,Jump Shot,0,3,197
+0040200225,191,PT00M41.20S,2,1610612747,LAL,1904,George,D. George,0,0,0,,0,0,0,0,v,George REBOUND (Off:0 Def:1),Rebound,Unknown,0,0,198
+0040200225,192,PT00M29.20S,2,1610612747,LAL,109,Horry,R. Horry,-125,219,25,Missed,1,0,0,0,v,MISS Horry 25' 3PT Jump Shot,Missed Shot,Jump Shot,0,3,199
+0040200225,193,PT00M26.90S,2,1610612759,SAS,2049,Claxton,S. Claxton,0,0,0,,0,0,0,0,h,Claxton REBOUND (Off:0 Def:3),Rebound,Unknown,0,0,200
+0040200225,194,PT00M11.20S,2,1610612759,SAS,1536,Jackson,S. Jackson,-151,59,16,Missed,1,0,0,0,h,MISS Jackson 16' Jump Shot,Missed Shot,Jump Shot,0,2,201
+0040200225,195,PT00M09.20S,2,1610612747,LAL,965,Fisher,D. Fisher,0,0,0,,0,0,0,0,v,Fisher REBOUND (Off:0 Def:3),Rebound,Unknown,0,0,202
+0040200225,196,PT00M01.40S,2,1610612747,LAL,965,Fisher,D. Fisher,3,54,5,Made,1,56,38,94,v,Fisher 5' Running Jump Shot (8 PTS),Made Shot,Running Jump Shot,0,2,203
+0040200225,197,PT00M00.00S,2,1610612759,SAS,1536,Jackson,S. Jackson,-167,619,64,Missed,1,0,0,0,h,MISS Jackson 64' 3PT Jump Shot,Missed Shot,Jump Shot,0,3,204
+0040200225,198,PT00M00.00S,2,0,,1610612759,,,0,0,0,,0,0,0,0,h,SPURS Rebound,Rebound,Unknown,0,0,205
+0040200225,199,PT00M00.00S,2,0,,0,,,0,0,0,,0,56,38,94, ,End of 2nd Period (10:52 PM EST),period,end,0,0,206
+0040200225,201,PT12M00.00S,3,0,,0,,,0,0,0,,0,56,38,94, ,Start of 3rd Period (11:11 PM EST),period,start,0,0,207
+0040200225,202,PT11M44.00S,3,1610612747,LAL,977,Bryant,K. Bryant,0,0,0,,0,0,0,0,v,Bryant Bad Pass Turnover (P3.T8),Turnover,Bad Pass,0,0,208
+0040200225,202,PT11M44.00S,3,1610612759,SAS,764,Robinson,D. Robinson,0,0,0,,0,0,0,0,h,Robinson STEAL (1 STL),,,0,0,209
+0040200225,203,PT11M25.00S,3,1610612759,SAS,1495,Duncan,T. Duncan,108,3,11,Made,1,58,38,96,h,Duncan 11' Turnaround Jump Shot (13 PTS),Made Shot,Turnaround Jump Shot,0,2,210
+0040200225,204,PT11M07.00S,3,1610612747,LAL,406,O'Neal,S. O'Neal,-60,42,7,Missed,1,0,0,0,v,MISS O'Neal 7' Jump Hook Shot,Missed Shot,Jump Hook Shot,0,2,211
+0040200225,205,PT11M06.00S,3,1610612759,SAS,1495,Duncan,T. Duncan,0,0,0,,0,0,0,0,h,Duncan REBOUND (Off:3 Def:8),Rebound,Unknown,0,0,212
+0040200225,206,PT10M58.00S,3,1610612759,SAS,2225,Parker,T. Parker,28,206,21,Missed,1,0,0,0,h,MISS Parker 21' Jump Shot,Missed Shot,Jump Shot,0,2,213
+0040200225,207,PT10M56.00S,3,1610612759,SAS,764,Robinson,D. Robinson,0,0,0,,0,0,0,0,h,Robinson REBOUND (Off:3 Def:0),Rebound,Unknown,0,0,214
+0040200225,208,PT10M42.00S,3,1610612759,SAS,1536,Jackson,S. Jackson,0,0,0,,0,0,0,0,h,Jackson Bad Pass Turnover (P1.T3),Turnover,Bad Pass,0,0,215
+0040200225,209,PT10M24.00S,3,1610612747,LAL,977,Bryant,K. Bryant,-8,8,1,Made,1,58,40,98,v,Bryant 1' Driving Layup (14 PTS),Made Shot,Driving Layup Shot,0,2,216
+0040200225,210,PT09M57.00S,3,1610612759,SAS,1495,Duncan,T. Duncan,3,49,5,Missed,1,0,0,0,h,MISS Duncan 5' Jump Shot,Missed Shot,Jump Shot,0,2,217
+0040200225,210,PT09M57.00S,3,1610612747,LAL,406,O'Neal,S. O'Neal,0,0,0,,0,0,0,0,v,O'Neal BLOCK (2 BLK),,,0,2,218
+0040200225,211,PT09M57.00S,3,0,,1610612759,,,0,0,0,,0,0,0,0,h,SPURS Rebound,Rebound,Unknown,0,0,219
+0040200225,212,PT09M57.00S,3,0,,1610612759,,,0,0,0,,0,0,0,0,h,SPURS Turnover: Shot Clock (T#4),Turnover,Shot Clock Turnover,0,0,220
+0040200225,213,PT09M38.00S,3,1610612747,LAL,406,O'Neal,S. O'Neal,69,23,7,Made,1,58,42,100,v,O'Neal 7' Jump Shot (10 PTS) (Horry 1 AST),Made Shot,Jump Shot,0,2,221
+0040200225,214,PT09M19.00S,3,1610612759,SAS,1477,Bowen,B. Bowen,-230,36,0,Made,1,61,42,103,h,Bowen  3PT Jump Shot (9 PTS) (Jackson 2 AST),Made Shot,Jump Shot,0,3,222
+0040200225,215,PT08M57.00S,3,1610612747,LAL,1904,George,D. George,24,15,3,Missed,1,0,0,0,v,MISS George 3' Driving Layup,Missed Shot,Driving Layup Shot,0,2,223
+0040200225,216,PT08M55.00S,3,0,,1610612759,,,0,0,0,,0,0,0,0,h,SPURS Rebound,Rebound,Unknown,0,0,224
+0040200225,217,PT08M44.00S,3,1610612759,SAS,2225,Parker,T. Parker,28,51,6,Made,1,63,42,105,h,Parker 6' Running Jump Shot (14 PTS),Made Shot,Running Jump Shot,0,2,225
+0040200225,218,PT08M17.00S,3,1610612747,LAL,977,Bryant,K. Bryant,77,169,19,Made,1,63,44,107,v,Bryant 19' Jump Shot (16 PTS),Made Shot,Jump Shot,0,2,226
+0040200225,219,PT07M55.00S,3,1610612759,SAS,1495,Duncan,T. Duncan,105,5,11,Missed,1,0,0,0,h,MISS Duncan 11' Turnaround Jump Shot,Missed Shot,Turnaround Jump Shot,0,2,227
+0040200225,220,PT07M54.00S,3,1610612759,SAS,764,Robinson,D. Robinson,0,0,0,,0,0,0,0,h,Robinson REBOUND (Off:4 Def:0),Rebound,Unknown,0,0,228
+0040200225,221,PT07M54.00S,3,1610612747,LAL,965,Fisher,D. Fisher,0,0,0,,0,0,0,0,v,Fisher P.FOUL (P1.T1),Foul,Personal,0,0,229
+0040200225,222,PT07M45.00S,3,1610612759,SAS,2225,Parker,T. Parker,-71,42,8,Missed,1,0,0,0,h,MISS Parker 8' Jump Shot,Missed Shot,Jump Shot,0,2,230
+0040200225,224,PT07M44.00S,3,1610612759,SAS,764,Robinson,D. Robinson,0,0,0,,0,0,0,0,h,Robinson REBOUND (Off:5 Def:0),Rebound,Unknown,0,0,231
+0040200225,223,PT07M44.00S,3,1610612759,SAS,764,Robinson,D. Robinson,-10,8,1,Missed,1,0,0,0,h,MISS Robinson 1' Tip Shot,Missed Shot,Tip Shot,0,2,232
+0040200225,225,PT07M41.00S,3,1610612747,LAL,109,Horry,R. Horry,0,0,0,,0,0,0,0,v,Horry REBOUND (Off:1 Def:4),Rebound,Unknown,0,0,233
+0040200225,226,PT07M37.00S,3,1610612747,LAL,109,Horry,R. Horry,0,0,0,,0,0,0,0,v,Horry Lost Ball Turnover (P1.T9),Turnover,Lost Ball,0,0,234
+0040200225,226,PT07M37.00S,3,1610612759,SAS,1477,Bowen,B. Bowen,0,0,0,,0,0,0,0,h,Bowen STEAL (1 STL),,,0,0,235
+0040200225,227,PT07M32.00S,3,1610612747,LAL,965,Fisher,D. Fisher,0,0,0,,0,0,0,0,v,Fisher S.FOUL (P2.T2),Foul,Shooting,0,0,236
+0040200225,228,PT07M32.00S,3,1610612759,SAS,2225,Parker,T. Parker,0,0,0,,0,64,44,108,h,Parker Free Throw 1 of 2 (15 PTS),Free Throw,Free Throw 1 of 2,0,0,237
+0040200225,229,PT07M32.00S,3,1610612759,SAS,2225,Parker,T. Parker,0,0,0,,0,65,44,109,h,Parker Free Throw 2 of 2 (16 PTS),Free Throw,Free Throw 2 of 2,0,0,238
+0040200225,230,PT07M18.00S,3,1610612759,SAS,764,Robinson,D. Robinson,0,0,0,,0,0,0,0,h,Robinson S.FOUL (P2.T1),Foul,Shooting,0,0,239
+0040200225,231,PT07M18.00S,3,1610612747,LAL,406,O'Neal,S. O'Neal,0,0,0,,0,65,45,110,v,O'Neal Free Throw 1 of 2 (11 PTS),Free Throw,Free Throw 1 of 2,0,0,240
+0040200225,232,PT07M18.00S,3,1610612747,LAL,406,O'Neal,S. O'Neal,0,0,0,,0,0,0,0,v,MISS O'Neal Free Throw 2 of 2,Free Throw,Free Throw 2 of 2,0,0,241
+0040200225,233,PT07M17.00S,3,1610612759,SAS,764,Robinson,D. Robinson,0,0,0,,0,0,0,0,h,Robinson REBOUND (Off:5 Def:1),Rebound,Unknown,0,0,242
+0040200225,234,PT07M03.00S,3,1610612759,SAS,1495,Duncan,T. Duncan,-49,43,7,Made,1,67,45,112,h,Duncan 7' Turnaround Jump Shot (15 PTS),Made Shot,Turnaround Jump Shot,0,2,243
+0040200225,235,PT06M43.00S,3,1610612759,SAS,1536,Jackson,S. Jackson,0,0,0,,0,0,0,0,h,Jackson P.FOUL (P2.T2),Foul,Personal,0,0,244
+0040200225,236,PT06M43.00S,3,1610612747,LAL,406,O'Neal,S. O'Neal,0,0,0,,0,0,0,0,v,O'Neal T.FOUL (P0.T2),Foul,Technical,0,0,245
+0040200225,237,PT06M43.00S,3,1610612759,SAS,1536,Jackson,S. Jackson,0,0,0,,0,68,45,113,h,Jackson Free Throw Technical (7 PTS),Free Throw,Free Throw Technical,0,0,246
+0040200225,238,PT06M33.00S,3,1610612747,LAL,406,O'Neal,S. O'Neal,0,0,0,,0,0,0,0,v,O'Neal OFF.Foul (P1),Foul,Offensive,0,0,247
+0040200225,239,PT06M33.00S,3,1610612747,LAL,406,O'Neal,S. O'Neal,0,0,0,,0,0,0,0,v,O'Neal Foul Turnover (P3.T10),Turnover,Foul,0,0,248
+0040200225,240,PT06M16.00S,3,1610612759,SAS,764,Robinson,D. Robinson,-112,137,18,Missed,1,0,0,0,h,MISS Robinson 18' Jump Shot,Missed Shot,Jump Shot,0,2,249
+0040200225,241,PT06M14.00S,3,1610612747,LAL,965,Fisher,D. Fisher,0,0,0,,0,0,0,0,v,Fisher REBOUND (Off:0 Def:4),Rebound,Unknown,0,0,250
+0040200225,242,PT06M12.00S,3,1610612747,LAL,406,O'Neal,S. O'Neal,0,5,1,Made,1,68,47,115,v,O'Neal 1' Dunk (13 PTS) (Fisher 1 AST),Made Shot,Dunk Shot,0,2,251
+0040200225,243,PT05M48.00S,3,1610612759,SAS,1495,Duncan,T. Duncan,-43,30,5,Made,1,70,47,117,h,Duncan 5' Jump Shot (17 PTS),Made Shot,Jump Shot,0,2,252
+0040200225,244,PT05M36.00S,3,1610612759,SAS,1495,Duncan,T. Duncan,0,0,0,,0,0,0,0,h,Duncan P.FOUL (P1.T3),Foul,Personal,0,0,253
+0040200225,245,PT05M36.00S,3,0,,1610612759,,,0,0,0,,0,0,0,0,h,SPURS Timeout: Regular (Full 3 Short 0),Timeout,Regular,0,0,254
+0040200225,247,PT05M28.00S,3,1610612747,LAL,109,Horry,R. Horry,-52,49,7,Made,1,70,49,119,v,Horry 7' Jump Hook Shot (4 PTS),Made Shot,Jump Hook Shot,0,2,255
+0040200225,248,PT05M07.00S,3,1610612759,SAS,1495,Duncan,T. Duncan,133,8,13,Made,1,72,49,121,h,Duncan 13' Jump Shot (19 PTS),Made Shot,Jump Shot,0,2,256
+0040200225,249,PT04M52.00S,3,1610612747,LAL,1904,George,D. George,6,22,2,Missed,1,0,0,0,v,MISS George 2' Running Layup,Missed Shot,Running Layup Shot,0,2,257
+0040200225,251,PT04M50.00S,3,1610612747,LAL,109,Horry,R. Horry,0,0,0,,0,0,0,0,v,Horry REBOUND (Off:2 Def:4),Rebound,Unknown,0,0,258
+0040200225,250,PT04M50.00S,3,1610612747,LAL,109,Horry,R. Horry,-3,2,0,Made,1,72,51,123,v,Horry  Dunk (6 PTS),Made Shot,Dunk Shot,0,2,259
+0040200225,252,PT04M29.00S,3,1610612759,SAS,2225,Parker,T. Parker,-148,0,15,Made,1,74,51,125,h,Parker 15' Jump Shot (18 PTS) (Robinson 1 AST),Made Shot,Jump Shot,0,2,260
+0040200225,253,PT04M06.00S,3,1610612747,LAL,406,O'Neal,S. O'Neal,0,0,0,,0,0,0,0,v,O'Neal Lost Ball Turnover (P4.T11),Turnover,Lost Ball,0,0,261
+0040200225,253,PT04M06.00S,3,1610612759,SAS,1536,Jackson,S. Jackson,0,0,0,,0,0,0,0,h,Jackson STEAL (2 STL),,,0,0,262
+0040200225,254,PT03M52.00S,3,1610612759,SAS,2225,Parker,T. Parker,181,-5,18,Missed,1,0,0,0,h,MISS Parker 18' Jump Shot,Missed Shot,Jump Shot,0,2,263
+0040200225,255,PT03M50.00S,3,1610612747,LAL,965,Fisher,D. Fisher,0,0,0,,0,0,0,0,v,Fisher REBOUND (Off:0 Def:5),Rebound,Unknown,0,0,264
+0040200225,256,PT03M42.00S,3,1610612747,LAL,406,O'Neal,S. O'Neal,0,0,0,,0,0,0,0,v,O'Neal Lost Ball Turnover (P5.T12),Turnover,Lost Ball,0,0,265
+0040200225,256,PT03M42.00S,3,1610612759,SAS,1536,Jackson,S. Jackson,0,0,0,,0,0,0,0,h,Jackson STEAL (3 STL),,,0,0,266
+0040200225,257,PT03M37.00S,3,1610612759,SAS,1477,Bowen,B. Bowen,-3,5,1,Made,1,76,51,127,h,Bowen 1' Dunk (11 PTS) (Parker 2 AST),Made Shot,Dunk Shot,0,2,267
+0040200225,258,PT03M15.00S,3,1610612747,LAL,1904,George,D. George,-161,-6,16,Missed,1,0,0,0,v,MISS George 16' Jump Shot,Missed Shot,Jump Shot,0,2,268
+0040200225,259,PT03M14.00S,3,1610612747,LAL,109,Horry,R. Horry,0,0,0,,0,0,0,0,v,Horry REBOUND (Off:3 Def:4),Rebound,Unknown,0,0,269
+0040200225,260,PT03M13.00S,3,1610612747,LAL,1904,George,D. George,-43,5,4,Missed,1,0,0,0,v,MISS George 4' Dunk,Missed Shot,Dunk Shot,0,2,270
+0040200225,260,PT03M13.00S,3,1610612759,SAS,1495,Duncan,T. Duncan,0,0,0,,0,0,0,0,h,Duncan BLOCK (1 BLK),,,0,2,271
+0040200225,262,PT03M10.00S,3,1610612747,LAL,406,O'Neal,S. O'Neal,0,0,0,,0,0,0,0,v,O'Neal REBOUND (Off:2 Def:2),Rebound,Unknown,0,0,272
+0040200225,261,PT03M10.00S,3,1610612747,LAL,406,O'Neal,S. O'Neal,1,-1,0,Made,1,76,53,129,v,O'Neal  Dunk (15 PTS),Made Shot,Dunk Shot,0,2,273
+0040200225,263,PT02M54.00S,3,1610612747,LAL,965,Fisher,D. Fisher,0,0,0,,0,0,0,0,v,Fisher P.FOUL (P3.T3),Foul,Personal,0,0,274
+0040200225,264,PT02M54.00S,3,1610612759,SAS,1536,Jackson,S. Jackson,0,0,0,,0,0,0,0,h,SUB: Ginobili FOR Jackson,Substitution,,0,0,275
+0040200225,265,PT02M54.00S,3,1610612759,SAS,764,Robinson,D. Robinson,0,0,0,,0,0,0,0,h,SUB: Rose FOR Robinson,Substitution,,0,0,276
+0040200225,266,PT02M54.00S,3,0,,1610612747,,,0,0,0,,0,0,0,0,v,Lakers Timeout: Regular (Reg.3 Short 0),Timeout,Regular,0,0,277
+0040200225,268,PT02M54.00S,3,1610612747,LAL,965,Fisher,D. Fisher,0,0,0,,0,0,0,0,v,SUB: Pargo FOR Fisher,Substitution,,0,0,278
+0040200225,269,PT02M54.00S,3,1610612747,LAL,109,Horry,R. Horry,0,0,0,,0,0,0,0,v,SUB: Medvedenko FOR Horry,Substitution,,0,0,279
+0040200225,270,PT02M50.00S,3,1610612747,LAL,2457,Pargo,J. Pargo,0,0,0,,0,0,0,0,v,Pargo S.FOUL (P1.T4),Foul,Shooting,0,0,280
+0040200225,271,PT02M50.00S,3,1610612759,SAS,2225,Parker,T. Parker,0,0,0,,0,77,53,130,h,Parker Free Throw 1 of 2 (19 PTS),Free Throw,Free Throw 1 of 2,0,0,281
+0040200225,272,PT02M50.00S,3,1610612759,SAS,2225,Parker,T. Parker,0,0,0,,0,0,0,0,h,MISS Parker Free Throw 2 of 2,Free Throw,Free Throw 2 of 2,0,0,282
+0040200225,273,PT02M50.00S,3,1610612747,LAL,2098,Medvedenko,S. Medvedenko,0,0,0,,0,0,0,0,v,Medvedenko REBOUND (Off:0 Def:1),Rebound,Unknown,0,0,283
+0040200225,274,PT02M38.00S,3,1610612747,LAL,977,Bryant,K. Bryant,-102,224,25,Missed,1,0,0,0,v,MISS Bryant 25' 3PT Jump Shot,Missed Shot,Jump Shot,0,3,284
+0040200225,275,PT02M37.00S,3,0,,1610612759,,,0,0,0,,0,0,0,0,h,SPURS Rebound,Rebound,Unknown,0,0,285
+0040200225,276,PT02M37.00S,3,1610612747,LAL,1904,George,D. George,0,0,0,,0,0,0,0,v,George L.B.FOUL (P2.PN),Foul,Loose Ball,0,0,286
+0040200225,277,PT02M37.00S,3,1610612759,SAS,1495,Duncan,T. Duncan,0,0,0,,0,0,0,0,h,MISS Duncan Free Throw 1 of 2,Free Throw,Free Throw 1 of 2,0,0,287
+0040200225,278,PT02M37.00S,3,0,,1610612759,,,0,0,0,,0,0,0,0,h,SPURS Rebound,Rebound,Normal Rebound,0,0,288
+0040200225,279,PT02M37.00S,3,1610612759,SAS,1495,Duncan,T. Duncan,0,0,0,,0,78,53,131,h,Duncan Free Throw 2 of 2 (20 PTS),Free Throw,Free Throw 2 of 2,0,0,289
+0040200225,280,PT02M26.00S,3,1610612747,LAL,2098,Medvedenko,S. Medvedenko,-2,202,20,Made,1,78,55,133,v,Medvedenko 20' Jump Shot (4 PTS) (Bryant 4 AST),Made Shot,Jump Shot,0,2,290
+0040200225,281,PT02M03.00S,3,1610612759,SAS,1495,Duncan,T. Duncan,34,63,7,Missed,1,0,0,0,h,MISS Duncan 7' Jump Shot,Missed Shot,Jump Shot,0,2,291
+0040200225,282,PT02M01.00S,3,1610612747,LAL,406,O'Neal,S. O'Neal,0,0,0,,0,0,0,0,v,O'Neal REBOUND (Off:2 Def:3),Rebound,Unknown,0,0,292
+0040200225,283,PT01M53.00S,3,1610612759,SAS,1477,Bowen,B. Bowen,0,0,0,,0,0,0,0,h,Bowen S.FOUL (P2.T4),Foul,Shooting,0,0,293
+0040200225,284,PT01M53.00S,3,1610612759,SAS,2225,Parker,T. Parker,0,0,0,,0,0,0,0,h,SUB: Claxton FOR Parker,Substitution,,0,0,294
+0040200225,285,PT01M53.00S,3,1610612747,LAL,977,Bryant,K. Bryant,0,0,0,,0,0,0,0,v,MISS Bryant Free Throw 1 of 2,Free Throw,Free Throw 1 of 2,0,0,295
+0040200225,286,PT01M53.00S,3,0,,1610612747,,,0,0,0,,0,0,0,0,v,Lakers Rebound,Rebound,Normal Rebound,0,0,296
+0040200225,287,PT01M53.00S,3,1610612747,LAL,1904,George,D. George,0,0,0,,0,0,0,0,v,SUB: Shaw FOR George,Substitution,,0,0,297
+0040200225,288,PT01M53.00S,3,1610612747,LAL,977,Bryant,K. Bryant,0,0,0,,0,78,56,134,v,Bryant Free Throw 2 of 2 (17 PTS),Free Throw,Free Throw 2 of 2,0,0,298
+0040200225,289,PT01M36.00S,3,1610612759,SAS,1938,Ginobili,M. Ginobili,64,28,7,Missed,1,0,0,0,h,MISS Ginobili 7' Jump Shot,Missed Shot,Jump Shot,0,2,299
+0040200225,290,PT01M34.00S,3,1610612747,LAL,406,O'Neal,S. O'Neal,0,0,0,,0,0,0,0,v,O'Neal REBOUND (Off:2 Def:4),Rebound,Unknown,0,0,300
+0040200225,291,PT01M29.00S,3,1610612759,SAS,990,Rose,M. Rose,0,0,0,,0,0,0,0,h,Rose S.FOUL (P2.PN),Foul,Shooting,0,0,301
+0040200225,292,PT01M29.00S,3,1610612747,LAL,2098,Medvedenko,S. Medvedenko,0,0,0,,0,78,57,135,v,Medvedenko Free Throw 1 of 2 (5 PTS),Free Throw,Free Throw 1 of 2,0,0,302
+0040200225,293,PT01M29.00S,3,1610612747,LAL,2098,Medvedenko,S. Medvedenko,0,0,0,,0,78,58,136,v,Medvedenko Free Throw 2 of 2 (6 PTS),Free Throw,Free Throw 2 of 2,0,0,303
+0040200225,294,PT01M12.00S,3,1610612747,LAL,2098,Medvedenko,S. Medvedenko,0,0,0,,0,0,0,0,v,Medvedenko S.FOUL (P2.PN),Foul,Shooting,0,0,304
+0040200225,295,PT01M12.00S,3,1610612759,SAS,1495,Duncan,T. Duncan,0,0,0,,0,79,58,137,h,Duncan Free Throw 1 of 2 (21 PTS),Free Throw,Free Throw 1 of 2,0,0,305
+0040200225,296,PT01M12.00S,3,1610612759,SAS,1495,Duncan,T. Duncan,0,0,0,,0,80,58,138,h,Duncan Free Throw 2 of 2 (22 PTS),Free Throw,Free Throw 2 of 2,0,0,306
+0040200225,297,PT00M50.50S,3,1610612747,LAL,406,O'Neal,S. O'Neal,-29,45,5,Missed,1,0,0,0,v,MISS O'Neal 5' Jump Shot,Missed Shot,Jump Shot,0,2,307
+0040200225,298,PT00M49.40S,3,1610612747,LAL,977,Bryant,K. Bryant,0,0,0,,0,0,0,0,v,Bryant REBOUND (Off:1 Def:3),Rebound,Unknown,0,0,308
+0040200225,299,PT00M47.50S,3,1610612747,LAL,977,Bryant,K. Bryant,-72,41,8,Missed,1,0,0,0,v,MISS Bryant 8' Jump Shot,Missed Shot,Jump Shot,0,2,309
+0040200225,300,PT00M45.50S,3,1610612759,SAS,990,Rose,M. Rose,0,0,0,,0,0,0,0,h,Rose REBOUND (Off:1 Def:3),Rebound,Unknown,0,0,310
+0040200225,301,PT00M39.50S,3,1610612759,SAS,1477,Bowen,B. Bowen,-145,206,25,Missed,1,0,0,0,h,MISS Bowen 25' 3PT Jump Shot,Missed Shot,Jump Shot,0,3,311
+0040200225,302,PT00M38.20S,3,1610612747,LAL,977,Bryant,K. Bryant,0,0,0,,0,0,0,0,v,Bryant REBOUND (Off:1 Def:4),Rebound,Unknown,0,0,312
+0040200225,303,PT00M32.50S,3,1610612747,LAL,977,Bryant,K. Bryant,-204,137,25,Made,1,80,61,141,v,Bryant 25' 3PT Jump Shot (20 PTS),Made Shot,Jump Shot,0,3,313
+0040200225,305,PT00M08.80S,3,1610612759,SAS,1938,Ginobili,M. Ginobili,0,0,0,,0,0,0,0,h,Ginobili Lost Ball Turnover (P1.T5),Turnover,Lost Ball,0,0,314
+0040200225,305,PT00M08.80S,3,1610612747,LAL,977,Bryant,K. Bryant,0,0,0,,0,0,0,0,v,Bryant STEAL (1 STL),,,0,0,315
+0040200225,306,PT00M01.00S,3,1610612747,LAL,977,Bryant,K. Bryant,227,35,0,Made,1,80,64,144,v,Bryant  3PT Jump Shot (23 PTS),Made Shot,Jump Shot,0,3,316
+0040200225,309,PT00M00.00S,3,0,,0,,,0,0,0,,0,80,64,144, ,End of 3rd Period (11:40 PM EST),period,end,0,0,317
+0040200225,311,PT12M00.00S,4,0,,0,,,0,0,0,,0,80,64,144, ,Start of 4th Period (11:43 PM EST),period,start,0,0,318
+0040200225,312,PT11M42.00S,4,1610612759,SAS,1495,Duncan,T. Duncan,38,45,6,Made,1,82,64,146,h,Duncan 6' Jump Shot (24 PTS) (Rose 1 AST),Made Shot,Jump Shot,0,2,319
+0040200225,313,PT11M16.00S,4,1610612747,LAL,977,Bryant,K. Bryant,-49,-13,5,Missed,1,0,0,0,v,MISS Bryant 5' Jump Shot,Missed Shot,Jump Shot,0,2,320
+0040200225,314,PT11M14.00S,4,1610612759,SAS,990,Rose,M. Rose,0,0,0,,0,0,0,0,h,Rose REBOUND (Off:1 Def:4),Rebound,Unknown,0,0,321
+0040200225,315,PT10M56.00S,4,1610612759,SAS,2049,Claxton,S. Claxton,-46,3,5,Missed,1,0,0,0,h,MISS Claxton 5' Jump Shot,Missed Shot,Jump Shot,0,2,322
+0040200225,316,PT10M54.00S,4,1610612747,LAL,2058,Madsen,M. Madsen,0,0,0,,0,0,0,0,v,Madsen REBOUND (Off:0 Def:1),Rebound,Unknown,0,0,323
+0040200225,317,PT10M46.00S,4,1610612747,LAL,977,Bryant,K. Bryant,-3,255,26,Missed,1,0,0,0,v,MISS Bryant 26' 3PT Jump Shot,Missed Shot,Jump Shot,0,3,324
+0040200225,318,PT10M44.00S,4,1610612759,SAS,990,Rose,M. Rose,0,0,0,,0,0,0,0,h,Rose REBOUND (Off:1 Def:5),Rebound,Unknown,0,0,325
+0040200225,319,PT10M34.00S,4,1610612759,SAS,1495,Duncan,T. Duncan,0,0,0,,0,0,0,0,h,Duncan Out Of Bounds Turnover (P2.T6),Turnover,Out Of Bounds,0,0,326
+0040200225,320,PT10M34.00S,4,1610612759,SAS,1477,Bowen,B. Bowen,0,0,0,,0,0,0,0,h,SUB: Jackson FOR Bowen,Substitution,,0,0,327
+0040200225,321,PT10M24.00S,4,1610612747,LAL,977,Bryant,K. Bryant,3,12,1,Made,1,82,66,148,v,Bryant 1' Driving Layup (25 PTS),Made Shot,Driving Layup Shot,0,2,328
+0040200225,322,PT10M07.00S,4,1610612747,LAL,2098,Medvedenko,S. Medvedenko,0,0,0,,0,0,0,0,v,Medvedenko S.FOUL (P3.T1),Foul,Shooting,0,0,329
+0040200225,323,PT10M07.00S,4,1610612759,SAS,2049,Claxton,S. Claxton,0,0,0,,0,0,0,0,h,MISS Claxton Free Throw 1 of 2,Free Throw,Free Throw 1 of 2,0,0,330
+0040200225,324,PT10M07.00S,4,0,,1610612759,,,0,0,0,,0,0,0,0,h,SPURS Rebound,Rebound,Normal Rebound,0,0,331
+0040200225,325,PT10M07.00S,4,1610612759,SAS,2049,Claxton,S. Claxton,0,0,0,,0,83,66,149,h,Claxton Free Throw 2 of 2 (7 PTS),Free Throw,Free Throw 2 of 2,0,0,332
+0040200225,326,PT09M57.00S,4,1610612747,LAL,2098,Medvedenko,S. Medvedenko,164,64,18,Made,1,83,68,151,v,Medvedenko 18' Jump Shot (8 PTS) (Shaw 2 AST),Made Shot,Jump Shot,0,2,333
+0040200225,327,PT09M41.00S,4,1610612747,LAL,2098,Medvedenko,S. Medvedenko,0,0,0,,0,0,0,0,v,Medvedenko Violation:Kicked Ball,Violation,Kicked Ball,0,0,334
+0040200225,328,PT09M38.00S,4,1610612747,LAL,2457,Pargo,J. Pargo,0,0,0,,0,0,0,0,v,Pargo P.FOUL (P2.T2),Foul,Personal,0,0,335
+0040200225,329,PT09M26.00S,4,1610612759,SAS,2049,Claxton,S. Claxton,0,0,0,,0,0,0,0,h,Claxton Bad Pass Turnover (P1.T7),Turnover,Bad Pass,0,0,336
+0040200225,329,PT09M26.00S,4,1610612747,LAL,977,Bryant,K. Bryant,0,0,0,,0,0,0,0,v,Bryant STEAL (2 STL),,,0,0,337
+0040200225,330,PT09M20.00S,4,1610612747,LAL,977,Bryant,K. Bryant,136,207,25,Missed,1,0,0,0,v,MISS Bryant 25' 3PT Jump Shot,Missed Shot,Jump Shot,0,3,338
+0040200225,331,PT09M18.00S,4,1610612759,SAS,1495,Duncan,T. Duncan,0,0,0,,0,0,0,0,h,Duncan REBOUND (Off:3 Def:9),Rebound,Unknown,0,0,339
+0040200225,332,PT09M08.00S,4,1610612759,SAS,1536,Jackson,S. Jackson,0,0,0,,0,0,0,0,h,Jackson Bad Pass Turnover (P2.T8),Turnover,Bad Pass,0,0,340
+0040200225,332,PT09M08.00S,4,1610612747,LAL,2457,Pargo,J. Pargo,0,0,0,,0,0,0,0,v,Pargo STEAL (1 STL),,,0,0,341
+0040200225,333,PT09M01.00S,4,1610612747,LAL,216,Shaw,B. Shaw,-232,76,24,Missed,1,0,0,0,v,MISS Shaw 24' 3PT Jump Shot,Missed Shot,Jump Shot,0,3,342
+0040200225,334,PT08M58.00S,4,1610612747,LAL,977,Bryant,K. Bryant,0,0,0,,0,0,0,0,v,Bryant REBOUND (Off:2 Def:4),Rebound,Unknown,0,0,343
+0040200225,335,PT08M47.00S,4,1610612747,LAL,977,Bryant,K. Bryant,-75,233,24,Missed,1,0,0,0,v,MISS Bryant 24' 3PT Jump Shot,Missed Shot,Jump Shot,0,3,344
+0040200225,336,PT08M45.00S,4,1610612759,SAS,990,Rose,M. Rose,0,0,0,,0,0,0,0,h,Rose REBOUND (Off:1 Def:6),Rebound,Unknown,0,0,345
+0040200225,337,PT08M44.00S,4,1610612747,LAL,977,Bryant,K. Bryant,0,0,0,,0,0,0,0,v,Bryant P.FOUL (P2.T3),Foul,Personal,0,0,346
+0040200225,338,PT08M44.00S,4,0,,0,,,0,0,0,,0,0,0,0, ,Timeout: Official,Timeout,Official,0,0,347
+0040200225,340,PT08M44.00S,4,1610612759,SAS,2049,Claxton,S. Claxton,0,0,0,,0,0,0,0,h,SUB: Parker FOR Claxton,Substitution,,0,0,348
+0040200225,341,PT08M34.00S,4,1610612759,SAS,1495,Duncan,T. Duncan,-10,5,1,Made,1,85,68,153,h,Duncan 1' Layup (26 PTS) (Jackson 3 AST),Made Shot,Layup Shot,0,2,349
+0040200225,342,PT08M08.00S,4,1610612747,LAL,977,Bryant,K. Bryant,-189,187,27,Missed,1,0,0,0,v,MISS Bryant 27' 3PT Jump Shot,Missed Shot,Jump Shot,0,3,350
+0040200225,343,PT08M06.00S,4,1610612759,SAS,1495,Duncan,T. Duncan,0,0,0,,0,0,0,0,h,Duncan REBOUND (Off:3 Def:10),Rebound,Unknown,0,0,351
+0040200225,344,PT07M50.00S,4,1610612759,SAS,990,Rose,M. Rose,0,10,1,Missed,1,0,0,0,h,MISS Rose 1' Layup,Missed Shot,Layup Shot,0,2,352
+0040200225,345,PT07M49.00S,4,1610612747,LAL,2058,Madsen,M. Madsen,0,0,0,,0,0,0,0,v,Madsen REBOUND (Off:0 Def:2),Rebound,Unknown,0,0,353
+0040200225,346,PT07M41.00S,4,1610612747,LAL,216,Shaw,B. Shaw,-237,-8,24,Made,1,85,71,156,v,Shaw 24' 3PT Jump Shot (5 PTS) (Bryant 5 AST),Made Shot,Jump Shot,0,3,354
+0040200225,347,PT07M21.00S,4,1610612759,SAS,1536,Jackson,S. Jackson,-3,2,0,Made,1,87,71,158,h,Jackson  Layup (9 PTS) (Duncan 4 AST),Made Shot,Layup Shot,0,2,355
+0040200225,348,PT07M21.00S,4,1610612747,LAL,2058,Madsen,M. Madsen,0,0,0,,0,0,0,0,v,Madsen S.FOUL (P3.T4),Foul,Shooting,0,0,356
+0040200225,349,PT07M21.00S,4,1610612759,SAS,1536,Jackson,S. Jackson,0,0,0,,0,0,0,0,h,MISS Jackson Free Throw 1 of 1,Free Throw,Free Throw 1 of 1,0,0,357
+0040200225,350,PT07M21.00S,4,0,,1610612747,,,0,0,0,,0,0,0,0,v,Lakers Rebound,Rebound,Unknown,0,0,358
+0040200225,351,PT07M21.00S,4,1610612759,SAS,990,Rose,M. Rose,0,0,0,,0,0,0,0,h,Rose L.B.FOUL (P3.T1),Foul,Loose Ball,0,0,359
+0040200225,352,PT07M14.00S,4,1610612747,LAL,977,Bryant,K. Bryant,0,0,0,,0,0,0,0,v,Bryant OFF.Foul (P3),Foul,Offensive,0,0,360
+0040200225,353,PT07M14.00S,4,1610612747,LAL,977,Bryant,K. Bryant,0,0,0,,0,0,0,0,v,Bryant Foul Turnover (P4.T13),Turnover,Foul,0,0,361
+0040200225,354,PT07M03.00S,4,1610612759,SAS,1536,Jackson,S. Jackson,158,97,19,Missed,1,0,0,0,h,MISS Jackson 19' Jump Shot,Missed Shot,Jump Shot,0,2,362
+0040200225,355,PT07M01.00S,4,1610612747,LAL,2098,Medvedenko,S. Medvedenko,0,0,0,,0,0,0,0,v,Medvedenko REBOUND (Off:0 Def:2),Rebound,Unknown,0,0,363
+0040200225,356,PT06M44.00S,4,1610612747,LAL,2098,Medvedenko,S. Medvedenko,-77,155,17,Missed,1,0,0,0,v,MISS Medvedenko 17' Turnaround Jump Shot,Missed Shot,Turnaround Jump Shot,0,2,364
+0040200225,357,PT06M41.00S,4,1610612759,SAS,2225,Parker,T. Parker,0,0,0,,0,0,0,0,h,Parker REBOUND (Off:0 Def:4),Rebound,Unknown,0,0,365
+0040200225,358,PT06M30.00S,4,1610612759,SAS,1938,Ginobili,M. Ginobili,0,0,0,,0,0,0,0,h,Ginobili Bad Pass Turnover (P2.T9),Turnover,Bad Pass,0,0,366
+0040200225,358,PT06M30.00S,4,1610612747,LAL,216,Shaw,B. Shaw,0,0,0,,0,0,0,0,v,Shaw STEAL (1 STL),,,0,0,367
+0040200225,359,PT06M23.00S,4,1610612747,LAL,977,Bryant,K. Bryant,-10,10,1,Missed,1,0,0,0,v,MISS Bryant 1' Reverse Layup,Missed Shot,Reverse Layup Shot,0,2,368
+0040200225,360,PT06M21.00S,4,1610612747,LAL,2098,Medvedenko,S. Medvedenko,0,0,0,,0,0,0,0,v,Medvedenko REBOUND (Off:1 Def:2),Rebound,Unknown,0,0,369
+0040200225,361,PT06M21.00S,4,1610612759,SAS,990,Rose,M. Rose,0,0,0,,0,0,0,0,h,Rose S.FOUL (P4.T2),Foul,Shooting,0,0,370
+0040200225,362,PT06M21.00S,4,1610612747,LAL,2098,Medvedenko,S. Medvedenko,0,0,0,,0,87,72,159,v,Medvedenko Free Throw 1 of 2 (9 PTS),Free Throw,Free Throw 1 of 2,0,0,371
+0040200225,363,PT06M21.00S,4,1610612759,SAS,990,Rose,M. Rose,0,0,0,,0,0,0,0,h,SUB: Robinson FOR Rose,Substitution,,0,0,372
+0040200225,364,PT06M21.00S,4,1610612747,LAL,2058,Madsen,M. Madsen,0,0,0,,0,0,0,0,v,SUB: O'Neal FOR Madsen,Substitution,,0,0,373
+0040200225,365,PT06M21.00S,4,1610612747,LAL,2098,Medvedenko,S. Medvedenko,0,0,0,,0,0,0,0,v,MISS Medvedenko Free Throw 2 of 2,Free Throw,Free Throw 2 of 2,0,0,374
+0040200225,366,PT06M20.00S,4,1610612747,LAL,406,O'Neal,S. O'Neal,0,0,0,,0,0,0,0,v,O'Neal REBOUND (Off:3 Def:4),Rebound,Unknown,0,0,375
+0040200225,367,PT06M15.00S,4,1610612747,LAL,2098,Medvedenko,S. Medvedenko,49,146,15,Made,1,87,74,161,v,Medvedenko 15' Jump Shot (11 PTS) (Shaw 3 AST),Made Shot,Jump Shot,0,2,376
+0040200225,368,PT05M57.00S,4,1610612759,SAS,1536,Jackson,S. Jackson,0,0,0,,0,0,0,0,h,Jackson Lost Ball Turnover (P3.T10),Turnover,Lost Ball,0,0,377
+0040200225,368,PT05M57.00S,4,1610612747,LAL,2457,Pargo,J. Pargo,0,0,0,,0,0,0,0,v,Pargo STEAL (2 STL),,,0,0,378
+0040200225,369,PT05M50.00S,4,1610612747,LAL,977,Bryant,K. Bryant,232,-8,0,Made,1,87,77,164,v,Bryant  3PT Jump Shot (28 PTS) (Shaw 4 AST),Made Shot,Jump Shot,0,3,379
+0040200225,370,PT05M48.00S,4,0,,1610612759,,,0,0,0,,0,0,0,0,h,SPURS Timeout: Regular (Full 4 Short 0),Timeout,Regular,0,0,380
+0040200225,371,PT05M48.00S,4,1610612759,SAS,1938,Ginobili,M. Ginobili,0,0,0,,0,0,0,0,h,SUB: Bowen FOR Ginobili,Substitution,,0,0,381
+0040200225,372,PT05M32.00S,4,1610612747,LAL,2098,Medvedenko,S. Medvedenko,0,0,0,,0,0,0,0,v,Medvedenko P.FOUL (P4.PN),Foul,Personal,0,0,382
+0040200225,373,PT05M32.00S,4,1610612759,SAS,1495,Duncan,T. Duncan,0,0,0,,0,0,0,0,h,MISS Duncan Free Throw 1 of 2,Free Throw,Free Throw 1 of 2,0,0,383
+0040200225,374,PT05M32.00S,4,0,,1610612759,,,0,0,0,,0,0,0,0,h,SPURS Rebound,Rebound,Normal Rebound,0,0,384
+0040200225,375,PT05M32.00S,4,1610612759,SAS,1495,Duncan,T. Duncan,0,0,0,,0,88,77,165,h,Duncan Free Throw 2 of 2 (27 PTS),Free Throw,Free Throw 2 of 2,0,0,385
+0040200225,376,PT05M12.00S,4,1610612747,LAL,2098,Medvedenko,S. Medvedenko,-151,-14,15,Made,1,88,79,167,v,Medvedenko 15' Jump Shot (13 PTS) (Bryant 6 AST),Made Shot,Jump Shot,0,2,386
+0040200225,377,PT04M53.00S,4,1610612759,SAS,1495,Duncan,T. Duncan,44,22,5,Missed,1,0,0,0,h,MISS Duncan 5' Running Jump Shot,Missed Shot,Running Jump Shot,0,2,387
+0040200225,378,PT04M52.00S,4,1610612747,LAL,2098,Medvedenko,S. Medvedenko,0,0,0,,0,0,0,0,v,Medvedenko REBOUND (Off:1 Def:3),Rebound,Unknown,0,0,388
+0040200225,379,PT04M44.00S,4,1610612747,LAL,216,Shaw,B. Shaw,-214,114,24,Missed,1,0,0,0,v,MISS Shaw 24' 3PT Jump Shot,Missed Shot,Jump Shot,0,3,389
+0040200225,380,PT04M41.00S,4,1610612759,SAS,2225,Parker,T. Parker,0,0,0,,0,0,0,0,h,Parker REBOUND (Off:0 Def:5),Rebound,Unknown,0,0,390
+0040200225,381,PT04M39.00S,4,1610612759,SAS,1536,Jackson,S. Jackson,1,3,0,Made,1,90,79,169,h,Jackson  Layup (11 PTS) (Parker 3 AST),Made Shot,Layup Shot,0,2,391
+0040200225,382,PT04M28.00S,4,1610612759,SAS,1495,Duncan,T. Duncan,0,0,0,,0,0,0,0,h,Duncan S.FOUL (P2.T3),Foul,Shooting,0,0,392
+0040200225,383,PT04M28.00S,4,1610612747,LAL,406,O'Neal,S. O'Neal,0,0,0,,0,90,80,170,v,O'Neal Free Throw 1 of 2 (16 PTS),Free Throw,Free Throw 1 of 2,0,0,393
+0040200225,384,PT04M28.00S,4,1610612747,LAL,406,O'Neal,S. O'Neal,0,0,0,,0,90,81,171,v,O'Neal Free Throw 2 of 2 (17 PTS),Free Throw,Free Throw 2 of 2,0,0,394
+0040200225,385,PT04M09.00S,4,1610612759,SAS,1495,Duncan,T. Duncan,-117,123,17,Missed,1,0,0,0,h,MISS Duncan 17' Jump Shot,Missed Shot,Jump Shot,0,2,395
+0040200225,386,PT04M07.00S,4,1610612747,LAL,406,O'Neal,S. O'Neal,0,0,0,,0,0,0,0,v,O'Neal REBOUND (Off:3 Def:5),Rebound,Unknown,0,0,396
+0040200225,387,PT03M53.00S,4,1610612747,LAL,977,Bryant,K. Bryant,-174,184,25,Made,1,90,84,174,v,Bryant 25' 3PT Jump Shot (31 PTS),Made Shot,Jump Shot,0,3,397
+0040200225,388,PT03M36.00S,4,1610612759,SAS,2225,Parker,T. Parker,10,45,5,Missed,1,0,0,0,h,MISS Parker 5' Jump Shot,Missed Shot,Jump Shot,0,2,398
+0040200225,389,PT03M34.00S,4,1610612747,LAL,406,O'Neal,S. O'Neal,0,0,0,,0,0,0,0,v,O'Neal REBOUND (Off:3 Def:6),Rebound,Unknown,0,0,399
+0040200225,390,PT03M29.00S,4,1610612747,LAL,2457,Pargo,J. Pargo,144,99,17,Made,1,90,86,176,v,Pargo 17' Jump Shot (2 PTS),Made Shot,Jump Shot,0,2,400
+0040200225,391,PT03M24.00S,4,0,,1610612759,,,0,0,0,,0,0,0,0,h,SPURS Timeout: Regular (Full 5 Short 0),Timeout,Regular,0,0,401
+0040200225,392,PT03M24.00S,4,1610612759,SAS,1536,Jackson,S. Jackson,0,0,0,,0,0,0,0,h,SUB: Ginobili FOR Jackson,Substitution,,0,0,402
+0040200225,393,PT03M03.00S,4,1610612759,SAS,1495,Duncan,T. Duncan,49,43,7,Missed,1,0,0,0,h,MISS Duncan 7' Jump Shot,Missed Shot,Jump Shot,0,2,403
+0040200225,393,PT03M03.00S,4,1610612747,LAL,406,O'Neal,S. O'Neal,0,0,0,,0,0,0,0,v,O'Neal BLOCK (3 BLK),,,0,2,404
+0040200225,394,PT03M01.00S,4,1610612747,LAL,977,Bryant,K. Bryant,0,0,0,,0,0,0,0,v,Bryant REBOUND (Off:2 Def:5),Rebound,Unknown,0,0,405
+0040200225,395,PT02M43.00S,4,1610612747,LAL,977,Bryant,K. Bryant,46,31,6,Missed,1,0,0,0,v,MISS Bryant 6' Running Jump Shot,Missed Shot,Running Jump Shot,0,2,406
+0040200225,396,PT02M41.00S,4,1610612759,SAS,1495,Duncan,T. Duncan,0,0,0,,0,0,0,0,h,Duncan REBOUND (Off:3 Def:11),Rebound,Unknown,0,0,407
+0040200225,397,PT02M32.00S,4,1610612759,SAS,2225,Parker,T. Parker,-31,54,6,Made,1,92,86,178,h,Parker 6' Running Jump Shot (21 PTS),Made Shot,Running Jump Shot,0,2,408
+0040200225,398,PT02M07.00S,4,1610612747,LAL,977,Bryant,K. Bryant,105,243,26,Missed,1,0,0,0,v,MISS Bryant 26' 3PT Jump Shot,Missed Shot,Jump Shot,0,3,409
+0040200225,398,PT02M07.00S,4,1610612759,SAS,1477,Bowen,B. Bowen,0,0,0,,0,0,0,0,h,Bowen BLOCK (2 BLK),,,0,3,410
+0040200225,399,PT02M04.00S,4,1610612759,SAS,1477,Bowen,B. Bowen,0,0,0,,0,0,0,0,h,Bowen REBOUND (Off:1 Def:2),Rebound,Unknown,0,0,411
+0040200225,400,PT02M03.00S,4,1610612747,LAL,2457,Pargo,J. Pargo,0,0,0,,0,0,0,0,v,Pargo S.FOUL (P3.PN),Foul,Shooting,0,0,412
+0040200225,401,PT02M03.00S,4,1610612759,SAS,1477,Bowen,B. Bowen,0,0,0,,0,0,0,0,h,MISS Bowen Free Throw 1 of 2,Free Throw,Free Throw 1 of 2,0,0,413
+0040200225,402,PT02M03.00S,4,0,,1610612759,,,0,0,0,,0,0,0,0,h,SPURS Rebound,Rebound,Normal Rebound,0,0,414
+0040200225,403,PT02M03.00S,4,0,,1610612747,,,0,0,0,,0,0,0,0,v,Lakers Timeout: Regular (Reg.4 Short 0),Timeout,Regular,0,0,415
+0040200225,405,PT02M03.00S,4,1610612747,LAL,2457,Pargo,J. Pargo,0,0,0,,0,0,0,0,v,SUB: Fisher FOR Pargo,Substitution,,0,0,416
+0040200225,406,PT02M03.00S,4,1610612747,LAL,2098,Medvedenko,S. Medvedenko,0,0,0,,0,0,0,0,v,SUB: Horry FOR Medvedenko,Substitution,,0,0,417
+0040200225,407,PT02M03.00S,4,1610612759,SAS,1477,Bowen,B. Bowen,0,0,0,,0,93,86,179,h,Bowen Free Throw 2 of 2 (12 PTS),Free Throw,Free Throw 2 of 2,0,0,418
+0040200225,408,PT01M52.00S,4,1610612747,LAL,977,Bryant,K. Bryant,61,31,7,Made,1,93,88,181,v,Bryant 7' Jump Shot (33 PTS) (Horry 2 AST),Made Shot,Jump Shot,0,2,419
+0040200225,409,PT01M38.00S,4,1610612759,SAS,764,Robinson,D. Robinson,-8,13,2,Made,1,95,88,183,h,Robinson 2' Alley Oop Layup (6 PTS) (Duncan 5 AST),Made Shot,Alley Oop Layup shot,0,2,420
+0040200225,410,PT01M23.00S,4,1610612747,LAL,216,Shaw,B. Shaw,-232,-11,0,Missed,1,0,0,0,v,MISS Shaw  3PT Jump Shot,Missed Shot,Jump Shot,0,3,421
+0040200225,411,PT01M19.00S,4,1610612759,SAS,1938,Ginobili,M. Ginobili,0,0,0,,0,0,0,0,h,Ginobili REBOUND (Off:1 Def:1),Rebound,Unknown,0,0,422
+0040200225,412,PT01M00.00S,4,1610612759,SAS,1495,Duncan,T. Duncan,-153,49,16,Missed,1,0,0,0,h,MISS Duncan 16' Jump Shot,Missed Shot,Jump Shot,0,2,423
+0040200225,413,PT00M58.30S,4,1610612747,LAL,216,Shaw,B. Shaw,0,0,0,,0,0,0,0,v,Shaw REBOUND (Off:0 Def:2),Rebound,Unknown,0,0,424
+0040200225,414,PT00M49.30S,4,1610612747,LAL,977,Bryant,K. Bryant,-186,169,25,Made,1,95,91,186,v,Bryant 25' 3PT Jump Shot (36 PTS),Made Shot,Jump Shot,0,3,425
+0040200225,415,PT00M35.40S,4,1610612759,SAS,2225,Parker,T. Parker,-112,10,11,Missed,1,0,0,0,h,MISS Parker 11' Jump Shot,Missed Shot,Jump Shot,0,2,426
+0040200225,416,PT00M34.10S,4,1610612747,LAL,406,O'Neal,S. O'Neal,0,0,0,,0,0,0,0,v,O'Neal REBOUND (Off:3 Def:7),Rebound,Unknown,0,0,427
+0040200225,417,PT00M21.40S,4,1610612747,LAL,109,Horry,R. Horry,-189,166,25,Missed,1,0,0,0,v,MISS Horry 25' 3PT Jump Shot,Missed Shot,Jump Shot,0,3,428
+0040200225,419,PT00M19.70S,4,1610612747,LAL,406,O'Neal,S. O'Neal,0,0,0,,0,0,0,0,v,O'Neal REBOUND (Off:4 Def:7),Rebound,Unknown,0,0,429
+0040200225,418,PT00M19.70S,4,1610612747,LAL,406,O'Neal,S. O'Neal,-2,10,1,Made,1,95,93,188,v,O'Neal 1' Layup (19 PTS),Made Shot,Layup Shot,0,2,430
+0040200225,420,PT00M19.70S,4,1610612759,SAS,2225,Parker,T. Parker,0,0,0,,0,0,0,0,h,Parker S.FOUL (P3.T4),Foul,Shooting,0,0,431
+0040200225,421,PT00M19.70S,4,1610612747,LAL,406,O'Neal,S. O'Neal,0,0,0,,0,95,94,189,v,O'Neal Free Throw 1 of 1 (20 PTS),Free Throw,Free Throw 1 of 1,0,0,432
+0040200225,422,PT00M19.70S,4,0,,1610612759,,,0,0,0,,0,0,0,0,h,SPURS Timeout: Regular (Full 6 Short 0),Timeout,Regular,0,0,433
+0040200225,425,PT00M19.70S,4,1610612747,LAL,965,Fisher,D. Fisher,0,0,0,,0,0,0,0,v,SUB: Pargo FOR Fisher,Substitution,,0,0,434
+0040200225,426,PT00M19.70S,4,1610612747,LAL,216,Shaw,B. Shaw,0,0,0,,0,0,0,0,v,SUB: Rush FOR Shaw,Substitution,,0,0,435
+0040200225,427,PT00M19.70S,4,1610612759,SAS,1477,Bowen,B. Bowen,0,0,0,,0,0,0,0,h,SUB: Jackson FOR Bowen,Substitution,,0,0,436
+0040200225,428,PT00M15.10S,4,1610612747,LAL,2416,Rush,K. Rush,0,0,0,,0,0,0,0,v,Rush P.FOUL (P1.PN),Foul,Personal,0,0,437
+0040200225,429,PT00M15.10S,4,1610612759,SAS,1536,Jackson,S. Jackson,0,0,0,,0,96,94,190,h,Jackson Free Throw 1 of 2 (12 PTS),Free Throw,Free Throw 1 of 2,0,0,438
+0040200225,430,PT00M15.10S,4,1610612759,SAS,1938,Ginobili,M. Ginobili,0,0,0,,0,0,0,0,h,SUB: Bowen FOR Ginobili,Substitution,,0,0,439
+0040200225,431,PT00M15.10S,4,1610612759,SAS,1536,Jackson,S. Jackson,0,0,0,,0,0,0,0,h,MISS Jackson Free Throw 2 of 2,Free Throw,Free Throw 2 of 2,0,0,440
+0040200225,432,PT00M14.70S,4,1610612747,LAL,406,O'Neal,S. O'Neal,0,0,0,,0,0,0,0,v,O'Neal REBOUND (Off:4 Def:8),Rebound,Unknown,0,0,441
+0040200225,433,PT00M14.70S,4,0,,1610612747,,,0,0,0,,0,0,0,0,v,Lakers Timeout: Regular (Reg.5 Short 0),Timeout,Regular,0,0,442
+0040200225,434,PT00M14.70S,4,1610612747,LAL,2457,Pargo,J. Pargo,0,0,0,,0,0,0,0,v,SUB: Fisher FOR Pargo,Substitution,,0,0,443
+0040200225,435,PT00M14.70S,4,1610612747,LAL,2416,Rush,K. Rush,0,0,0,,0,0,0,0,v,SUB: Shaw FOR Rush,Substitution,,0,0,444
+0040200225,436,PT00M14.70S,4,1610612759,SAS,1536,Jackson,S. Jackson,0,0,0,,0,0,0,0,h,SUB: Ginobili FOR Jackson,Substitution,,0,0,445
+0040200225,437,PT00M03.60S,4,1610612747,LAL,109,Horry,R. Horry,-169,192,26,Missed,1,0,0,0,v,MISS Horry 26' 3PT Jump Shot,Missed Shot,Jump Shot,0,3,446
+0040200225,438,PT00M01.60S,4,1610612759,SAS,764,Robinson,D. Robinson,0,0,0,,0,0,0,0,h,Robinson REBOUND (Off:5 Def:2),Rebound,Unknown,0,0,447
+0040200225,439,PT00M00.00S,4,0,,0,,,0,0,0,,0,96,94,190, ,End of 4th Period (12:20 PM EST),period,end,0,0,448
