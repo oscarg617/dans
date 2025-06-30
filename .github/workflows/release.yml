@@ -18,20 +18,103 @@ permissions:
 jobs:
   release-build:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-python@v5
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          # Ensure we checkout the exact commit tagged for this release
+          ref: ${{ github.event.release.tag_name }}
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
           python-version: "3.x"
-
+      
+      - name: Extract version from tag
+        id: get_version
+        run: |
+          # Remove 'v' prefix if present (e.g., v1.1.0 -> 1.1.0)
+          VERSION=${{ github.event.release.tag_name }}
+          VERSION=${VERSION#v}
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "Building version: $VERSION"
+      
+      - name: Verify version consistency
+        run: |
+          EXPECTED_VERSION="${{ steps.get_version.outputs.version }}"
+          echo "Expected version from tag: $EXPECTED_VERSION"
+          
+          # Check version in setup.py if it exists
+          if [ -f "setup.py" ]; then
+            SETUP_VERSION=$(python setup.py --version 2>/dev/null || echo "not found")
+            echo "Version in setup.py: $SETUP_VERSION"
+            if [ "$SETUP_VERSION" != "$EXPECTED_VERSION" ] && [ "$SETUP_VERSION" != "not found" ]; then
+              echo "ERROR: Version mismatch in setup.py: expected $EXPECTED_VERSION, got $SETUP_VERSION"
+              exit 1
+            fi
+          fi
+          
+          # Check version in pyproject.toml if it exists
+          if [ -f "pyproject.toml" ]; then
+            if command -v python -c "import tomllib" 2>/dev/null; then
+              PYPROJECT_VERSION=$(python -c "
+import tomllib
+with open('pyproject.toml', 'rb') as f:
+    data = tomllib.load(f)
+    print(data.get('project', {}).get('version', 'not found'))
+" 2>/dev/null || echo "not found")
+              echo "Version in pyproject.toml: $PYPROJECT_VERSION"
+              if [ "$PYPROJECT_VERSION" != "$EXPECTED_VERSION" ] && [ "$PYPROJECT_VERSION" != "not found" ]; then
+                echo "ERROR: Version mismatch in pyproject.toml: expected $EXPECTED_VERSION, got $PYPROJECT_VERSION"
+                exit 1
+              fi
+            fi
+          fi
+      
+      - name: Install build dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install build twine
+      
       - name: Build release distributions
         run: |
-          # NOTE: put your own distribution build steps here.
-          python -m pip install build
           python -m build
-
+          echo "Built packages:"
+          ls -la dist/
+      
+      - name: Check built package version
+        run: |
+          EXPECTED_VERSION="${{ steps.get_version.outputs.version }}"
+          # Check if the built wheel has the correct version
+          WHEEL_FILE=$(ls dist/*.whl | head -1)
+          if [ -n "$WHEEL_FILE" ]; then
+            echo "Checking wheel file: $WHEEL_FILE"
+            if [[ "$WHEEL_FILE" == *"$EXPECTED_VERSION"* ]]; then
+              echo "✅ Wheel version matches tag: $EXPECTED_VERSION"
+            else
+              echo "❌ ERROR: Wheel version doesn't match tag $EXPECTED_VERSION"
+              echo "Wheel file: $WHEEL_FILE"
+              exit 1
+            fi
+          fi
+          
+          # Check if the built tarball has the correct version
+          TAR_FILE=$(ls dist/*.tar.gz | head -1)
+          if [ -n "$TAR_FILE" ]; then
+            echo "Checking tarball file: $TAR_FILE"
+            if [[ "$TAR_FILE" == *"$EXPECTED_VERSION"* ]]; then
+              echo "✅ Tarball version matches tag: $EXPECTED_VERSION"
+            else
+              echo "❌ ERROR: Tarball version doesn't match tag $EXPECTED_VERSION"
+              echo "Tarball file: $TAR_FILE"
+              exit 1
+            fi
+          fi
+      
+      - name: Check package with twine
+        run: |
+          python -m twine check dist/*
+      
       - name: Upload distributions
         uses: actions/upload-artifact@v4
         with:
@@ -40,31 +123,23 @@ jobs:
 
   pypi-publish:
     runs-on: ubuntu-latest
-    needs:
-      - release-build
+    needs: [release-build]
     permissions:
       # IMPORTANT: this permission is mandatory for trusted publishing
       id-token: write
-
-    # Dedicated environments with protections for publishing are strongly recommended.
-    # For more information, see: https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment#deployment-protection-rules
     environment:
       name: release
-      # OPTIONAL: uncomment and update to include your PyPI project URL in the deployment status:
-      url: https://pypi.org/p/dans
-      #
-      # ALTERNATIVE: if your GitHub Release name is the PyPI project version string
-      # ALTERNATIVE: exactly, uncomment the following line instead:
-      # url: https://pypi.org/project/YOURPROJECT/${{ github.event.release.name }}
-
+      url: https://pypi.org/project/dans/${{ github.event.release.tag_name }}
+    
     steps:
-      - name: Retrieve release distributions
+      - name: Download release distributions
         uses: actions/download-artifact@v4
         with:
           name: release-dists
           path: dist/
-
+      
       - name: Publish release distributions to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
           packages-dir: dist/
+          verbose: true
