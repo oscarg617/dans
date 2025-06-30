@@ -91,9 +91,9 @@ class PBPPlayerStats(StatsEndpoint):
         self.stats = {}
         
         self.teams = pd.read_csv(os.path.join(os.path.dirname(os.path.dirname(
-            os.path.dirname(__file__))), "data\\nba-stats-teams.csv"))
+            os.path.dirname(__file__))), "data/nba-stats-teams.csv"))
         self.seasons = pd.read_csv(os.path.join(os.path.dirname(os.path.dirname(
-            os.path.dirname(__file__))), "data\\season-averages.csv"))
+            os.path.dirname(__file__))), "data/season-averages.csv"))
 
         ids = player_logs["Player_ID"].unique().tolist()
         if len(ids) > 1:

@@ -84,7 +84,7 @@ class PBPPlayerLogs(LogsEndpoint):
 
     def _lookup(self, name):
         path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))),
-                            'data\\player_ids.csv')
+                            'data/player_ids.csv')
         names_df = pd.read_csv(path)
         
         player = names_df[names_df["NAME"] == name]["NBA_ID"]
