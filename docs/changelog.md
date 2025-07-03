@@ -1,3 +1,25 @@
+# `v1.1.0`
+
+# v1.1.0
+
+**2025-07-02**
+
+## Added
+
+- New `playbyplay` subpackage, containing its own `pbpplayerlogs` and `pbpplayerstats` endpoints (view [data_formats.md](https://github.com/oscarg617/dans/blob/main/docs/data_formats.md#playbyplay-subpackage-approach) for details)
+- Caching for `playbyplay` subpackage
+
+## Changed
+
+- Improved `request`'s abstraction and scalability
+- Homogenized the endpoints and methods of the `boxscore` and `playbyplay` subpackages
+
+## Fixed
+
+- Fixed test cases that make requests to `stats.nba.com` with cached responses
+
+---
+
 # `v1.0.4`
 
 # v1.0.4
@@ -24,7 +46,6 @@
 ## Improved
 
 - Pace-scraping efficiency: instead of going through game by game to find pace, use `Basketball-Reference` team game logs to find pace for an entire season
-- 
 
 ## Removed
 
