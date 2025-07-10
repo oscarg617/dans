@@ -8,11 +8,11 @@ Numbers at face-value don't always tell the full story. For example, if player A
 
 However, what if player B faced one of the best defensive teams in the league, and player A faced a mediocre defensive team? How does that change how we view those performances?
 
-This package attempts to provide a more even playing field with statistics by using the opponent team's defensive to adjust a player scoring and efficiency. For more details about how stats are "adjusted", see the methodology [here](https://github.com/oscarg617/dans/blob/main/METHODOLOGY.md).
+This package attempts to provide a more even playing field with statistics by using the opponent team's defensive to adjust a player scoring and efficiency. For more details about how stats are "adjusted", see the methodology [here](https://github.com/oscarg617/dans/blob/main/docs/data_formats.md).
 
 Stats from basketball-reference for this package go back to the 1970-71 season, and stats from nba-stats only go back to the 1996-97 season.
 
-You can find the full details for this API [here](https://github.com/oscarg617/dans/blob/main/API.md).
+Read the full documentation for this API [here](https://github.com/oscarg617/dans/tree/main/docs/).
 
 ## Installing
 ### Via `pip`
