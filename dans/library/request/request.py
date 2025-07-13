@@ -21,6 +21,9 @@ class Request:
     def get_response(self) -> pd.DataFrame:
         """Get response using appropriate data source"""
         
+        print(self.kwargs)
+        print(self.args)
+        
         if self.kwargs and "year" in self.kwargs:
             self.kwargs["year"] = self._format_year(self.kwargs["year"])
         
@@ -31,6 +34,7 @@ class Request:
         if isinstance(self.source, APISource):
             return self._handle_function_call()
         
+        print("last")
         # Handle URL-based requests
         return self._handle_url_request()
     
@@ -51,6 +55,11 @@ class Request:
         headers = self.source.get_headers()
         params = self.source.get_params(url=self.url, **self.kwargs)
         try:
+            print('pre res')
+            print(self.url)
+            print(headers)
+            print(params)
+            print(self.attr_id)
             response = self.rate_limiter.make_request(
                 requests.get,
                 url=self.url,
@@ -61,9 +70,11 @@ class Request:
             
             # Pass attr_id for Basketball Reference
             if isinstance(self.source, BasketballReferenceSource):
+                print("parsing")
                 return self.source.parse_response(response, self.attr_id)
             else:
                 return self.source.parse_response(response)
+            
                 
         except Exception as e:
             print(f"Request failed: {e}")
