@@ -1,7 +1,7 @@
 import json
 import pandas as pd
 
-from tests.cache.mock_response import MockResponse, MockAPIResponse
+from dans.library.request.cache.mock_response import MockResponse, MockAPIResponse
 
 def read_file(file_name: str) -> str:
     with open(file_name, "r", encoding='utf-8') as file:
