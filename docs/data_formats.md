@@ -62,8 +62,8 @@ The formula for calculating possessions is:
 
 The new formula for `opponent-and-pace-adjusted` stats:
 
-`PTS` = (110 / Opponent Average DRTG) * (Total Points / Possessions Played) * (100 + Team Pace - League Pace)
+`PTS` = (110 / Opponent Average DRTG) * (Total Points / Team Possessions) * (100 + Team Pace - League Pace)
 
-`REB` = (Total Rebounds / Possessions Played) * (100 + Team Pace - League)
+`REB` = (Total Rebounds / Team Possessions) * (100 + Team Pace - League Pace)
 
-`AST` = (Total Assists / Possessions Played) * (100 + Team Pace - League)
+`AST` = (Total Assists / Team Possessions) * (100 + Team Pace - League Pace)
