@@ -86,7 +86,9 @@ class RateLimiter:
                 res = cached_args[req_tup]
                 return res
         
-        
+        print(func)
+        print(args)
+        print(kwargs)
         res = func(*args, **kwargs)
         # dfs = res.get_data_frames()
         # print(dfs)
