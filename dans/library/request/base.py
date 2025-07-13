@@ -1,5 +1,6 @@
 """Base class for data sources"""
 import json
+import requests
 from abc import ABC, abstractmethod
 import pandas as pd
 from ratelimit import sleep_and_retry, limits
@@ -86,6 +87,8 @@ class RateLimiter:
                 res = cached_args[req_tup]
                 return res
         
+        res = requests.get("https://www.basketball-reference.com/players/b/bryanko01/gamelog-playoffs/", headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'})
+        print(res)
         print(func)
         print(args)
         print(kwargs)
