@@ -6,7 +6,7 @@ from ratelimit import sleep_and_retry, limits
 
 from nba_api.stats.endpoints.playergamelog import PlayerGameLog
 from nba_api.stats.endpoints.playbyplayv3 import PlayByPlayV3
-from tests.cache.cached_args import cached_args
+from dans.library.request.cache.cached_args import cached_args
 
 class DataSource(ABC):
     """Abstract base class for data sources"""
