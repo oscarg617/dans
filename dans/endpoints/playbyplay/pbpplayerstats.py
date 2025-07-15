@@ -73,7 +73,8 @@ class PBPPlayerStats(StatsEndpoint):
         'ADJ_DRTG',
         'LA_PACE',
         'rDRTG',
-        'rADJ_DRTG'
+        'rADJ_DRTG',
+        'GAMES',
     ]
 
 
@@ -125,7 +126,8 @@ class PBPPlayerStats(StatsEndpoint):
         misc_stats = {
             "PLAYER_ID": self.player_id,
             "TEAM_POSS": self.pbp_logs["TEAM_POSS"].mean(),
-            "PLAYER_POSS": self.pbp_logs["PLAYER_POSS"].mean()
+            "PLAYER_POSS": self.pbp_logs["PLAYER_POSS"].mean(),
+            "GAMES": len(self.pbp_logs)
         }
 
         if self.data_format == DataFormat.opp_adj:
@@ -150,13 +152,12 @@ class PBPPlayerStats(StatsEndpoint):
     def _iterate_through_games(self):
 
         logs = self.player_logs[["Game_ID", "SEASON", "MATCHUP"]]
-        seasons = self.player_logs["SEASON"].to_list()
-        
         drtg = 'ADJ_DRTG' if self.adj_def else 'DRTG'
         
         logs = pd.merge(logs, self.teams, on=["SEASON", "MATCHUP"])
         logs = logs[(logs[drtg] >= self.drtg_range[0]) & (logs[drtg] < self.drtg_range[1])]
         game_ids = logs["Game_ID"].to_list()
+        seasons = logs["SEASON"].to_list()
 
         # Check cache first
         cache = Cache()
@@ -164,7 +165,6 @@ class PBPPlayerStats(StatsEndpoint):
         cached_game_ids = cached_logs["GAME_ID"].to_list() if not cached_logs.empty else []
 
         remaining_games = [game for game in zip(game_ids, seasons) if game[0] not in cached_game_ids]
-
         new_logs_df = pd.DataFrame()
 
         if remaining_games:
@@ -180,8 +180,8 @@ class PBPPlayerStats(StatsEndpoint):
 
         # Combine DataFrames, filtering out empty ones
         dfs_to_combine = [df for df in [new_logs_df, cached_logs] if not df.empty]
+    
         self.pbp_logs = pd.concat(dfs_to_combine, ignore_index=True) if dfs_to_combine else pd.DataFrame()
-
         # Insert logs to cache
         cache.insert_logs(self.pbp_logs)
 
