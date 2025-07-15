@@ -16,10 +16,7 @@ setuptools.setup(
     packages=setuptools.find_packages(),
 
     install_requires=[
-    "pandas==2.1.0",
-    "requests==2.31.0",
-    "six==1.16.0",
-    "Unidecode==1.3.8"
+        "pandas>=2.2.3","numpy>=2.2.3","requests>=2.32.3","six>=1.16.0","Unidecode>=1.3.8","ratelimit>=2.2.1","bs4>=0.0.2","tqdm>=4.66.2","pylint>=3.3.5","build>=1.2.2.post1","lxml>=5.3.1","nba_api>=1.10.0","pytest>=7.4.0"
     ],
 
     license="MIT",
