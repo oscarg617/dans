@@ -63,10 +63,21 @@ class RateLimiter:
         global file
         file += 1
               
-        # Check if request is cached (for testing purposes)
+        # Check if API request is cached (for testing purposes)
         if 'headers' in kwargs and 'User-Agent' not in kwargs['headers']:
             kw_tup = kwargs.copy()
             kw_tup['headers'] = tuple(list(kw_tup['headers'].items()))
+            kw_tup = tuple(list(kw_tup.items()))
+            req_tup = (args, kw_tup)
+            if req_tup in cached_args:
+                res = cached_args[req_tup]
+                return res
+        
+        # Check if request.get is cached (for testing purposes)
+        if 'headers' in kwargs and 'User-Agent' in kwargs['headers']:
+            kw_tup = kwargs.copy()
+            kw_tup['headers'] = tuple(list(kw_tup['headers'].items()))
+            kw_tup['params'] = tuple(list(kw_tup['params'].items()))
             kw_tup = tuple(list(kw_tup.items()))
             req_tup = (args, kw_tup)
             if req_tup in cached_args:
@@ -87,11 +98,6 @@ class RateLimiter:
                 res = cached_args[req_tup]
                 return res
         
-        res = requests.get("https://www.basketball-reference.com/players/b/bryanko01/gamelog-playoffs/", headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'})
-        print(res)
-        print(func)
-        print(args)
-        print(kwargs)
         res = func(*args, **kwargs)
         # dfs = res.get_data_frames()
         # print(dfs)

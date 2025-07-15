@@ -13,6 +13,10 @@ def read_df(file_names: list[str]) -> list[pd.DataFrame]:
         dfs.append(pd.read_csv(file_name, dtype={"Game_ID": "str", "GAME_ID": "str", "gameId": "str", "scoreAway": "object", "scoreHome": "object"}))
     return dfs
 
+def read_text(file_name: str) -> str:
+    with open(file_name, "r", encoding='utf-8') as file:
+        return file.read()
+
 cached_args = {
     (
         (),
@@ -167,5 +171,29 @@ cached_args = {
         (('game_id', '0040200226'),)
     ) :
         MockAPIResponse(data_frames=read_df(["dans/library/request/cache/data/KB2003G6_gr_1.txt", "dans/library/request/cache/data/KB2003G6_gr_2.txt"])),
-
+    (
+        (),
+        (('url', 'https://www.basketball-reference.com/players/c/curryst01/gamelog-playoffs/'), ('headers', (('User-Agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'),)), ('params', ()), ('timeout', 10))
+    ) :
+        MockResponse(status_code=200, text=read_text("dans/library/request/cache/data/SC2015-17BX.txt")),
+    (
+        (),
+        (('url', 'https://www.basketball-reference.com/players/b/bryanko01/gamelog-playoffs/'), ('headers', (('User-Agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'),)), ('params', ()), ('timeout', 10))
+    ) :
+        MockResponse(status_code=200, text=read_text("dans/library/request/cache/data/KB2003BX.txt")),
+    (
+        (),
+        (('url', 'https://www.basketball-reference.com/teams/LAL/2003/gamelog-advanced/'), ('headers', (('User-Agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'),)), ('params', ()), ('timeout', 10))
+    ) :
+        MockResponse(status_code=200, text=read_text("dans/library/request/cache/data/LAL2003BX.txt")),
+    (
+        (),
+        (('url', 'https://www.basketball-reference.com/players/a/abdulka01/gamelog/1974'), ('headers', (('User-Agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'),)), ('params', ()), ('timeout', 10))
+    ) :
+        MockResponse(status_code=200, text=read_text("dans/library/request/cache/data/KAJ1974BX.txt")),
+    (
+        (),
+        (('url', 'https://www.basketball-reference.com/teams/MIL/1974/gamelog-advanced/'), ('headers', (('User-Agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'),)), ('params', ()), ('timeout', 10))
+    ) :
+        MockResponse(status_code=200, text=read_text("dans/library/request/cache/data/MIL1974BX.txt")),
 }

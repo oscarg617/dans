@@ -21,9 +21,6 @@ class Request:
     def get_response(self) -> pd.DataFrame:
         """Get response using appropriate data source"""
         
-        print(self.kwargs)
-        print(self.args)
-        
         if self.kwargs and "year" in self.kwargs:
             self.kwargs["year"] = self._format_year(self.kwargs["year"])
         
@@ -33,33 +30,27 @@ class Request:
         # Handle API calls
         if isinstance(self.source, APISource):
             return self._handle_function_call()
-        
-        print("last")
+
         # Handle URL-based requests
         return self._handle_url_request()
     
     def _handle_function_call(self) -> pd.DataFrame:
         """Handle API calls with rate limiting"""
-        # try:
-        response = self.rate_limiter.make_request(
-            self.source.function, 
-            **self.source.args
-        )
-        return self.source.parse_response(response)
-        # except Exception as e:
-        #     print(f"Function call failed: {e}")
-        #     return pd.DataFrame()
+        try:
+            response = self.rate_limiter.make_request(
+                self.source.function, 
+                **self.source.args
+            )
+            return self.source.parse_response(response)
+        except Exception as e:
+            print(f"Function call failed: {e}")
+            return pd.DataFrame()
     
     def _handle_url_request(self) -> pd.DataFrame:
         """Handle URL-based requests with rate limiting"""
         headers = self.source.get_headers()
         params = self.source.get_params(url=self.url, **self.kwargs)
         try:
-            print('pre res')
-            print(self.url)
-            print(headers)
-            print(params)
-            print(self.attr_id)
             response = self.rate_limiter.make_request(
                 requests.get,
                 url=self.url,
@@ -70,7 +61,6 @@ class Request:
             
             # Pass attr_id for Basketball Reference
             if isinstance(self.source, BasketballReferenceSource):
-                print("parsing")
                 return self.source.parse_response(response, self.attr_id)
             else:
                 return self.source.parse_response(response)

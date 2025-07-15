@@ -109,6 +109,8 @@ class PBPProcessor:
             opp_team_id = home_rotations.iloc[0]['TEAM_ID']
 
         opp_tricode = pbp_v3[pbp_v3['teamId'] == opp_team_id].iloc[0]['teamTricode']
+
+        player = dfrotation[dfrotation['PERSON_ID'] == int(player_id)]
         team_id = dfrotation[dfrotation['PERSON_ID'] == int(player_id)].iloc[0]['TEAM_ID']
         bins = dfrotation[dfrotation['PERSON_ID'] == int(player_id)]\
             [['IN_TIME_REAL', 'OUT_TIME_REAL']].values.tolist()
