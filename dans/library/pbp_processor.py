@@ -49,7 +49,7 @@ class PBPProcessor:
         pbp_v3['prevFTA'] = pbp_v3['actionType'].shift(1)
         
         # Calculate rotations for each play
-        pbp_v3, pbp_v2, team_id, opp_tricode, bins  = self._handle_rotations(pbp_v3, pbp_v2, rotations, player_id)
+        pbp_v3, pbp_v2, team_id, team_name, opp_tricode, bins  = self._handle_rotations(pbp_v3, pbp_v2, rotations, player_id)
 
         # Remove garbage time
         all_logs, pbp_v3, pbp_v2 = self._remove_garbage_time(pbp_v3, pbp_v2, bins)
@@ -65,6 +65,7 @@ class PBPProcessor:
             "pbp_v3": pbp_v3,
             "pbp_v2": pbp_v2,
             "team_id": team_id,
+            "team_name": team_name,
             "opp_tricode": opp_tricode
         }
 
@@ -96,7 +97,7 @@ class PBPProcessor:
         return df
 
     def _handle_rotations(self, pbp_v3: pd.DataFrame, pbp_v2: pd.DataFrame, rotations: list[pd.DataFrame], player_id: str) \
-        -> tuple[pd.DataFrame, pd.DataFrame, str, str, list[int]]:
+        -> tuple[pd.DataFrame, pd.DataFrame, str, str, str, list[int]]:
 
         home_rotations = rotations[0]
         away_rotations = rotations[1]
@@ -108,6 +109,7 @@ class PBPProcessor:
             dfrotation = away_rotations
             opp_team_id = home_rotations.iloc[0]['TEAM_ID']
 
+        team_name = dfrotation.iloc[0]['TEAM_NAME']
         opp_tricode = pbp_v3[pbp_v3['teamId'] == opp_team_id].iloc[0]['teamTricode']
 
         player = dfrotation[dfrotation['PERSON_ID'] == int(player_id)]
@@ -121,7 +123,7 @@ class PBPProcessor:
         pbp_v3['totalStarters'] = pbp_v3['homeStarters'] + pbp_v3['awayStarters']
         pbp_v2['totalStarters'] = pbp_v2['homeStarters'] + pbp_v2['awayStarters']
 
-        return (pbp_v3, pbp_v2, team_id, opp_tricode, bins)
+        return (pbp_v3, pbp_v2, team_id, team_name, opp_tricode, bins)
 
     def _remove_garbage_time(self, pbp_v3: pd.DataFrame, pbp_v2: pd.DataFrame, bins: list[list[int]]) \
         -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:

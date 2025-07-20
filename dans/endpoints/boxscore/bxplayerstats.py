@@ -36,6 +36,7 @@ class BXPlayerStats(StatsEndpoint):
         'OPP_TS',
         'OPP_ADJ_TS',
         'DRTG',
+        'rDRTG',
         'ADJ_DRTG'
     ]
 
@@ -47,7 +48,7 @@ class BXPlayerStats(StatsEndpoint):
         player_logs: pd.DataFrame,
         drtg_range: list,
         data_format=DataFormat.default,
-        adj_def=True,
+        adj_def=False,
     ):
         self.player_logs = player_logs
         self.drtg_range = drtg_range

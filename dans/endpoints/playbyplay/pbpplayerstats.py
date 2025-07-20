@@ -194,6 +194,7 @@ class PBPPlayerStats(StatsEndpoint):
         pbp_v3 = pbp_data["pbp_v3"]
         pbp_v2 = pbp_data["pbp_v2"]
         team_id = pbp_data["team_id"]
+        team_name = pbp_data["team_name"]
         opp_tricode = pbp_data["opp_tricode"]
 
         counter = PBPCounter()
@@ -205,7 +206,7 @@ class PBPPlayerStats(StatsEndpoint):
         }
 
         box_stats = counter.count_stats(pbp_v3, pbp_v2, self.player_id)
-        poss_stats = counter.count_possessions(all_logs, pbp_v3, team_id)
+        poss_stats = counter.count_possessions(all_logs, pbp_v3, team_name, team_id)
         opp_stats = counter.count_opp_stats(self.teams, self.seasons, season, opp_tricode)
 
         stats.update(box_stats)

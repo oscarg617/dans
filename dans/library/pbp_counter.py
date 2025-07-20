@@ -29,10 +29,10 @@ class PBPCounter:
         stats["STOV"] = self._count_stov(pbp_v2, player_id)
         return stats
 
-    def count_possessions(self, all_logs: pd.DataFrame, pbp_v3: pd.DataFrame, team_id: int) -> dict:
+    def count_possessions(self, all_logs: pd.DataFrame, pbp_v3: pd.DataFrame, team_name: str, team_id: int) -> dict:
         stats = {}
-        stats["TEAM_POSS"] = self._estimate_possessions(all_logs, team_id)
-        stats["PLAYER_POSS"] = self._estimate_possessions(pbp_v3, team_id)
+        stats["TEAM_POSS"] = self._estimate_possessions(all_logs, team_name, team_id)
+        stats["PLAYER_POSS"] = self._estimate_possessions(pbp_v3, team_name, team_id)
         return stats
 
     def count_opp_stats(self, teams: pd.DataFrame, seasons: pd.DateOffset, season: int, opp_tricode: str):
@@ -96,8 +96,19 @@ class PBPCounter:
         return len(dflogs2[(dflogs2['PLAYER1_ID'] == int(player_id)) & ((dflogs2['HOMEDESCRIPTION'].str.contains('Turnover') & \
             (~dflogs2['HOMEDESCRIPTION'].str.contains('Bad Pass'))) | (dflogs2['VISITORDESCRIPTION'].str.contains('Turnover') & (~dflogs2['VISITORDESCRIPTION'].str.contains('Bad Pass'))))])
 
-    def _estimate_possessions(self, dflogs: pd.DataFrame, team_id: str) -> float:
-        fgato = len(dflogs[(dflogs['teamId'] == team_id) & ((dflogs['isFieldGoal'] == 1) | (dflogs['actionType'] == 'Turnover'))])
+    def _estimate_possessions(self, dflogs: pd.DataFrame, team_name: str, team_id: str) -> float:
+        # print(dflogs.iloc[345])
+        # print(dflogs.iloc[345]['teamId'] == team_id)
+        # print(team_id)
+        # print(dflogs.iloc[345]['isFieldGoal'] == 1)
+        # print(dflogs.iloc[345]['actionType'] == "Turnover")
+        fgato = len(dflogs[((dflogs['teamId'] == team_id) & ((dflogs['isFieldGoal'] == 1) | (dflogs['actionType'] == 'Turnover'))) | ((dflogs['description'].str.contains(team_name)) & (dflogs['actionType'] == 'Turnover'))])
         fta = len(dflogs[(dflogs['teamId'] == team_id) & (dflogs['actionType'] == 'Free Throw')])
         oreb = len(dflogs[(dflogs['teamId'] == team_id) & (dflogs['description'].str.contains('REBOUND')) & (((dflogs['prevFGA'] == 1.0) | (dflogs['prevFTA'] == 'Free Throw'))) & (dflogs['prevTeam'] == team_id)])
+        # print(dflogs[(dflogs['teamId'] == team_id) & ((dflogs['isFieldGoal'] == 1))][["description", "actionType"]])
+        # print(dflogs[((dflogs['actionType'] == 'Turnover'))][["description", "actionType"]])
+        print(fgato)
+        print(fta)
+        print(oreb)
+        print()
         return 0.96 * (fgato + (0.44 * fta) - oreb)

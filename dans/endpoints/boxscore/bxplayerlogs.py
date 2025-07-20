@@ -131,8 +131,13 @@ class BXPlayerLogs(LogsEndpoint):
                 data_pd["SEASON"] = curr_year
             else:
                 data_pd["SEASON"] = data_pd["GAME_DATE"].str[0:4].astype(int)
-            data_pd["MIN"] = data_pd["MIN"].str.extract(r'([1-9]*[0-9]):').astype("int32") + \
+
+
+            try:
+                data_pd["MIN"] = data_pd["MIN"].str.extract(r'([1-9]*[0-9]):').astype("int32") + \
                             data_pd["MIN"].str.extract(r':([0-5][0-9])').astype("int32") / 60
+            except:
+                pass
 
             convert_dict = {
                 'SEASON': 'int32', 'GAME_DATE': 'string', 'TEAM': 'string', 'MATCHUP': 'string',
